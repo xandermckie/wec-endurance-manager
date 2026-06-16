@@ -1,0 +1,32 @@
+{# Reusable driver table. Expects: roster, stat_columns, stat_labels, sort, order, make_url(optional) #}
+<div class="table-responsive">
+  <table class="table-wec">
+    <thead>
+      <tr>
+        <th>Driver</th>
+        <th>Grade</th>
+        <th>OVR</th>
+        <th>Age</th>
+        {% for col in stat_columns %}<th class="text-end">{{ stat_labels[col] }}</th>{% endfor %}
+        {% if show_contract %}<th class="text-end">Salary</th><th class="text-end">Yrs</th>{% endif %}
+        {% if show_actions %}<th></th>{% endif %}
+      </tr>
+    </thead>
+    <tbody>
+      {% for p in roster %}
+      <tr>
+        <td><strong>{{ p.name }}</strong></td>
+        <td><span class="grade-chip grade-{{ p.grade }}">{{ p.grade }}</span></td>
+        <td><span data-ovr="{{ p.overall|int if p.overall else 0 }}">{{ p.overall|round|int if p.overall else '—' }}</span></td>
+        <td>{{ p.age or '—' }}</td>
+        {% for col in stat_columns %}<td class="text-end">{{ p[col]|stat1 }}</td>{% endfor %}
+        {% if show_contract %}
+        <td class="text-end">{% if p.salary %}€{{ '%.1f'|format(p.salary) }}M{% else %}—{% endif %}</td>
+        <td class="text-end">{{ p.contract_years if p.contract_years is not none else '—' }}</td>
+        {% endif %}
+        {% if show_actions %}<td>{% block row_actions %}{% endblock %}</td>{% endif %}
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>

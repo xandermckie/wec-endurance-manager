@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-header">
+  <h1>Season{% if season %} {{ season.season_year }}{% endif %}</h1>
+  <p>
+    {% if season %}
+      Round {{ rounds_played }} of {{ season.max_round }} · Phase: {{ season.phase|replace('_',' ')|title }}
+      {% if difficulty_label %} · {{ difficulty_label }}{% endif %}
+    {% else %}No season in progress.{% endif %}
+  </p>
+</div>
+
+{% if not season %}
+<div class="card-wec"><div class="card-wec-body text-center py-5">
+  <h2 class="mb-3" style="font-family:'Rajdhani',sans-serif;text-transform:uppercase;">Ready to Race?</h2>
+  <form method="post" action="{{ url_for('season_start') }}"><button class="btn-wec-primary btn-wec-lg">Start the Season</button></form>
+</div></div>
+{% else %}
+
+<!-- Sim controls -->
+<div class="card-wec mb-4">
+  <div class="card-wec-body d-flex gap-sm flex-wrap align-items-center">
+    {% if can_sim_regular %}
+    <form method="post" action="{{ url_for('season_sim_round') }}"><button class="btn-wec-primary">Sim Next Round</button></form>
+    <form method="post" action="{{ url_for('season_sim_double') }}"><button class="btn-wec-secondary">Sim Double-Header</button></form>
+    {% if can_trade %}<form method="post" action="{{ url_for('season_sim_deadline') }}"><button class="btn-wec-secondary">Sim to Transfer Deadline</button></form>{% endif %}
+    <form method="post" action="{{ url_for('season_sim_rest') }}"><button class="btn-wec-secondary">Sim Rest of Regular Season</button></form>
+    {% elif regular_complete and season.phase not in ['complete','draft','offseason'] %}
+    <a href="{{ url_for('season_finale') }}" class="btn-wec-primary">Go to the Season Finale →</a>
+    {% elif season.phase == 'complete' %}
+    <a href="{{ url_for('season_year_end') }}" class="btn-wec-secondary">Season Review</a>
+    <a href="{{ url_for('season_draft') }}" class="btn-wec-primary">Young Driver Programme →</a>
+    {% elif season.phase == 'offseason' %}
+    <a href="{{ url_for('season_year_end') }}" class="btn-wec-secondary">Season Review</a>
+    <form method="post" action="{{ url_for('season_advance') }}"><button class="btn-wec-primary">Advance to Next Season →</button></form>
+    {% endif %}
+  </div>
+</div>
+
+{% if user_incident_report %}
+<div class="alert-wec alert-wec-warning mb-4">
+  <strong>Driver availability:</strong>
+  {% for i in user_incident_report %}{{ i.player_name }} ({{ i.type }}, {{ i.rounds_remaining }} rd){% if not loop.last %}; {% endif %}{% endfor %}
+</div>
+{% endif %}
+
+<!-- Standings -->
+<div class="row g-3 mb-4">
+  {% for cls in classes %}
+  <div class="col-lg-6">
+    <div class="card-wec">
+      <div class="card-wec-header"><h2>{{ cls }} Championship</h2></div>
+      <div class="table-responsive">
+        <table class="table-wec">
+          <thead><tr><th>#</th><th>Team</th><th class="text-end">Pts</th><th class="text-end">Wins</th><th class="text-end">Pod</th><th class="text-end">Pole</th></tr></thead>
+          <tbody>
+            {% for row in standings_by_class[cls] %}
+            <tr class="{% if row.team_id == user_team_id %}user-row{% endif %}">
+              <td class="result-pos">{{ row.rank }}</td>
+              <td>{{ row.team_name }}{% if row.team_id == user_team_id %} <span class="badge-wec badge-you">YOU</span>{% endif %}</td>
+              <td class="text-end"><strong>{{ row.points }}</strong></td>
+              <td class="text-end">{{ row.wins }}</td>
+              <td class="text-end">{{ row.podiums }}</td>
+              <td class="text-end">{{ row.poles }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<!-- Calendar -->
+<div class="section-title">Race Calendar</div>
+<div class="calendar-grid">
+  {% for r in schedule %}
+  <div class="calendar-round {% if r.marquee %}is-marquee{% endif %} {% if r.finale %}is-finale{% endif %}">
+    <div class="flex-between">
+      <span class="calendar-round-num">R{{ r.round }}</span>
+      {% if r.marquee %}<span class="badge-wec badge-wec-gray">Marquee</span>{% elif r.finale %}<span class="badge-wec badge-wec-red">Finale</span>{% endif %}
+    </div>
+    <div class="calendar-round-name">
+      {% if r.played %}<a href="{{ url_for('season_round', round_id=r.round) }}" style="color:var(--text);">{{ r.name }}</a>{% else %}{{ r.name }}{% endif %}
+    </div>
+    <div class="calendar-round-meta">{{ r.circuit }} · {{ r.format }}</div>
+    {% if r.played and r.winners %}
+      {% for cls, winner in r.winners.items() %}<div class="calendar-round-winner">🏁 {{ cls }}: {{ winner }}</div>{% endfor %}
+    {% elif not r.played %}<div class="calendar-round-meta mt-1 text-dim-wec">Upcoming</div>{% endif %}
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
+{% endblock %}

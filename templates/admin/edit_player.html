@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-header"><h1>Edit Driver</h1><p>{{ player.name }}</p></div>
+<form method="post" class="card-wec"><div class="card-wec-body">
+  <div class="row g-3">
+    <div class="col-md-6"><label class="section-title">Name</label><input class="form-control-wec" name="name" value="{{ player.name }}"></div>
+    <div class="col-md-3"><label class="section-title">Age</label><input class="form-control-wec" name="age" value="{{ player.age }}"></div>
+    <div class="col-md-3"><label class="section-title">Grade</label>
+      <select class="form-select-wec" name="grade">
+        {% for g in grades %}<option value="{{ g }}" {% if g == player.grade %}selected{% endif %}>{{ g }}</option>{% endfor %}
+      </select>
+    </div>
+    <div class="col-md-3"><label class="section-title">Potential</label><input class="form-control-wec" name="potential" value="{{ player.potential }}"></div>
+    <div class="col-md-3"><label class="section-title">Peak Age</label><input class="form-control-wec" name="peak_age" value="{{ player.peak_age }}"></div>
+    <div class="col-md-3"><label class="section-title">Retirement Age</label><input class="form-control-wec" name="retirement_age" value="{{ player.retirement_age }}"></div>
+    <div class="col-md-3"><label class="section-title">Salary (€M)</label><input class="form-control-wec" name="salary" value="{{ player.salary }}"></div>
+    <div class="col-md-3"><label class="section-title">Contract Years</label><input class="form-control-wec" name="contract_years" value="{{ player.contract_years }}"></div>
+    <div class="col-md-9"><label class="section-title">Team</label>
+      <select class="form-select-wec" name="team_id">
+        <option value="">Free Agent</option>
+        {% for t in teams %}<option value="{{ t.team_id }}" {% if t.team_id == player.team_id %}selected{% endif %}>{{ t.team_name }}</option>{% endfor %}
+      </select>
+    </div>
+  </div>
+  <div class="section-title mt-4">Attributes</div>
+  <div class="row g-2">
+    {% for key in attribute_keys %}
+    <div class="col-md-4 col-lg-2"><label class="section-title">{{ key|replace('_',' ')|title }}</label>
+      <input class="form-control-wec" name="attr_{{ key }}" value="{{ (player.base_attributes or player.attributes or {}).get(key, '') }}"></div>
+    {% endfor %}
+  </div>
+  <div class="mt-3 d-flex gap-sm">
+    <button class="btn-wec-primary" type="submit">Save</button>
+    <a class="btn-wec-secondary" href="{{ url_for('admin.admin_players') }}">Back</a>
+  </div>
+</div></form>
+{% endblock %}

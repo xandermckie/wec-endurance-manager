@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-header"><h1>Admin · Teams</h1></div>
+<div class="card-wec"><div class="table-responsive"><table class="table-wec">
+  <thead><tr><th>Team</th><th>Drivers</th><th>Points</th><th>Budget</th><th></th></tr></thead>
+  <tbody>
+    {% for t in teams %}
+    <tr class="{% if t.is_user_team %}user-row{% endif %}">
+      <td><strong>{{ t.team_name }}</strong>{% if t.is_user_team %} <span class="badge-wec badge-you">YOU</span>{% endif %}</td>
+      <td>{{ t.roster_size }}</td>
+      <td>{{ t.record }}</td>
+      <td>€{{ '%.1f'|format(t.salary_cap) }}M{% if t.cap_override %} <span class="badge-wec badge-wec-gray">override</span>{% endif %}</td>
+      <td class="text-end"><a class="btn-wec-ghost" href="{{ url_for('admin.admin_team_roster', team_id=t.team_id) }}">Manage</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table></div></div>
+{% endblock %}

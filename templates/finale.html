@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-header">
+  <h1>Season Finale</h1>
+  <p>{% if finale %}{{ finale.name }} · {{ finale.circuit }} · {{ finale.format }}{% endif %} — the title decider.</p>
+</div>
+
+{% if finale_done %}
+<div class="card-wec mb-4"><div class="card-wec-body text-center py-4">
+  <div class="magazine-banner-label mb-2">CHAMPIONS CROWNED</div>
+  {% set champions = (season.finale or {}).get('champions') or {} %}
+  {% for cls, champ in champions.items() %}
+  <div class="mb-2"><span class="class-chip class-{{ cls }}">{{ cls }}</span>
+    <span style="font-family:'Rajdhani',sans-serif;font-size:1.5rem;font-weight:700;"> {{ champ.team_name }}</span>
+    <span class="text-muted-wec">— {{ champ.points }} pts</span>
+    {% if champ.team_id == user_team_id %}<span class="badge-wec badge-you ms-1">YOU</span>{% endif %}
+  </div>
+  {% endfor %}
+  <div class="mt-3 d-flex gap-sm justify-content-center">
+    <a href="{{ url_for('season_year_end') }}" class="btn-wec-primary">Season Review →</a>
+    <a href="{{ url_for('season_draft') }}" class="btn-wec-secondary">Young Driver Programme</a>
+  </div>
+</div></div>
+{% elif regular_complete %}
+<div class="card-wec mb-4"><div class="card-wec-body text-center py-4">
+  <p class="text-muted-wec mb-3">All regular rounds are done. One race remains to decide the championships.</p>
+  <form method="post" action="{{ url_for('season_finale_run') }}"><button class="btn-wec-primary btn-wec-lg">Run the Finale 🏁</button></form>
+</div></div>
+{% else %}
+<div class="alert-wec alert-wec-warning mb-4">Finish the regular season before the finale. <a href="{{ url_for('season_hub') }}">Back to season</a></div>
+{% endif %}
+
+<div class="row g-3">
+  {% for cls in classes %}
+  <div class="col-lg-6">
+    <div class="card-wec">
+      <div class="card-wec-header"><h2>{{ cls }} Title Contenders</h2></div>
+      <div class="table-responsive">
+        <table class="table-wec">
+          <thead><tr><th>#</th><th>Team</th><th class="text-end">Pts</th><th class="text-end">Wins</th></tr></thead>
+          <tbody>
+            {% for row in standings_by_class[cls][:6] %}
+            <tr class="{% if row.team_id == user_team_id %}user-row{% endif %}">
+              <td class="result-pos">{{ row.rank }}</td>
+              <td>{{ row.team_name }}{% if row.team_id == user_team_id %} <span class="badge-wec badge-you">YOU</span>{% endif %}</td>
+              <td class="text-end"><strong>{{ row.points }}</strong></td>
+              <td class="text-end">{{ row.wins }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

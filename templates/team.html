@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-header">
+  <h1>{{ team_name }}{% include "_championship_badge.html" %}</h1>
+  <p>
+    {% if team_class_name %}<span class="class-chip class-{{ team_class_name }}">{{ team_class_name }}</span>{% endif %}
+    Squad rating {{ team_overall|round|int if team_overall else '—' }} ·
+    {{ roster_size }}/{{ max_roster }} drivers
+    {% if team_finances %} · €{{ '%.1f'|format(team_finances.payroll) }}M / €{{ '%.0f'|format(team_finances.salary_cap) }}M budget{% endif %}
+  </p>
+</div>
+
+{% if not active_season %}
+<div class="alert-wec mb-3">Start a season to manage contracts and your squad.</div>
+{% endif %}
+
+{% if team_finances and team_finances.below_min_warning %}
+<div class="alert-wec alert-wec-warning mb-3">Your payroll is below the minimum team spend. Consider signing another driver.</div>
+{% endif %}
+
+<div class="card-wec mb-4">
+  <div class="card-wec-header"><h2>Race Squad</h2></div>
+  <div class="table-responsive">
+    <table class="table-wec">
+      <thead>
+        <tr>
+          <th><a href="{{ make_team_url(sort='name', order=next_order('name', sort, order)) }}">Driver</a></th>
+          <th><a href="{{ make_team_url(sort='grade', order=next_order('grade', sort, order)) }}">Grade</a></th>
+          <th><a href="{{ make_team_url(sort='overall', order=next_order('overall', sort, order)) }}">OVR</a></th>
+          <th><a href="{{ make_team_url(sort='age', order=next_order('age', sort, order)) }}">Age</a></th>
+          {% for col in stat_columns %}<th class="text-end"><a href="{{ make_team_url(sort=col, order=next_order(col, sort, order)) }}">{{ stat_labels[col] }}</a></th>{% endfor %}
+          <th class="text-end">Salary</th>
+          <th class="text-end">Yrs</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for p in roster %}
+        <tr>
+          <td><strong>{{ p.name }}</strong>{% if p.injury %} <span class="badge-wec badge-wec-red">OUT {{ p.injury.rounds_remaining }}</span>{% endif %}</td>
+          <td><span class="grade-chip grade-{{ p.grade }}">{{ p.grade }}</span></td>
+          <td><span data-ovr="{{ p.overall|int if p.overall else 0 }}">{{ p.overall|round|int if p.overall else '—' }}</span></td>
+          <td>{{ p.age or '—' }}</td>
+          {% for col in stat_columns %}<td class="text-end">{{ p[col]|stat1 }}</td>{% endfor %}
+          <td class="text-end">{% if p.salary %}€{{ '%.1f'|format(p.salary) }}M{% else %}—{% endif %}</td>
+          <td class="text-end">{{ p.contract_years if p.contract_years is not none else '—' }}</td>
+          <td>
+            <div class="d-flex gap-xs justify-content-end flex-wrap">
+              {% if can_extend and extension_offers.get(p.id) %}
+              {% set ext = extension_offers[p.id] %}
+              <form method="post" action="{{ url_for('team_extend', player_id=p.id) }}" class="d-inline"
+                    title="Offer €{{ '%.1f'|format(ext.salary) }}M × {{ ext.years }}y (asks €{{ '%.1f'|format(ext.ask) }}M)">
+                <input type="hidden" name="salary" value="{{ ext.salary }}">
+                <input type="hidden" name="years" value="{{ ext.years }}">
+                <button class="btn-wec-ghost" type="submit">Extend</button>
+              </form>
+              {% endif %}
+              {% if can_reserve_moves and p.age and p.age <= max_reserve_age and roster_size > min_roster %}
+              <form method="post" action="{{ url_for('team_reserve_send', player_id=p.id) }}" class="d-inline">
+                <button class="btn-wec-ghost" type="submit" title="Move to development pool">Reserve</button>
+              </form>
+              {% endif %}
+              {% if can_release and roster_size > min_roster %}
+              <form method="post" action="{{ url_for('team_release', player_id=p.id) }}" class="d-inline"
+                    onsubmit="return confirm('Release {{ p.name }}?');">
+                <button class="btn-wec-danger" type="submit">Release</button>
+              </form>
+              {% endif %}
+            </div>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+{% if active_season %}
+<div class="row g-3">
+  <div class="col-lg-7">
+    <div class="card-wec">
+      <div class="card-wec-header"><h2>Development Pool ({{ reserve_roster|length }}/{{ max_reserve }})</h2></div>
+      <div class="card-wec-body">
+        {% if reserve_roster %}
+        <div class="table-responsive">
+          <table class="table-wec">
+            <thead><tr><th>Driver</th><th>Grade</th><th>OVR</th><th>Age</th><th></th></tr></thead>
+            <tbody>
+              {% for p in reserve_roster %}
+              <tr>
+                <td><strong>{{ p.name }}</strong></td>
+                <td><span class="grade-chip grade-{{ p.grade }}">{{ p.grade }}</span></td>
+                <td><span data-ovr="{{ p.overall|int if p.overall else 0 }}">{{ p.overall|round|int if p.overall else '—' }}</span></td>
+                <td>{{ p.age or '—' }}</td>
+                <td class="text-end">
+                  {% if can_reserve_moves and roster_size < max_roster %}
+                  <form method="post" action="{{ url_for('team_reserve_recall', player_id=p.id) }}" class="d-inline">
+                    <button class="btn-wec-ghost" type="submit">Promote</button>
+                  </form>
+                  {% endif %}
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+        {% else %}<p class="text-muted-wec mb-0">No development drivers. Move a driver aged {{ max_reserve_age }} or under here to nurture them — they develop faster.</p>{% endif %}
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-5">
+    <div class="card-wec">
+      <div class="card-wec-header"><h2>Expiring Contracts</h2></div>
+      <div class="card-wec-body">
+        {% if expiring_contracts %}
+        <ul class="list-unstyled mb-0">
+          {% for c in expiring_contracts %}
+          <li class="flex-between" style="padding:.35rem 0;border-bottom:1px solid var(--border);">
+            <span>{{ c.player_name }} <span class="text-dim-wec">({{ c.contract_years }}y left)</span></span>
+            <span class="text-muted-wec">asks €{{ '%.1f'|format(c.extension_ask) }}M</span>
+          </li>
+          {% endfor %}
+        </ul>
+        {% else %}<p class="text-muted-wec mb-0">No drivers in the final year of their deal.</p>{% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+{% endblock %}

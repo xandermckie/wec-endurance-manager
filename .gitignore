@@ -1,0 +1,13 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+.DS_Store
+data/*
+!data/grid.json
+!data/names.json
+!data/seasons/
+data/seasons/*
+!data/seasons/.gitkeep

@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-header"><h1>{{ team_name }}</h1><p>{{ record }} · {{ roster_size }} drivers · €{{ '%.1f'|format(finances.payroll) }}M / €{{ '%.0f'|format(finances.salary_cap) }}M</p></div>
+
+<div class="card-wec mb-3">
+  <div class="card-wec-header"><h2>Squad</h2></div>
+  <div class="table-responsive"><table class="table-wec">
+    <thead><tr><th>Driver</th><th>Grade</th><th>OVR</th><th>Salary</th><th></th></tr></thead>
+    <tbody>
+      {% for p in roster %}
+      <tr>
+        <td><strong>{{ p.name }}</strong></td>
+        <td><span class="grade-chip grade-{{ p.grade }}">{{ p.grade }}</span></td>
+        <td><span data-ovr="{{ p.overall|int if p.overall else 0 }}">{{ p.overall|round|int if p.overall else '—' }}</span></td>
+        <td>€{{ '%.1f'|format(p.salary or 0) }}M</td>
+        <td class="text-end">
+          <form method="post" class="d-inline"><input type="hidden" name="action" value="release"><input type="hidden" name="player_id" value="{{ p.id }}"><button class="btn-wec-danger" type="submit">Release</button></form>
+          <a class="btn-wec-ghost" href="{{ url_for('admin.admin_edit_player', player_id=p.id) }}">Edit</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table></div>
+</div>
+
+<div class="row g-3">
+  <div class="col-lg-6">
+    <div class="card-wec"><div class="card-wec-body">
+      <div class="section-title">Set Budget</div>
+      <form method="post" class="d-flex gap-sm mb-3">
+        <input type="hidden" name="action" value="set_cap">
+        <input class="form-control-wec" name="salary_cap" value="{{ finances.salary_cap }}" style="max-width:140px;">
+        <button class="btn-wec-primary" type="submit">Set</button>
+        <button class="btn-wec-secondary" type="submit" name="action" value="reset_cap">Reset</button>
+      </form>
+      <div class="section-title">Discount Salaries</div>
+      <form method="post" class="d-flex gap-sm">
+        <input type="hidden" name="action" value="discount_salaries">
+        <input class="form-control-wec" name="salary_pct" placeholder="% of pay (5-100)" style="max-width:160px;">
+        <button class="btn-wec-secondary" type="submit">Apply</button>
+      </form>
+    </div></div>
+  </div>
+  <div class="col-lg-6">
+    <div class="card-wec"><div class="card-wec-header"><h2>Add Free Agent</h2></div><div class="card-wec-body" style="max-height:360px;overflow:auto;">
+      {% for p in free_agents %}
+      <form method="post" class="flex-between" style="padding:.3rem 0;border-bottom:1px solid var(--border);">
+        <span>{{ p.name }} <span class="grade-chip grade-{{ p.grade }}">{{ p.grade }}</span> <span class="text-muted-wec">{{ p.overall|round|int if p.overall else '—' }}</span></span>
+        <input type="hidden" name="action" value="add_fa"><input type="hidden" name="player_id" value="{{ p.id }}">
+        <button class="btn-wec-ghost" type="submit">Add</button>
+      </form>
+      {% else %}<p class="text-muted-wec mb-0">No free agents.</p>{% endfor %}
+    </div></div>
+  </div>
+</div>
+<a class="btn-wec-secondary mt-3" href="{{ url_for('admin.admin_teams') }}">← All teams</a>
+{% endblock %}

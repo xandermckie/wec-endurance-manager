@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-header">
+  <h1>Young Driver Programme</h1>
+  <p>Recruit the next generation. Teams pick in reverse championship order.</p>
+</div>
+
+{% if phase == 'complete' %}
+<div class="card-wec"><div class="card-wec-body text-center py-5">
+  <h2 class="mb-3" style="font-family:'Rajdhani',sans-serif;text-transform:uppercase;">Open the Programme</h2>
+  <p class="text-muted-wec mb-4">Sign promising young drivers to your squad and development pool.</p>
+  <form method="post" action="{{ url_for('season_draft_start') }}"><button class="btn-wec-primary btn-wec-lg">Start the Programme</button></form>
+</div></div>
+
+{% elif phase == 'offseason' %}
+<div class="card-wec"><div class="card-wec-body text-center py-5">
+  <h2 class="mb-3" style="font-family:'Rajdhani',sans-serif;text-transform:uppercase;">Programme Complete</h2>
+  <p class="text-muted-wec mb-4">All young drivers are signed. Roll into the new season when ready.</p>
+  <form method="post" action="{{ url_for('season_advance') }}"><button class="btn-wec-primary btn-wec-lg">Advance to Next Season →</button></form>
+</div></div>
+
+{% else %}
+<div class="row g-3">
+  <div class="col-lg-8">
+    <div class="card-wec mb-3">
+      <div class="card-wec-header">
+        <h2>Pick #{{ (board.picks_made or 0) + 1 }} of {{ board.total_picks }} · {{ board.owner_team_name }}</h2>
+        <span class="badge-wec badge-wec-gray">{{ board.picks_made }}/{{ board.total_picks }} signed</span>
+      </div>
+      <div class="card-wec-body">
+        {% if board.is_user_turn %}
+        <form method="post" action="{{ url_for('season_draft_pick') }}">
+          <div class="row g-2 mb-3">
+            {% for prospect in board.prospect_options %}
+            <div class="col-md-6">
+              <label class="prospect-card">
+                <div class="flex-between">
+                  <input type="radio" name="prospect_index" value="{{ loop.index0 }}" {% if loop.first %}checked{% endif %}>
+                  <span data-ovr="{{ prospect.overall|int if prospect.overall else 0 }}">{{ prospect.overall|round|int if prospect.overall else '—' }}</span>
+                </div>
+                <div class="mt-2"><strong>{{ prospect.name }}</strong></div>
+                <div class="text-muted-wec" style="font-size:.8rem;">
+                  Age {{ prospect.age }} · <span class="grade-chip grade-{{ prospect.grade }}">{{ prospect.grade }}</span>
+                </div>
+                <div class="text-dim-wec" style="font-size:.78rem;">{{ prospect.upside_tier }}</div>
+              </label>
+            </div>
+            {% endfor %}
+          </div>
+          <div class="d-flex gap-sm flex-wrap">
+            <button class="btn-wec-primary" type="submit" {% if user_roster_size >= max_roster %}disabled{% endif %}>Sign Driver</button>
+          </div>
+        </form>
+        {% if user_roster_size >= max_roster %}<p class="text-muted-wec mt-2" style="font-size:.85rem;">Your squad is full ({{ max_roster }}). Pass or release a driver first.</p>{% endif %}
+        <div class="d-flex gap-sm flex-wrap mt-2">
+          <form method="post" action="{{ url_for('season_draft_skip') }}"><button class="btn-wec-ghost" type="submit">Pass</button></form>
+          <form method="post" action="{{ url_for('season_draft_sim') }}"><input type="hidden" name="mode" value="rest"><button class="btn-wec-secondary" type="submit">Sim Rest of Programme</button></form>
+        </div>
+        {% else %}
+        <p class="text-muted-wec">It's {{ board.owner_team_name }}'s pick.</p>
+        <form method="post" action="{{ url_for('season_draft_sim') }}"><input type="hidden" name="mode" value="to_user"><button class="btn-wec-primary" type="submit">Sim to My Pick</button></form>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="card-wec">
+      <div class="card-wec-header"><h2>Recent Signings</h2></div>
+      <div class="card-wec-body">
+        {% if board.recent_picks %}
+        <ul class="list-unstyled mb-0" style="font-size:.84rem;">
+          {% for pick in board.recent_picks %}
+          <li class="text-muted-wec" style="padding:.25rem 0;border-bottom:1px solid var(--border);">
+            #{{ pick.pick_number }} {{ pick.team_name }} — <strong style="color:var(--text);">{{ pick.player_name }}</strong>{% if pick.overall %} ({{ pick.overall|round|int }}){% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+        {% else %}<p class="text-muted-wec mb-0">No signings yet.</p>{% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+{% endblock %}

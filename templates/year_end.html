@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block content %}
+{% if not report %}
+<div class="alert-wec">The Season Review is not available yet.</div>
+{% else %}
+<div class="magazine-wrap">
+  <div class="magazine-masthead">
+    <p class="magazine-tagline">The Paddock Post · Season Edition</p>
+    <h1 class="magazine-title">{{ report.season_year }} Season Review</h1>
+  </div>
+
+  {% if report.champions %}
+  <div class="magazine-banner">
+    <span class="magazine-banner-label">World Champions</span>
+    {% for cls, champ in report.champions.items() %}
+    <span class="magazine-banner-team">{{ cls }}: {{ champ.team_name }}</span>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <div class="magazine-columns">
+    <div>
+      <div class="magazine-section-title">Major Awards</div>
+      {% for award in report.awards %}
+      <div class="award-card">
+        <p class="award-name">{{ award.title }}</p>
+        <div class="award-winner">{{ award.winner.name }}</div>
+        <div class="award-team">{{ award.winner.team_name }}{% if award.winner.grade %} · {{ award.winner.grade }}{% endif %}{% if award.winner.line %} · {{ award.winner.line }}{% endif %}</div>
+        {% if award.runners_up %}
+        <div class="award-runners">Runners-up: {% for r in award.runners_up %}{{ r.name }}{% if not loop.last %}, {% endif %}{% endfor %}</div>
+        {% endif %}
+      </div>
+      {% endfor %}
+      {% if report.principal_of_year %}
+      <div class="award-card">
+        <p class="award-name">Principal of the Year</p>
+        <div class="award-winner">{{ report.principal_of_year.team_name }}</div>
+        <div class="award-team">{{ report.principal_of_year.record }} · {{ report.principal_of_year.note }}</div>
+      </div>
+      {% endif %}
+    </div>
+    <div>
+      <div class="magazine-section-title">Statistical Leaders</div>
+      {% for key, block in report.stat_leaders.items() %}
+      <div class="mb-3">
+        <p class="award-name">{{ block.label }}</p>
+        <ol style="margin:0;padding-left:1.1rem;font-size:.85rem;">
+          {% for leader in block.leaders %}
+          <li class="{% if leader.team_id == user_team_id %}text-accent2{% endif %}">{{ leader.name }} <span class="text-muted-wec">— {{ '%.1f'|format(leader.value) }} ({{ leader.team_name }})</span></li>
+          {% endfor %}
+        </ol>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="magazine-section-title">Team of the Season</div>
+  <div class="magazine-columns mb-3">
+    <ul class="list-unstyled" style="font-size:.88rem;">
+      {% for p in report.team_of_season %}
+      <li style="padding:.3rem 0;border-bottom:1px solid var(--border);">
+        <strong>{{ p.name }}</strong> <span class="grade-chip grade-{{ p.grade }}">{{ p.grade }}</span>
+        <span class="text-muted-wec">— {{ p.team_name }} ({{ p.overall|round|int if p.overall else '—' }} OVR)</span>
+      </li>
+      {% endfor %}
+    </ul>
+    <div>
+      <div class="magazine-section-title">Final Standings</div>
+      {% for cls, rows in report.standings_by_class.items() %}
+      <p class="award-name mt-2">{{ cls }}</p>
+      <ol style="margin:0;padding-left:1.1rem;font-size:.83rem;">
+        {% for row in rows[:5] %}<li>{{ row.team_name }} <span class="text-muted-wec">— {{ row.points }} pts</span></li>{% endfor %}
+      </ol>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="text-center mt-4 d-flex gap-sm justify-content-center">
+    <a href="{{ url_for('season_hub') }}" class="btn-wec-secondary">Back to Season</a>
+    {% if season.phase in ['complete','draft'] %}<a href="{{ url_for('season_draft') }}" class="btn-wec-primary">Young Driver Programme →</a>{% endif %}
+  </div>
+</div>
+{% endif %}
+{% endblock %}

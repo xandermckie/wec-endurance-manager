@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-header">
+  <h1>{{ team_name }}{% include "_championship_badge.html" %}</h1>
+  <p>
+    {% if team_class_name %}<span class="class-chip class-{{ team_class_name }}">{{ team_class_name }}</span>{% endif %}
+    Team Principal's dashboard
+  </p>
+</div>
+
+<div class="row g-3 mb-4">
+  <div class="col-6 col-lg-3">
+    <div class="stat-card">
+      <div class="stat-card-label">Squad Rating</div>
+      <div class="stat-card-value">{{ team_overall|round|int if team_overall else '—' }}</div>
+      <div class="stat-card-sub">{% if team_rank %}#{{ team_rank }} on the grid{% else %}—{% endif %}</div>
+    </div>
+  </div>
+  <div class="col-6 col-lg-3">
+    <div class="stat-card green-accent">
+      <div class="stat-card-label">Drivers</div>
+      <div class="stat-card-value">{{ roster_size }}</div>
+      <div class="stat-card-sub">of {{ max_roster }} max</div>
+    </div>
+  </div>
+  <div class="col-6 col-lg-3">
+    <div class="stat-card gold-accent">
+      <div class="stat-card-label">Budget Used</div>
+      <div class="stat-card-value">{% if team_finances %}€{{ '%.0f'|format(team_finances.payroll) }}M{% else %}—{% endif %}</div>
+      <div class="stat-card-sub">{% if team_finances %}€{{ '%.1f'|format(team_finances.cap_space) }}M free of €{{ '%.0f'|format(team_finances.salary_cap) }}M{% endif %}</div>
+    </div>
+  </div>
+  <div class="col-6 col-lg-3">
+    <div class="stat-card">
+      <div class="stat-card-label">Titles</div>
+      <div class="stat-card-value">{{ user_championships }}</div>
+      <div class="stat-card-sub">championships won</div>
+    </div>
+  </div>
+</div>
+
+<div class="row g-3">
+  <div class="col-lg-7">
+    <div class="card-wec">
+      <div class="card-wec-header"><h2>Lead Drivers</h2><a class="btn-wec-ghost" href="{{ url_for('team') }}">Manage Squad</a></div>
+      <div class="card-wec-body">
+        {% if top_players %}
+        <div class="d-flex flex-column gap-sm">
+          {% for p in top_players %}
+          <div class="flex-between" style="padding:.4rem 0;border-bottom:1px solid var(--border);">
+            <div>
+              <strong>{{ p.name }}</strong>
+              <span class="grade-chip grade-{{ p.grade }} ms-1">{{ p.grade }}</span>
+              <div class="text-dim-wec" style="font-size:.78rem;">Age {{ p.age or '—' }} · {{ p.ppr|stat1 }} pts/round</div>
+            </div>
+            <span data-ovr="{{ p.overall|int if p.overall else 0 }}">{{ p.overall|round|int if p.overall else '—' }}</span>
+          </div>
+          {% endfor %}
+        </div>
+        {% else %}<p class="text-muted-wec mb-0">No drivers yet.</p>{% endif %}
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-5">
+    <div class="card-wec">
+      <div class="card-wec-header"><h2>Race Control</h2></div>
+      <div class="card-wec-body d-flex flex-column gap-sm">
+        {% if active_season %}
+        <a href="{{ url_for('season_hub') }}" class="btn-wec-primary w-full">Go to Season</a>
+        <a href="{{ url_for('free_agency') }}" class="btn-wec-secondary w-full">Driver Market</a>
+        <a href="{{ url_for('trade') }}" class="btn-wec-secondary w-full">Transfer Market</a>
+        {% else %}
+        <p class="text-muted-wec">No season in progress.</p>
+        <form method="post" action="{{ url_for('season_start') }}"><button class="btn-wec-primary w-full">Start the Season</button></form>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

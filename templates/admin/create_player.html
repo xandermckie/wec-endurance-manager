@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-header"><h1>Create Driver</h1></div>
+<form method="post" class="card-wec"><div class="card-wec-body">
+  <div class="row g-3">
+    <div class="col-md-6"><label class="section-title">Name</label><input class="form-control-wec" name="name" placeholder="Custom Driver"></div>
+    <div class="col-md-2"><label class="section-title">Age</label><input class="form-control-wec" name="age" value="20"></div>
+    <div class="col-md-2"><label class="section-title">Overall</label><input class="form-control-wec" name="overall" value="60"></div>
+    <div class="col-md-2"><label class="section-title">Grade</label>
+      <select class="form-select-wec" name="grade">{% for g in grades %}<option value="{{ g }}">{{ g }}</option>{% endfor %}</select>
+    </div>
+    <div class="col-md-3"><label class="section-title">Potential</label><input class="form-control-wec" name="potential"></div>
+    <div class="col-md-9"><label class="section-title">Destination</label>
+      <select class="form-select-wec" name="destination" id="dest">
+        <option value="draft">Young-driver pool / Free agent</option>
+        <option value="team">Assign to team</option>
+      </select>
+    </div>
+    <div class="col-md-12" id="team-select" style="display:none;"><label class="section-title">Team</label>
+      <select class="form-select-wec" name="team_id">
+        {% for t in teams %}<option value="{{ t.team_id }}">{{ t.team_name }}</option>{% endfor %}
+      </select>
+    </div>
+  </div>
+  <div class="section-title mt-4">Attributes (optional)</div>
+  <div class="row g-2">
+    {% for key in attribute_keys %}
+    <div class="col-md-4 col-lg-2"><label class="section-title">{{ key|replace('_',' ')|title }}</label><input class="form-control-wec" name="attr_{{ key }}"></div>
+    {% endfor %}
+  </div>
+  <div class="mt-3 d-flex gap-sm">
+    <button class="btn-wec-primary" type="submit">Create</button>
+    <a class="btn-wec-secondary" href="{{ url_for('admin.admin_players') }}">Back</a>
+  </div>
+</div></form>
+<script>
+document.getElementById('dest').addEventListener('change', function () {
+  document.getElementById('team-select').style.display = this.value === 'team' ? 'block' : 'none';
+});
+</script>
+{% endblock %}

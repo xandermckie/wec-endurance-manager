@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="hero-section">
+  <p class="hero-eyebrow">FIA World Endurance Championship</p>
+  <h1 class="display-hero mb-3">Run Your<br>Endurance Team</h1>
+  <p class="text-muted-wec mb-4" style="max-width:560px;">
+    Take the pit wall as Team Principal. Sign drivers, manage your budget, race the eight-round WEC
+    calendar from Qatar to the Bahrain finale, and chase the Hypercar and LMGT3 crowns.
+  </p>
+  <div class="hero-cta-card">
+    <h2 class="mb-2" style="font-family:'Rajdhani',sans-serif;text-transform:uppercase;">Start a Career</h2>
+    <p class="text-muted-wec mb-4" style="font-size:.9rem;">Pick your team and difficulty, then build a title contender.</p>
+    <div class="d-flex flex-column gap-sm">
+      <a href="{{ url_for('choose_team') }}" class="btn-wec-primary btn-wec-lg w-full">Choose Your Team</a>
+      <form method="post" action="{{ url_for('start') }}" class="w-full">
+        <button type="submit" class="btn-wec-secondary w-full">Surprise Me</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

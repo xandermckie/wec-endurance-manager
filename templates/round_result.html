@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-header">
+  <h1>{{ round.name }}</h1>
+  <p>Round {{ round.round }} · {{ round.circuit }} · {{ round.format }}
+    {% if round.marquee %}<span class="badge-wec badge-wec-gray ms-1">Marquee</span>{% endif %}
+    {% if round.finale %}<span class="badge-wec badge-wec-red ms-1">Finale</span>{% endif %}
+    {% if round.points_mult and round.points_mult != 1.0 %}<span class="badge-wec badge-wec-green ms-1">{{ round.points_mult }}× points</span>{% endif %}
+  </p>
+</div>
+
+<a class="btn-wec-ghost mb-3" href="{{ url_for('season_hub') }}">← Back to season</a>
+
+{% for cls in classes %}
+{% set rows = round.results.get(cls) %}
+{% if rows %}
+<div class="card-wec mb-4">
+  <div class="card-wec-header"><h2>{{ cls }} Classification</h2></div>
+  <div class="table-responsive">
+    <table class="table-wec">
+      <thead><tr><th>Pos</th><th>Grid</th><th>Team</th><th>Crew</th><th class="text-end">Pts</th><th></th></tr></thead>
+      <tbody>
+        {% for row in rows %}
+        <tr class="{% if row.team_id == user_team_id %}user-row{% endif %}">
+          <td class="result-pos {% if row.status == 'DNF' %}result-dnf{% elif row.position == 1 %}result-p1{% endif %}">
+            {% if row.status == 'DNF' %}DNF{% else %}{{ row.position }}{% endif %}
+          </td>
+          <td class="text-muted-wec">P{{ row.grid }}</td>
+          <td>{{ row.team_name }}{% if row.team_id == user_team_id %} <span class="badge-wec badge-you">YOU</span>{% endif %}</td>
+          <td class="text-muted-wec" style="font-size:.8rem;">{% for c in row.crew %}{{ c.name }}{% if not loop.last %}, {% endif %}{% endfor %}</td>
+          <td class="text-end"><strong>{{ row.points }}</strong></td>
+          <td>{% if row.pole %}<span class="badge-wec badge-wec-gray" title="Pole position">P</span>{% endif %}{% if row.fastest_lap %}<span class="badge-wec badge-wec-green ms-1" title="Fastest lap">FL</span>{% endif %}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endif %}
+{% endfor %}
+{% endblock %}

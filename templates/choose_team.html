@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-header">
+  <h1>Choose Your Team</h1>
+  <p>Pick a Hypercar or LMGT3 entry. Each is a single car with a driver crew.</p>
+</div>
+
+<form method="post" action="{{ url_for('start_pick') }}" id="pick-form">
+  <input type="hidden" name="team_id" id="team_id_input">
+
+  <div class="card-wec mb-4">
+    <div class="card-wec-body">
+      <div class="section-title">Difficulty</div>
+      <div class="difficulty-options">
+        {% for level in difficulty_levels %}
+        <label class="difficulty-option {% if level == 'normal' %}difficulty-option-active{% endif %}" data-difficulty="{{ level }}">
+          <input type="radio" name="difficulty" value="{{ level }}" {% if level == 'normal' %}checked{% endif %}>
+          <span class="difficulty-option-label">{{ difficulty_labels[level] }}</span>
+          <span class="difficulty-option-desc">{{ difficulty_descriptions[level] }}</span>
+        </label>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  {% for cls in classes %}
+  <div class="section-title">{{ cls }}</div>
+  <div class="team-picker-grid mb-4">
+    {% for team in teams if team.class == cls %}
+    <button type="button" class="team-picker-card" data-team-id="{{ team.id }}">
+      <span class="team-picker-number">#{{ team.number }}</span>
+      <span class="team-picker-name">{{ team.name }}</span>
+      <span class="team-picker-car">{{ team.car }}</span>
+    </button>
+    {% endfor %}
+  </div>
+  {% endfor %}
+</form>
+
+<script>
+document.querySelectorAll('.difficulty-option').forEach(function (opt) {
+  opt.addEventListener('click', function () {
+    document.querySelectorAll('.difficulty-option').forEach(function (o) { o.classList.remove('difficulty-option-active'); });
+    opt.classList.add('difficulty-option-active');
+    opt.querySelector('input').checked = true;
+  });
+});
+document.querySelectorAll('.team-picker-card').forEach(function (card) {
+  card.addEventListener('click', function () {
+    document.getElementById('team_id_input').value = card.dataset.teamId;
+    document.getElementById('pick-form').submit();
+  });
+});
+</script>
+{% endblock %}

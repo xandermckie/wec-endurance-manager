@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-header">
+  <h1>Transfer Market</h1>
+  <p>{{ trade_message }}</p>
+</div>
+
+{% if not can_trade %}
+<div class="alert-wec alert-wec-warning mb-3">The transfer window is currently closed.</div>
+{% endif %}
+
+<form method="get" action="{{ url_for('trade') }}" class="mb-3 d-flex gap-sm align-items-center flex-wrap">
+  <label class="section-title mb-0">Negotiate with</label>
+  <select class="form-select-wec" name="partner" style="max-width:340px;" onchange="this.form.submit()">
+    <option value="">Select a team…</option>
+    {% for t in teams %}
+    <option value="{{ t.team_id }}" {% if partner_id == t.team_id %}selected{% endif %}>{{ t.team_name }} ({{ t.class }})</option>
+    {% endfor %}
+  </select>
+</form>
+
+{% if partner_id %}
+<form method="post" action="{{ url_for('trade_propose') }}" id="trade-form">
+  <input type="hidden" name="partner_id" value="{{ partner_id }}">
+  <div class="row g-3">
+    <div class="col-lg-6">
+      <div class="card-wec">
+        <div class="card-wec-header"><h2>You send</h2></div>
+        <div>
+          {% for p in user_roster %}
+          <label class="check-list-item">
+            <span><input type="checkbox" name="outgoing_players" value="{{ p.id }}" class="trade-cb"> {{ p.name }}
+              <span class="grade-chip grade-{{ p.grade }}">{{ p.grade }}</span></span>
+            <span data-ovr="{{ p.overall|int if p.overall else 0 }}">{{ p.overall|round|int if p.overall else '—' }}</span>
+          </label>
+          {% endfor %}
+          {% for pick in user_picks %}
+          <label class="check-list-item">
+            <span><input type="checkbox" name="outgoing_picks" value="{{ pick.id }}" class="trade-cb"> {{ pick.year }} Round {{ pick.round }} slot</span>
+            <span class="badge-wec badge-wec-gray">Pick</span>
+          </label>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="card-wec">
+        <div class="card-wec-header"><h2>{{ partner_name }} sends {% if partner_gm %}<span class="badge-wec badge-wec-gray">{{ partner_gm }}</span>{% endif %}</h2></div>
+        <div>
+          {% for p in partner_roster %}
+          <label class="check-list-item">
+            <span><input type="checkbox" name="incoming_players" value="{{ p.id }}" class="trade-cb"> {{ p.name }}
+              <span class="grade-chip grade-{{ p.grade }}">{{ p.grade }}</span></span>
+            <span data-ovr="{{ p.overall|int if p.overall else 0 }}">{{ p.overall|round|int if p.overall else '—' }}</span>
+          </label>
+          {% endfor %}
+          {% for pick in partner_picks %}
+          <label class="check-list-item">
+            <span><input type="checkbox" name="incoming_picks" value="{{ pick.id }}" class="trade-cb"> {{ pick.year }} Round {{ pick.round }} slot</span>
+            <span class="badge-wec badge-wec-gray">Pick</span>
+          </label>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-wec mt-3">
+    <div class="card-wec-body">
+      <div class="flex-between mb-2">
+        <strong id="meter-label">Select assets to preview</strong>
+        <span id="meter-net" class="text-muted-wec"></span>
+      </div>
+      <div class="progress-wec mb-3"><div class="progress-wec-bar" id="meter-bar" style="width:50%"></div></div>
+      <button type="submit" class="btn-wec-primary" {% if not can_trade %}disabled{% endif %}>Propose Transfer</button>
+    </div>
+  </div>
+</form>
+{% else %}
+<div class="card-wec"><div class="card-wec-body text-muted-wec">Select a team above to start negotiating.</div></div>
+{% endif %}
+
+{% if trades %}
+<div class="card-wec mt-4">
+  <div class="card-wec-header"><h2>Recent Transfers</h2></div>
+  <div class="card-wec-body">
+    <ul class="list-unstyled mb-0" style="font-size:.85rem;">
+      {% for t in trades|reverse %}
+      <li class="text-muted-wec" style="padding:.25rem 0;">{{ t.incoming_players|length }} in / {{ t.outgoing_players|length }} out{% if t.partner_released %} · partner released {{ t.partner_released|join(', ') }}{% endif %}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endif %}
+
+{% block scripts %}
+<script>
+(function () {
+  var form = document.getElementById('trade-form');
+  if (!form) return;
+  var partnerId = "{{ partner_id }}";
+  function collect(name) { return Array.from(form.querySelectorAll('input[name="' + name + '"]:checked')).map(function (c) { return c.value; }); }
+  function update() {
+    document.querySelectorAll('.check-list-item').forEach(function (item) {
+      var cb = item.querySelector('input'); item.classList.toggle('checked', cb && cb.checked);
+    });
+    fetch("{{ url_for('trade_evaluate') }}", {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        partner_id: partnerId,
+        outgoing_players: collect('outgoing_players'), outgoing_picks: collect('outgoing_picks'),
+        incoming_players: collect('incoming_players'), incoming_picks: collect('incoming_picks'),
+      })
+    }).then(function (r) { return r.json(); }).then(function (d) {
+      if (d.error) return;
+      document.getElementById('meter-label').textContent = d.label;
+      document.getElementById('meter-bar').style.width = d.meter + '%';
+      document.getElementById('meter-net').textContent = d.has_assets ? ('partner net ' + d.partner_net) : '';
+    }).catch(function () {});
+  }
+  form.querySelectorAll('.trade-cb').forEach(function (cb) { cb.addEventListener('change', update); });
+})();
+</script>
+{% endblock %}
+{% endblock %}

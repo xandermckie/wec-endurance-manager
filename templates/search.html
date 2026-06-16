@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-header">
+  <h1>Browse the Grid</h1>
+  <p>Explore drivers and teams across both classes.</p>
+</div>
+
+{% if refreshed %}<div class="alert-wec alert-wec-success mb-3">Grid data refreshed.</div>{% endif %}
+{% if stale %}<div class="alert-wec alert-wec-warning mb-3">Could not refresh; showing cached grid.</div>{% endif %}
+
+<div class="d-flex gap-sm mb-3 flex-wrap">
+  <a class="btn-wec-ghost {% if view == 'drivers' %}sort-active{% endif %}" href="{{ make_search_url(view='drivers') }}">Drivers</a>
+  <a class="btn-wec-ghost {% if view == 'teams' %}sort-active{% endif %}" href="{{ make_search_url(view='teams') }}">Teams</a>
+</div>
+
+<form method="get" action="{{ url_for('search') }}" class="mb-3 d-flex gap-sm">
+  <input type="hidden" name="view" value="{{ view }}">
+  <input class="form-control-wec" type="text" name="q" value="{{ q }}" placeholder="Search {{ view }}…" style="max-width:340px;">
+  <button class="btn-wec-primary" type="submit">Search</button>
+  <a class="btn-wec-secondary" href="{{ url_for('refresh') }}">Refresh Grid</a>
+</form>
+
+{% if view == 'teams' %}
+<div class="card-wec">
+  <div class="table-responsive">
+    <table class="table-wec">
+      <thead><tr><th>Team</th><th>Class</th><th>Rating</th><th>Drivers</th><th>Top Driver</th></tr></thead>
+      <tbody>
+        {% for t in teams %}
+        <tr class="{% if t.team_id == user_team_id %}user-row{% endif %}">
+          <td><a href="{{ make_search_url(view='roster', team_id=t.team_id) }}" style="text-decoration:none;color:var(--text);"><strong>{{ t.team }}</strong></a></td>
+          <td><span class="class-chip class-{{ t.class }}">{{ t.class }}</span></td>
+          <td><span data-ovr="{{ t.overall|int if t.overall else 0 }}">{{ t.overall|round|int if t.overall else '—' }}</span></td>
+          <td>{{ t.roster_size }}</td>
+          <td class="text-muted-wec">{{ t.top_player_name or '—' }}{% if t.top_player_overall %} ({{ t.top_player_overall|round|int }}){% endif %}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+{% elif view == 'roster' %}
+<div class="flex-between mb-2">
+  <h2 style="font-family:'Rajdhani',sans-serif;text-transform:uppercase;">{{ roster_team_name }}
+    {% if roster_team_class %}<span class="class-chip class-{{ roster_team_class }}">{{ roster_team_class }}</span>{% endif %}</h2>
+  <a class="btn-wec-ghost" href="{{ make_search_url(view='teams') }}">← All teams</a>
+</div>
+<div class="card-wec">
+  <div class="table-responsive">
+    <table class="table-wec">
+      <thead><tr><th>Driver</th><th>Grade</th><th>OVR</th><th>Age</th>{% for col in stat_columns %}<th class="text-end">{{ stat_labels[col] }}</th>{% endfor %}</tr></thead>
+      <tbody>
+        {% for p in roster %}
+        <tr>
+          <td><strong>{{ p.name }}</strong></td>
+          <td><span class="grade-chip grade-{{ p.grade }}">{{ p.grade }}</span></td>
+          <td><span data-ovr="{{ p.overall|int if p.overall else 0 }}">{{ p.overall|round|int if p.overall else '—' }}</span></td>
+          <td>{{ p.age or '—' }}</td>
+          {% for col in stat_columns %}<td class="text-end">{{ p[col]|stat1 }}</td>{% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+{% else %}
+<div class="card-wec">
+  <div class="table-responsive">
+    <table class="table-wec">
+      <thead>
+        <tr>
+          <th><a href="{{ make_search_url(sort='name', order=next_order('name', sort, order)) }}">Driver</a></th>
+          <th><a href="{{ make_search_url(sort='team', order=next_order('team', sort, order)) }}">Team</a></th>
+          <th>Grade</th>
+          <th><a href="{{ make_search_url(sort='overall', order=next_order('overall', sort, order)) }}">OVR</a></th>
+          {% for col in stat_columns %}<th class="text-end"><a href="{{ make_search_url(sort=col, order=next_order(col, sort, order)) }}">{{ stat_labels[col] }}</a></th>{% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for p in players %}
+        <tr class="{% if p.team_id == user_team_id %}user-row{% endif %}">
+          <td><strong>{{ p.name }}</strong></td>
+          <td class="text-muted-wec">{{ p.team }}</td>
+          <td><span class="grade-chip grade-{{ p.grade }}">{{ p.grade }}</span></td>
+          <td><span data-ovr="{{ p.overall|int if p.overall else 0 }}">{{ p.overall|round|int if p.overall else '—' }}</span></td>
+          {% for col in stat_columns %}<td class="text-end">{{ p[col]|stat1 }}</td>{% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endif %}
+{% endblock %}
