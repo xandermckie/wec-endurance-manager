@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" fill="none">
+  <rect x="20" y="10" width="80" height="20" rx="2" fill="#0A2342"/>
+  <path fill="#C4A35A" d="M60 12l8 8-8 8-8-8z"/>
+  <text x="60" y="35" text-anchor="middle" fill="#C4A35A" font-family="Arial,sans-serif" font-size="7" font-weight="700">CADILLAC</text>
+</svg>

@@ -11,6 +11,8 @@ driver categorisation and acts as the game's "position".
 
 import random
 
+from assets import logo_slug_from_car
+
 CLASSES = ("Hypercar", "LMGT3")
 
 DRIVER_GRADES = ("Platinum", "Gold", "Silver", "Bronze")
@@ -18,21 +20,29 @@ DRIVER_GRADES = ("Platinum", "Gold", "Silver", "Bronze")
 # ── Race calendar (2025 WEC, eight rounds) ──────────────────────────────────
 CALENDAR = [
     {"round": 1, "name": "Qatar 1812 km", "circuit": "Lusail International Circuit",
-     "country": "Qatar", "format": "1812 km", "marquee": False, "finale": False, "points_mult": 1.0},
+     "country": "Qatar", "flag_code": "qa", "circuit_slug": "lusail",
+     "format": "1812 km", "marquee": False, "finale": False, "points_mult": 1.0},
     {"round": 2, "name": "6 Hours of Imola", "circuit": "Autodromo di Imola",
-     "country": "Italy", "format": "6 Hours", "marquee": False, "finale": False, "points_mult": 1.0},
+     "country": "Italy", "flag_code": "it", "circuit_slug": "imola",
+     "format": "6 Hours", "marquee": False, "finale": False, "points_mult": 1.0},
     {"round": 3, "name": "6 Hours of Spa-Francorchamps", "circuit": "Circuit de Spa-Francorchamps",
-     "country": "Belgium", "format": "6 Hours", "marquee": False, "finale": False, "points_mult": 1.0},
+     "country": "Belgium", "flag_code": "be", "circuit_slug": "spa",
+     "format": "6 Hours", "marquee": False, "finale": False, "points_mult": 1.0},
     {"round": 4, "name": "24 Hours of Le Mans", "circuit": "Circuit de la Sarthe",
-     "country": "France", "format": "24 Hours", "marquee": True, "finale": False, "points_mult": 2.0},
+     "country": "France", "flag_code": "fr", "circuit_slug": "lemans",
+     "format": "24 Hours", "marquee": True, "finale": False, "points_mult": 2.0},
     {"round": 5, "name": "6 Hours of São Paulo", "circuit": "Autódromo José Carlos Pace",
-     "country": "Brazil", "format": "6 Hours", "marquee": False, "finale": False, "points_mult": 1.0},
+     "country": "Brazil", "flag_code": "br", "circuit_slug": "interlagos",
+     "format": "6 Hours", "marquee": False, "finale": False, "points_mult": 1.0},
     {"round": 6, "name": "Lone Star Le Mans", "circuit": "Circuit of the Americas",
-     "country": "United States", "format": "6 Hours", "marquee": False, "finale": False, "points_mult": 1.0},
+     "country": "United States", "flag_code": "us", "circuit_slug": "cota",
+     "format": "6 Hours", "marquee": False, "finale": False, "points_mult": 1.0},
     {"round": 7, "name": "6 Hours of Fuji", "circuit": "Fuji Speedway",
-     "country": "Japan", "format": "6 Hours", "marquee": False, "finale": False, "points_mult": 1.0},
+     "country": "Japan", "flag_code": "jp", "circuit_slug": "fuji",
+     "format": "6 Hours", "marquee": False, "finale": False, "points_mult": 1.0},
     {"round": 8, "name": "8 Hours of Bahrain", "circuit": "Bahrain International Circuit",
-     "country": "Bahrain", "format": "8 Hours", "marquee": True, "finale": True, "points_mult": 1.5},
+     "country": "Bahrain", "flag_code": "bh", "circuit_slug": "bahrain",
+     "format": "8 Hours", "marquee": True, "finale": True, "points_mult": 1.5},
 ]
 
 CURRENT_SEASON = 2025
@@ -177,6 +187,7 @@ def _build_team(team, class_name, team_id, rng):
         "car": team["car"],
         "class": class_name,
         "strength": team["strength"],
+        "logo_slug": logo_slug_from_car(team["car"]),
     }
     return record
 

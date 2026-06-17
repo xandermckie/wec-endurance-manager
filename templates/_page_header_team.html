@@ -1,0 +1,10 @@
+{% from '_team_logo.html' import team_logo with context %}
+<div class="page-header page-header-with-logo">
+  <div class="page-header-logo">
+    {{ team_logo(team_id, 'lg') }}
+  </div>
+  <div class="page-header-text">
+    <h1>{{ title }}{% include "_championship_badge.html" %}</h1>
+    {% if subtitle %}<p>{{ subtitle }}</p>{% endif %}
+  </div>
+</div>

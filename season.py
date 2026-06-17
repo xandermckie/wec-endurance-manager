@@ -224,6 +224,8 @@ def generate_schedule():
                 "name": round_info["name"],
                 "circuit": round_info["circuit"],
                 "country": round_info["country"],
+                "flag_code": round_info.get("flag_code", ""),
+                "circuit_slug": round_info.get("circuit_slug", ""),
                 "format": fmt,
                 "marquee": round_info.get("marquee", False),
                 "finale": round_info.get("finale", False),

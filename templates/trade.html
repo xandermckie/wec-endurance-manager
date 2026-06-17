@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from '_team_logo.html' import team_logo with context %}
 {% block content %}
 <div class="page-header">
   <h1>Transfer Market</h1>
@@ -45,7 +46,9 @@
     </div>
     <div class="col-lg-6">
       <div class="card-wec">
-        <div class="card-wec-header"><h2>{{ partner_name }} sends {% if partner_gm %}<span class="badge-wec badge-wec-gray">{{ partner_gm }}</span>{% endif %}</h2></div>
+        <div class="card-wec-header">
+          <h2 class="table-team-cell">{{ team_logo(partner_id, 'sm') }}<span>{{ partner_name }} sends {% if partner_gm %}<span class="badge-wec badge-wec-gray">{{ partner_gm }}</span>{% endif %}</span></h2>
+        </div>
         <div>
           {% for p in partner_roster %}
           <label class="check-list-item">

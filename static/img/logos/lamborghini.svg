@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" fill="none">
+  <path fill="#DDB321" d="M60 8l28 12v12H32V20z"/>
+  <path fill="#000" d="M52 18h16v4H52z"/>
+  <text x="60" y="36" text-anchor="middle" fill="#DDB321" font-family="Arial,sans-serif" font-size="7" font-weight="700">LAMBORGHINI</text>
+</svg>

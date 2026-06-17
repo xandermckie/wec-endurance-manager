@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" fill="none">
+  <circle cx="60" cy="20" r="16" fill="#00D2BE"/>
+  <path fill="#1a1a1a" d="M60 8l12 20H48zm0 0L48 28h24z"/>
+  <text x="60" y="36" text-anchor="middle" fill="#00D2BE" font-family="Arial,sans-serif" font-size="6" font-weight="700">MERCEDES</text>
+</svg>

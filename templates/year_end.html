@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from '_team_logo.html' import team_logo with context %}
 {% block content %}
 {% if not report %}
 <div class="alert-wec">The Season Review is not available yet.</div>
@@ -13,7 +14,10 @@
   <div class="magazine-banner">
     <span class="magazine-banner-label">World Champions</span>
     {% for cls, champ in report.champions.items() %}
-    <span class="magazine-banner-team">{{ cls }}: {{ champ.team_name }}</span>
+    <span class="magazine-banner-team table-team-cell">
+      {{ team_logo(champ.team_id, 'md') }}
+      <span>{{ cls }}: {{ champ.team_name }}</span>
+    </span>
     {% endfor %}
   </div>
   {% endif %}

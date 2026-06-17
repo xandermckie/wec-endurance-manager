@@ -1,13 +1,17 @@
 {% extends "base.html" %}
+{% from '_team_logo.html' import team_logo with context %}
 {% block content %}
-<div class="page-header">
-  <h1>{{ team_name }}{% include "_championship_badge.html" %}</h1>
-  <p>
-    {% if team_class_name %}<span class="class-chip class-{{ team_class_name }}">{{ team_class_name }}</span>{% endif %}
-    Squad rating {{ team_overall|round|int if team_overall else '—' }} ·
-    {{ roster_size }}/{{ max_roster }} drivers
-    {% if team_finances %} · €{{ '%.1f'|format(team_finances.payroll) }}M / €{{ '%.0f'|format(team_finances.salary_cap) }}M budget{% endif %}
-  </p>
+<div class="page-header page-header-with-logo">
+  <div class="page-header-logo">{{ team_logo(user_team_id, 'lg') }}</div>
+  <div class="page-header-text">
+    <h1>{{ team_name }}{% include "_championship_badge.html" %}</h1>
+    <p>
+      {% if team_class_name %}<span class="class-chip class-{{ team_class_name }}">{{ team_class_name }}</span>{% endif %}
+      Squad rating {{ team_overall|round|int if team_overall else '—' }} ·
+      {{ roster_size }}/{{ max_roster }} drivers
+      {% if team_finances %} · €{{ '%.1f'|format(team_finances.payroll) }}M / €{{ '%.0f'|format(team_finances.salary_cap) }}M budget{% endif %}
+    </p>
+  </div>
 </div>
 
 {% if not active_season %}

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" fill="none">
+  <rect x="28" y="10" width="64" height="20" rx="3" fill="#F2BC18"/>
+  <path fill="#000" d="M44 14h32v2H44zm0 6h32v2H44zm0 6h32v2H44z"/>
+  <text x="60" y="36" text-anchor="middle" fill="#F2BC18" font-family="Arial,sans-serif" font-size="7" font-weight="700">CHEVROLET</text>
+</svg>

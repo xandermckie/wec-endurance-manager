@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" fill="none">
+  <path fill="#DC0000" d="M18 8h84v24H18z"/>
+  <path fill="#FFF200" d="M58 12c-4 0-7 3-7 7s3 7 7 7 7-3 7-7-3-7-7-7zm0 3a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/>
+  <text x="60" y="34" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="8" font-weight="700">SF</text>
+</svg>

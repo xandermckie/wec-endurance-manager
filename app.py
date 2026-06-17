@@ -7,6 +7,7 @@ from werkzeug.exceptions import HTTPException
 
 import cache
 import season_store
+from assets import brand_color, build_team_logo_lookup, static_relpath
 from season_store import SeasonSaveError
 from admin import admin_bp
 from attributes import (
@@ -46,7 +47,7 @@ from draft import (
     start_draft,
     trade_pick_for_future,
 )
-from fetcher import fetch_teams, refresh_cache
+from fetcher import calendar as fetch_calendar, fetch_teams, refresh_cache
 from game import (
     clear_game,
     consume_season_recovery_notice,
@@ -150,6 +151,31 @@ def stat1(value):
         return f"{float(value):.1f}"
     except (TypeError, ValueError):
         return "—"
+
+
+@app.template_filter("brand_color")
+def brand_color_filter(slug):
+    return brand_color(slug or "")
+
+
+@app.template_global()
+def asset_url(kind, slug, ext="svg"):
+    rel = static_relpath(kind, slug, ext)
+    if rel:
+        return url_for("static", filename=rel)
+    return None
+
+
+def _cached_teams():
+    cache_data = cache.load_cache()
+    teams = cache_data.get("teams")
+    if not teams:
+        teams = fetch_teams()
+    return teams
+
+
+def _team_logos_lookup():
+    return build_team_logo_lookup(_cached_teams())
 
 
 SORT_COLUMNS = {"name", "team", "overall"} | set(STAT_COLUMNS)
@@ -291,6 +317,7 @@ def inject_game():
     if game and season_data:
         reconcile_team_roster(season_data, game["team_id"])
         user_roster_size = roster_size(season_data, game["team_id"])
+    team_logos = _team_logos_lookup()
     return {
         "game": game,
         "active_season": season_data,
@@ -303,6 +330,9 @@ def inject_game():
         "user_championships": user_championships,
         "user_roster_size": user_roster_size,
         "classes": CLASSES,
+        "team_logos": team_logos,
+        "user_team_id": game["team_id"] if game else None,
+        "hero_bg_url": asset_url("hero", "pit-lane"),
     }
 
 
@@ -970,9 +1000,15 @@ def _render_season(season_id, season_data, lookup, game, page="hub", schedule_ro
             standings_by_class[cls] = standings_table(season_data, class_name=cls)
     schedule = []
     if season_data:
+        calendar_by_round = {r["round"]: r for r in fetch_calendar()}
         for round_entry in schedule_rounds(season_data):
+            cal = calendar_by_round.get(round_entry.get("round"), {})
+            enriched = dict(round_entry)
+            for key in ("flag_code", "circuit_slug"):
+                if not enriched.get(key) and cal.get(key):
+                    enriched[key] = cal[key]
             schedule.append({
-                **round_entry,
+                **enriched,
                 "winners": _round_winners(round_entry),
             })
     return render_template(
@@ -1098,6 +1134,13 @@ def season_round(round_id):
     if round_entry is None or not round_entry.get("played"):
         flash("Results not available for that round.")
         return redirect(url_for("season_hub"))
+    if not round_entry.get("circuit_slug"):
+        for cal_round in fetch_calendar():
+            if cal_round.get("round") == round_entry.get("round"):
+                round_entry = {**round_entry, **{
+                    k: cal_round[k] for k in ("flag_code", "circuit_slug") if cal_round.get(k)
+                }}
+                break
     return render_template(
         "round_result.html",
         page_title=round_entry["name"],

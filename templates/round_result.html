@@ -1,5 +1,17 @@
 {% extends "base.html" %}
+{% from '_team_logo.html' import team_logo with context %}
 {% block content %}
+{% if round.circuit_slug and asset_url('circuit', round.circuit_slug) %}
+<div class="round-hero" style="--circuit-bg: url('{{ asset_url('circuit', round.circuit_slug) }}')">
+  {% if round.flag_code and asset_url('flag', round.flag_code) %}
+  <img src="{{ asset_url('flag', round.flag_code) }}" alt="" class="round-hero-flag" loading="lazy">
+  {% endif %}
+  <div class="round-hero-text">
+    <span class="round-hero-label">Round {{ round.round }}</span>
+    <span class="round-hero-circuit">{{ round.circuit }}</span>
+  </div>
+</div>
+{% endif %}
 <div class="page-header">
   <h1>{{ round.name }}</h1>
   <p>Round {{ round.round }} · {{ round.circuit }} · {{ round.format }}
@@ -26,7 +38,12 @@
             {% if row.status == 'DNF' %}DNF{% else %}{{ row.position }}{% endif %}
           </td>
           <td class="text-muted-wec">P{{ row.grid }}</td>
-          <td>{{ row.team_name }}{% if row.team_id == user_team_id %} <span class="badge-wec badge-you">YOU</span>{% endif %}</td>
+          <td>
+            <span class="table-team-cell">
+              {{ team_logo(row.team_id, 'sm') }}
+              <span>{{ row.team_name }}{% if row.team_id == user_team_id %} <span class="badge-wec badge-you">YOU</span>{% endif %}</span>
+            </span>
+          </td>
           <td class="text-muted-wec" style="font-size:.8rem;">{% for c in row.crew %}{{ c.name }}{% if not loop.last %}, {% endif %}{% endfor %}</td>
           <td class="text-end"><strong>{{ row.points }}</strong></td>
           <td>{% if row.pole %}<span class="badge-wec badge-wec-gray" title="Pole position">P</span>{% endif %}{% if row.fastest_lap %}<span class="badge-wec badge-wec-green ms-1" title="Fastest lap">FL</span>{% endif %}</td>

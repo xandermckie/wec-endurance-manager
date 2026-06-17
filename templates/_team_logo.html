@@ -1,0 +1,12 @@
+{% macro team_logo(team_id, size='sm', slug=none) -%}
+{%- set logo_slug = slug or (team_logos.get(team_id) if team_id is not none else none) -%}
+{%- if logo_slug -%}
+<div class="team-logo-wrap team-logo-wrap-{{ size }}">
+  {%- if asset_url('logo', logo_slug) -%}
+  <img src="{{ asset_url('logo', logo_slug) }}" alt="" class="team-logo team-logo-{{ size }}" loading="lazy">
+  {%- else -%}
+  <span class="team-logo-fallback team-logo-{{ size }}" style="--brand: {{ logo_slug|brand_color }}">{{ logo_slug[0]|upper }}</span>
+  {%- endif -%}
+</div>
+{%- endif -%}
+{%- endmacro %}

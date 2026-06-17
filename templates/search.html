@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from '_team_logo.html' import team_logo with context %}
 {% block content %}
 <div class="page-header">
   <h1>Browse the Grid</h1>
@@ -28,7 +29,12 @@
       <tbody>
         {% for t in teams %}
         <tr class="{% if t.team_id == user_team_id %}user-row{% endif %}">
-          <td><a href="{{ make_search_url(view='roster', team_id=t.team_id) }}" style="text-decoration:none;color:var(--text);"><strong>{{ t.team }}</strong></a></td>
+          <td>
+            <a href="{{ make_search_url(view='roster', team_id=t.team_id) }}" class="table-team-cell" style="text-decoration:none;color:var(--text);">
+              {{ team_logo(t.team_id, 'sm') }}
+              <strong>{{ t.team }}</strong>
+            </a>
+          </td>
           <td><span class="class-chip class-{{ t.class }}">{{ t.class }}</span></td>
           <td><span data-ovr="{{ t.overall|int if t.overall else 0 }}">{{ t.overall|round|int if t.overall else '—' }}</span></td>
           <td>{{ t.roster_size }}</td>
@@ -42,8 +48,11 @@
 
 {% elif view == 'roster' %}
 <div class="flex-between mb-2">
-  <h2 style="font-family:'Rajdhani',sans-serif;text-transform:uppercase;">{{ roster_team_name }}
-    {% if roster_team_class %}<span class="class-chip class-{{ roster_team_class }}">{{ roster_team_class }}</span>{% endif %}</h2>
+  <h2 class="page-header-with-logo standings-team" style="font-family:'Rajdhani',sans-serif;text-transform:uppercase;margin:0;">
+    {{ team_logo(roster_team_id, 'md') }}
+    <span>{{ roster_team_name }}
+    {% if roster_team_class %}<span class="class-chip class-{{ roster_team_class }}">{{ roster_team_class }}</span>{% endif %}</span>
+  </h2>
   <a class="btn-wec-ghost" href="{{ make_search_url(view='teams') }}">← All teams</a>
 </div>
 <div class="card-wec">
@@ -82,7 +91,9 @@
         {% for p in players %}
         <tr class="{% if p.team_id == user_team_id %}user-row{% endif %}">
           <td><strong>{{ p.name }}</strong></td>
-          <td class="text-muted-wec">{{ p.team }}</td>
+          <td class="text-muted-wec">
+            <span class="table-team-cell">{{ team_logo(p.team_id, 'sm') }}<span>{{ p.team }}</span></span>
+          </td>
           <td><span class="grade-chip grade-{{ p.grade }}">{{ p.grade }}</span></td>
           <td><span data-ovr="{{ p.overall|int if p.overall else 0 }}">{{ p.overall|round|int if p.overall else '—' }}</span></td>
           {% for col in stat_columns %}<td class="text-end">{{ p[col]|stat1 }}</td>{% endfor %}
