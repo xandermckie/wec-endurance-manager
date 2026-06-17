@@ -7,6 +7,11 @@ import uuid
 
 logger = logging.getLogger(__name__)
 
+
+class SeasonSaveError(RuntimeError):
+    """Raised when season data cannot be written to disk."""
+
+
 SEASONS_DIR = os.path.join(os.path.dirname(__file__), "data", "seasons")
 
 DEFAULT_SEASON = {
@@ -119,6 +124,9 @@ def save_season(season_id, data):
 
         os.replace(temp_path, path)
         temp_path = None
+    except OSError as exc:
+        logger.exception("Failed to save season %s", season_id)
+        raise SeasonSaveError("Could not save season progress.") from exc
     finally:
         if temp_path and os.path.exists(temp_path):
             os.remove(temp_path)
@@ -127,4 +135,7 @@ def save_season(season_id, data):
 def delete_season(season_id):
     for path in (_season_path(season_id), _backup_path(season_id), _corrupt_path(season_id)):
         if os.path.exists(path):
-            os.remove(path)
+            try:
+                os.remove(path)
+            except OSError as exc:
+                logger.warning("Could not delete season file %s: %s", path, exc)

@@ -32,6 +32,14 @@ def _round_salary(value):
     return round(max(MIN_SALARY_M, value), 1)
 
 
+def _parse_contract_terms(salary, years):
+    """Return (salary, years, error_message). error_message is None on success."""
+    try:
+        return _round_salary(float(salary)), int(years), None
+    except (TypeError, ValueError):
+        return None, None, "Invalid salary or contract length."
+
+
 def market_salary(player):
     """Fair annual salary (€M) from OVR and age."""
     overall = player.get("overall") or 50
@@ -306,8 +314,9 @@ def suggested_extension_offer(player, season, team_id, lookup=None):
 
 
 def validate_extension_terms(player, salary, years, team_id, season, lookup=None):
-    salary = _round_salary(float(salary))
-    years = int(years)
+    salary, years, err = _parse_contract_terms(salary, years)
+    if err:
+        return False, err
     lookup = lookup or league_lookup(season)
     finances = team_finances(season, team_id, lookup)
     overall = player.get("overall") or 50
@@ -352,8 +361,9 @@ def expiring_contract_report(season, user_team_id, lookup=None):
 
 
 def evaluate_extension(player, salary, years, season, team_id):
-    salary = _round_salary(float(salary))
-    years = int(years)
+    salary, years, err = _parse_contract_terms(salary, years)
+    if err:
+        return False, err
     ask = compute_extension_ask(player)
     current = float(player.get("salary") or 0)
     win_pct = _team_win_pct(season, team_id)
@@ -446,8 +456,9 @@ def clear_championship_bonuses(season):
 
 
 def validate_offer_terms(player, salary, years, team_id, season, lookup=None):
-    salary = _round_salary(float(salary))
-    years = int(years)
+    salary, years, err = _parse_contract_terms(salary, years)
+    if err:
+        return False, err
     lookup = lookup or league_lookup(season)
     finances = team_finances(season, team_id, lookup)
     overall = player.get("overall") or 50
@@ -484,8 +495,9 @@ def _team_win_pct(season, team_id):
 
 
 def evaluate_offer(player, salary, years, season, team_id):
-    salary = _round_salary(float(salary))
-    years = int(years)
+    salary, years, err = _parse_contract_terms(salary, years)
+    if err:
+        return False, err
     overall = player.get("overall") or 50
     ask = player.get("asking_salary") or compute_asking_salary(player)
     prev = player.get("previous_salary") or 0

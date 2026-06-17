@@ -46,6 +46,16 @@ def test_404(client):
     assert client.get("/no-such-page").status_code == 404
 
 
+def test_refresh_stale_on_failure(client, monkeypatch):
+    def _boom():
+        raise RuntimeError("refresh failed")
+
+    monkeypatch.setattr(appmod, "refresh_cache", _boom)
+    response = client.get("/refresh", follow_redirects=False)
+    assert response.status_code == 302
+    assert "stale=1" in response.headers["Location"]
+
+
 def test_admin_hidden_by_default(client):
     # Admin disabled unless ADMIN_ENABLED is set
     assert client.get("/admin/").status_code == 404

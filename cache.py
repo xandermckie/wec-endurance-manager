@@ -1,26 +1,45 @@
 import json
+import logging
 import os
 import shutil
 import tempfile
+
+logger = logging.getLogger(__name__)
 
 CACHE_PATH = os.path.join(os.path.dirname(__file__), "data", "grid.json")
 
 DEFAULT_CACHE = {"last_updated": None, "season": None, "drivers": []}
 
 
+def _normalize_cache_data(data):
+    if not data:
+        return dict(DEFAULT_CACHE)
+    data.setdefault("drivers", [])
+    data.setdefault("teams", [])
+    return data
+
+
 def load_cache():
     if not os.path.exists(CACHE_PATH):
         return dict(DEFAULT_CACHE)
 
-    with open(CACHE_PATH, encoding="utf-8") as f:
-        data = json.load(f)
+    try:
+        with open(CACHE_PATH, encoding="utf-8") as f:
+            return _normalize_cache_data(json.load(f))
+    except (json.JSONDecodeError, OSError) as exc:
+        logger.warning("Corrupt or unreadable grid cache: %s", exc)
 
-    if not data:
-        return dict(DEFAULT_CACHE)
+    backup_path = CACHE_PATH + ".bak"
+    if os.path.exists(backup_path):
+        try:
+            with open(backup_path, encoding="utf-8") as f:
+                data = _normalize_cache_data(json.load(f))
+            logger.warning("Restored grid cache from backup")
+            return data
+        except (json.JSONDecodeError, OSError) as exc:
+            logger.warning("Grid cache backup also unreadable: %s", exc)
 
-    data.setdefault("drivers", [])
-    data.setdefault("teams", [])
-    return data
+    return dict(DEFAULT_CACHE)
 
 
 def save_cache(data):
@@ -40,7 +59,7 @@ def save_cache(data):
             try:
                 shutil.copy2(CACHE_PATH, CACHE_PATH + ".bak")
             except OSError:
-                pass
+                logger.warning("Could not write grid cache backup")
 
         os.replace(temp_path, CACHE_PATH)
         temp_path = None

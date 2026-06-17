@@ -70,6 +70,13 @@ def trade_window_message(season):
     return "Transfers are not available in this phase."
 
 
+def _parse_trade_player_id(raw):
+    try:
+        return int(raw), None
+    except (TypeError, ValueError):
+        return None, "Invalid driver id in transfer."
+
+
 def validate_trade(
     season,
     user_team_id,
@@ -95,11 +102,16 @@ def validate_trade(
     if not all_out and not all_picks:
         return False, "Transfer must include at least one asset."
 
-    user_roster_ids = {int(x) for x in season["rosters"].get(str(user_team_id), [])}
-    partner_roster_ids = {int(x) for x in season["rosters"].get(str(partner_team_id), [])}
+    try:
+        user_roster_ids = {int(x) for x in season["rosters"].get(str(user_team_id), [])}
+        partner_roster_ids = {int(x) for x in season["rosters"].get(str(partner_team_id), [])}
+    except (TypeError, ValueError):
+        return False, "Invalid roster data."
 
     for player_id in outgoing_players:
-        pid = int(player_id)
+        pid, err = _parse_trade_player_id(player_id)
+        if err:
+            return False, err
         player = lookup.get(pid)
         if not player or int(player.get("team_id") or -1) != int(user_team_id):
             return False, "Outgoing driver not in your squad."
@@ -107,7 +119,9 @@ def validate_trade(
             return False, "Outgoing driver not in your squad."
 
     for player_id in incoming_players:
-        pid = int(player_id)
+        pid, err = _parse_trade_player_id(player_id)
+        if err:
+            return False, err
         player = lookup.get(pid)
         if not player or int(player.get("team_id") or -1) != int(partner_team_id):
             return False, "Incoming driver not in partner squad."
@@ -211,13 +225,6 @@ def execute_trade(
     repair_roster_sync(season, user_team_id)
     repair_roster_sync(season, partner_team_id)
     lookup = league_lookup(season)
-    partner_size = roster_size(season, partner_team_id)
-    partner_after = partner_size - len(incoming_players) + len(outgoing_players)
-    released_names = []
-    if partner_after > MAX_ROSTER:
-        overflow = partner_after - MAX_ROSTER
-        released = release_worst_players(season, partner_team_id, overflow, lookup)
-        released_names = [p.get("name", p["id"]) for p in released]
 
     ok, message = validate_trade(
         season, user_team_id, partner_team_id,
@@ -225,6 +232,14 @@ def execute_trade(
     )
     if not ok:
         return False, message
+
+    partner_size = roster_size(season, partner_team_id)
+    partner_after = partner_size - len(incoming_players) + len(outgoing_players)
+    released_names = []
+    if partner_after > MAX_ROSTER:
+        overflow = partner_after - MAX_ROSTER
+        released = release_worst_players(season, partner_team_id, overflow, lookup)
+        released_names = [p.get("name", p["id"]) for p in released]
 
     user_roster = [int(x) for x in season["rosters"].setdefault(str(user_team_id), [])]
     partner_roster = [int(x) for x in season["rosters"].setdefault(str(partner_team_id), [])]

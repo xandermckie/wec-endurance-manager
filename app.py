@@ -7,6 +7,7 @@ from werkzeug.exceptions import HTTPException
 
 import cache
 import season_store
+from season_store import SeasonSaveError
 from admin import admin_bp
 from attributes import (
     apply_attributes,
@@ -128,7 +129,14 @@ from year_end_report import get_year_end_report
 load_dotenv()
 
 app = Flask(__name__)
-app.secret_key = os.getenv("FLASK_SECRET_KEY", "dev")
+_secret_key = os.getenv("FLASK_SECRET_KEY")
+if not _secret_key:
+    if os.getenv("FLASK_ENV", "").lower() == "production":
+        raise RuntimeError("FLASK_SECRET_KEY must be set when FLASK_ENV=production")
+    _secret_key = "dev"
+app.secret_key = _secret_key
+if not os.getenv("FLASK_SECRET_KEY"):
+    app.logger.warning("FLASK_SECRET_KEY not set; using insecure default (development only)")
 app.register_blueprint(admin_bp)
 
 GRADES = ("Platinum", "Gold", "Silver", "Bronze")
@@ -354,6 +362,9 @@ def _parse_difficulty():
 @app.route("/start", methods=["POST"])
 def start():
     team = start_game(difficulty=_parse_difficulty())
+    if team is None:
+        flash("No teams available. Try refreshing the grid.", "error")
+        return redirect(url_for("choose_team"))
     flash(f"You've been handed the {team['full_name']}!")
     return redirect(url_for("team"))
 
@@ -470,7 +481,7 @@ def team_release(player_id):
         return redirect(url_for("team"))
     ok, message = release_player(season_data, game["team_id"], player_id)
     if ok:
-        save_session_season(season_id, season_data)
+        _save_season(season_id, season_data)
     flash(message)
     return redirect(url_for("team"))
 
@@ -494,7 +505,7 @@ def team_extend(player_id):
         return redirect(url_for("team"))
     years = int(years_raw) if years_raw.isdigit() else 2
     ok, message, _accepted = propose_extension(season_data, game["team_id"], player_id, salary, years)
-    save_session_season(season_id, season_data)
+    _save_season(season_id, season_data)
     flash(message)
     return redirect(url_for("team"))
 
@@ -511,7 +522,7 @@ def team_reserve_send(player_id):
         return redirect(url_for("team"))
     ok, message = assign_to_reserve(season_data, game["team_id"], player_id)
     if ok:
-        save_session_season(season_id, season_data)
+        _save_season(season_id, season_data)
     flash(message)
     return redirect(url_for("team"))
 
@@ -528,7 +539,7 @@ def team_reserve_recall(player_id):
         return redirect(url_for("team"))
     ok, message = recall_from_reserve(season_data, game["team_id"], player_id)
     if ok:
-        save_session_season(season_id, season_data)
+        _save_season(season_id, season_data)
     flash(message)
     return redirect(url_for("team"))
 
@@ -638,7 +649,7 @@ def free_agency_offer(player_id):
         return redirect(url_for("free_agency"))
     years = int(years_raw) if years_raw.isdigit() else 2
     ok, message, _accepted = propose_offer(season_data, game["team_id"], player_id, salary, years)
-    save_session_season(season_id, season_data)
+    _save_season(season_id, season_data)
     flash(message)
     return redirect(url_for("free_agency"))
 
@@ -659,7 +670,7 @@ def free_agency_sign(player_id):
     if player:
         salary = player.get("asking_salary") or compute_asking_salary(player)
     ok, message, _accepted = propose_offer(season_data, game["team_id"], player_id, salary or 2.0, 2)
-    save_session_season(season_id, season_data)
+    _save_season(season_id, season_data)
     flash(message)
     return redirect(url_for("free_agency"))
 
@@ -769,7 +780,8 @@ def trade_propose():
 
     ok, message = execute_trade(season_data, game["team_id"], partner_id,
                                 outgoing_players, outgoing_picks, incoming_players, incoming_picks)
-    _save_season(season_id, season_data)
+    if ok:
+        _save_season(season_id, season_data)
     flash(message)
     return redirect(url_for("trade", partner=partner_id))
 
@@ -924,7 +936,12 @@ def _save_season(season_id, season_data):
     game = get_game()
     if game and season_data is not None:
         season_data["user_team_id"] = game["team_id"]
-    save_session_season(season_id, season_data)
+    try:
+        save_session_season(season_id, season_data)
+    except SeasonSaveError:
+        flash("Could not save your season progress. Check disk space and try again.", "error")
+        return False
+    return True
 
 
 def _flash_incident_notifications(season_data, user_team_id=None):
@@ -1247,7 +1264,8 @@ def season_draft_pick():
     try:
         option_index = int(option_raw)
     except ValueError:
-        option_index = 0
+        flash("Invalid prospect selection.")
+        return redirect(url_for("season_draft"))
     state = season_data.get("draft_state") or {}
     options = state.get("prospect_options", [])
     prospect = options[option_index] if 0 <= option_index < len(options) else None
@@ -1361,6 +1379,7 @@ def refresh():
     try:
         success = refresh_cache()
     except Exception:
+        app.logger.exception("Manual grid refresh failed")
         return redirect(url_for("search", stale=1))
     if success:
         return redirect(url_for("search", refreshed=1))

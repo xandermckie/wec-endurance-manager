@@ -5,11 +5,15 @@ The original game pulled live stats from a sports API. WEC has no free public ti
 records, apply ratings + attributes + career profiles, then write the cache atomically.
 """
 
+import logging
 from datetime import datetime, timezone
 
 from dotenv import load_dotenv
 
 import cache
+
+logger = logging.getLogger(__name__)
+
 import wec_data
 from attributes import apply_attributes, ensure_grade, init_career_profiles
 from ratings import apply_ratings
@@ -58,6 +62,7 @@ def refresh_cache():
         )
         return True
     except Exception:
+        logger.exception("Grid refresh failed")
         existing = cache.load_cache()
         if existing.get("drivers"):
             return False

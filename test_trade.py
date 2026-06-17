@@ -20,6 +20,26 @@ def test_validate_trade_rejects_empty(season):
     assert not ok
 
 
+def test_validate_trade_rejects_invalid_player_id(season):
+    user, partner = _two_teams(season)
+    ok, msg = validate_trade(season, user, partner, ["not-a-number"], [], [], [])
+    assert not ok
+    assert "Invalid" in msg
+
+
+def test_execute_trade_does_not_mutate_on_invalid_pick(season):
+    user, partner = _two_teams(season)
+    lookup = league_lookup(season)
+    partner_before = list(season["rosters"][str(partner)])
+    mine = roster_players(season, user, lookup)[0]["id"]
+    theirs = roster_players(season, partner, lookup)[0]["id"]
+    ok, _msg = execute_trade(
+        season, user, partner, [str(mine)], ["fake-pick-id"], [str(theirs)], [],
+    )
+    assert not ok
+    assert season["rosters"][str(partner)] == partner_before
+
+
 def test_evaluate_trade_meter(season):
     user, partner = _two_teams(season)
     lookup = league_lookup(season)

@@ -34,6 +34,13 @@ def test_offer_terms_reject_overpay():
     assert not ok
 
 
+def test_offer_terms_reject_invalid_salary():
+    player = {"overall": 60, "asking_salary": 3.0}
+    ok, msg = validate_offer_terms(player, "lots", 2, 1, {"team_finances": {}, "standings": {}}, {})
+    assert not ok
+    assert "Invalid" in msg
+
+
 def test_sign_free_agent_succeeds(season):
     lookup = league_lookup(season)
     fas = free_agent_players(season, lookup)

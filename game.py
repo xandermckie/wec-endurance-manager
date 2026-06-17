@@ -71,7 +71,10 @@ def start_game(current_session=None, team_id=None, difficulty=None):
         if not team:
             return None
     else:
-        team = random.choice(fetch_teams())
+        teams = fetch_teams()
+        if not teams:
+            return None
+        team = random.choice(teams)
     current_session[SESSION_GAME_STARTED] = True
     current_session[SESSION_TEAM_ID] = team["id"]
     current_session[SESSION_TEAM_NAME] = team["full_name"]

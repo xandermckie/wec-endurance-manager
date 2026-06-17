@@ -62,7 +62,7 @@ def _admin_allowed():
     if request.remote_addr not in LOCAL_HOSTS:
         return False
     token = os.getenv("ADMIN_TOKEN", "")
-    if token and request.args.get("token") != token and request.form.get("token") != token:
+    if token and request.form.get("token") != token:
         if request.cookies.get("admin_token") != token:
             return False
     return True

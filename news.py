@@ -25,7 +25,7 @@ def _format_headline(season, category, context):
         template = templates[idx]
         try:
             headline = template.format(**safe)
-        except KeyError:
+        except (KeyError, ValueError, IndexError):
             headline = template
         if headline not in existing:
             indices[category] = (idx + 1) % len(templates)
@@ -77,7 +77,7 @@ def _ambient_headline(season, lookup, rng, existing):
         template = rng.choice(templates)
         try:
             headline = template.format(**{k: str(v) for k, v in ctx.items() if v is not None})
-        except KeyError:
+        except (KeyError, ValueError, IndexError):
             headline = template
         if headline not in existing:
             return headline
