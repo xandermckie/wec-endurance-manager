@@ -3,6 +3,7 @@ import unittest
 from assets import (
     brand_color,
     flag_code_from_country,
+    logo_external_url,
     logo_slug_from_car,
     static_relpath,
 )
@@ -58,6 +59,20 @@ class LogoSlugTests(unittest.TestCase):
     def test_static_relpath_for_bundled_logo(self):
         self.assertEqual(static_relpath("logo", "toyota"), "img/logos/toyota.svg")
         self.assertIsNone(static_relpath("logo", "nonexistent-brand"))
+
+    def test_logo_external_url_simple_icons(self):
+        self.assertEqual(
+            logo_external_url("ferrari"),
+            "https://cdn.simpleicons.org/ferrari/DC0000",
+        )
+        self.assertEqual(
+            logo_external_url("aston-martin"),
+            "https://cdn.simpleicons.org/astonmartin/00665E",
+        )
+
+    def test_logo_external_url_worldvectorlogo(self):
+        self.assertTrue(logo_external_url("lexus").startswith("https://"))
+        self.assertTrue(logo_external_url("alpine").startswith("https://"))
 
 
 if __name__ == "__main__":

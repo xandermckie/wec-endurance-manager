@@ -7,7 +7,7 @@ from werkzeug.exceptions import HTTPException
 
 import cache
 import season_store
-from assets import brand_color, build_team_logo_lookup, static_relpath
+from assets import brand_color, build_team_logo_lookup, logo_external_url, static_relpath
 from season_store import SeasonSaveError
 from admin import admin_bp
 from attributes import (
@@ -161,6 +161,20 @@ def brand_color_filter(slug):
 @app.template_global()
 def asset_url(kind, slug, ext="svg"):
     rel = static_relpath(kind, slug, ext)
+    if rel:
+        return url_for("static", filename=rel)
+    return None
+
+
+@app.template_global()
+def team_logo_src(slug):
+    """Real logo URL (online CDN) with bundled static fallback."""
+    if not slug:
+        return None
+    external = logo_external_url(slug)
+    if external:
+        return external
+    rel = static_relpath("logo", slug)
     if rel:
         return url_for("static", filename=rel)
     return None

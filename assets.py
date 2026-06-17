@@ -57,6 +57,29 @@ _ASSET_SUBDIRS = {
     "hero": "hero",
 }
 
+# Real manufacturer marks via Simple Icons CDN (https://simpleicons.org).
+_SIMPLE_ICONS_CDN = "https://cdn.simpleicons.org"
+_LOGO_SIMPLE_ICONS_SLUG = {
+    "toyota": "toyota",
+    "ferrari": "ferrari",
+    "porsche": "porsche",
+    "cadillac": "cadillac",
+    "bmw": "bmw",
+    "peugeot": "peugeot",
+    "lamborghini": "lamborghini",
+    "aston-martin": "astonmartin",
+    "mclaren": "mclaren",
+    "ford": "ford",
+    "chevrolet": "chevrolet",
+    "mercedes": "mercedes",
+}
+
+# Brands not in Simple Icons — other public logo CDNs.
+_LOGO_EXTERNAL_URLS = {
+    "alpine": "https://cdn.worldvectorlogo.com/logos/alpine-1.svg",
+    "lexus": "https://cdn.worldvectorlogo.com/logos/lexus.svg",
+}
+
 
 def logo_slug_from_car(car: str) -> str:
     """Map a car model string to a manufacturer logo slug."""
@@ -122,6 +145,19 @@ def static_relpath(kind: str, slug: str, ext: str = "svg") -> str | None:
     return f"img/{subdir}/{slug}.{ext}"
 
 
+def logo_external_url(slug: str) -> str | None:
+    """HTTPS URL for a real manufacturer logo (online CDN)."""
+    if not slug:
+        return None
+    if slug in _LOGO_EXTERNAL_URLS:
+        return _LOGO_EXTERNAL_URLS[slug]
+    si_slug = _LOGO_SIMPLE_ICONS_SLUG.get(slug)
+    if not si_slug:
+        return None
+    color = brand_color(slug).lstrip("#")
+    return f"{_SIMPLE_ICONS_CDN}/{si_slug}/{color}"
+
+
 def build_team_logo_lookup(teams: list) -> dict:
     """Map team_id → logo_slug from team records."""
     lookup = {}
@@ -139,11 +175,12 @@ def team_logo_context(team_id, team_logos: dict) -> dict:
     slug = team_logos.get(team_id) if team_id is not None else None
     if not slug and team_id is not None:
         slug = "unknown"
+    external = logo_external_url(slug) if slug else None
     rel = static_relpath("logo", slug) if slug else None
     return {
         "slug": slug,
-        "url": rel,
+        "url": external or rel,
         "brand": brand_color(slug or ""),
         "initial": brand_initial(slug or ""),
-        "has_image": rel is not None,
+        "has_image": external is not None or rel is not None,
     }
