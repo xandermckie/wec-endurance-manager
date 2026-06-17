@@ -301,7 +301,9 @@ a { color: var(--accent); }
 
 /* ── Team logos ── */
 .team-logo-wrap { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.team-logo { display: block; object-fit: contain; filter: brightness(1.05); }
+.team-logo-wrap-md { max-width: 80px; }
+.team-logo-wrap-lg { max-width: 120px; }
+.team-logo { display: block; object-fit: contain; filter: brightness(1.05); max-width: 100%; }
 .team-logo-sm, .team-logo-fallback.team-logo-sm { width: 20px; height: 20px; font-size: 0.65rem; }
 .team-logo-md, .team-logo-fallback.team-logo-md { width: 32px; height: 32px; font-size: 0.8rem; }
 .team-logo-lg, .team-logo-fallback.team-logo-lg { width: 48px; height: 48px; font-size: 1rem; }
