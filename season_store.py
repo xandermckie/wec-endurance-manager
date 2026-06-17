@@ -5,6 +5,8 @@ import shutil
 import tempfile
 import uuid
 
+from paths import writable_data_dir
+
 logger = logging.getLogger(__name__)
 
 
@@ -12,7 +14,7 @@ class SeasonSaveError(RuntimeError):
     """Raised when season data cannot be written to disk."""
 
 
-SEASONS_DIR = os.path.join(os.path.dirname(__file__), "data", "seasons")
+SEASONS_DIR = os.path.join(writable_data_dir(), "seasons")
 
 DEFAULT_SEASON = {
     "season_year": None,

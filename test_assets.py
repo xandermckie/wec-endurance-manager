@@ -5,6 +5,7 @@ from assets import (
     flag_code_from_country,
     logo_external_url,
     logo_slug_from_car,
+    logo_slug_from_team,
     static_relpath,
 )
 from wec_data import HYPERCAR_TEAMS, LMGT3_TEAMS, build_grid
@@ -46,7 +47,19 @@ class LogoSlugTests(unittest.TestCase):
         self.assertEqual(len(teams), len(HYPERCAR_TEAMS) + len(LMGT3_TEAMS))
         for team in teams:
             self.assertIn("logo_slug", team)
-            self.assertEqual(team["logo_slug"], logo_slug_from_car(team["car"]))
+            self.assertEqual(
+                team["logo_slug"],
+                logo_slug_from_team(team["name"], team["car"]),
+            )
+
+    def test_iron_lynx_team_logo(self):
+        self.assertEqual(logo_slug_from_team("Iron Lynx", "Mercedes-AMG GT3"), "iron-lynx")
+        self.assertEqual(
+            logo_slug_from_team("Lamborghini Iron Lynx", "Lamborghini SC63"),
+            "iron-lynx",
+        )
+        self.assertEqual(static_relpath("logo", "iron-lynx"), "img/logos/iron-lynx.png")
+        self.assertEqual(brand_color("iron-lynx"), "#C8C8C8")
 
     def test_flag_codes(self):
         self.assertEqual(flag_code_from_country("France"), "fr")

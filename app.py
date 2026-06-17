@@ -127,9 +127,15 @@ from trade import (
 )
 from year_end_report import get_year_end_report
 
+from paths import bundle_dir, is_frozen
+
 load_dotenv()
 
-app = Flask(__name__)
+if is_frozen():
+    _bundle = str(bundle_dir())
+    app = Flask(__name__, template_folder=os.path.join(_bundle, "templates"), static_folder=os.path.join(_bundle, "static"))
+else:
+    app = Flask(__name__)
 _secret_key = os.getenv("FLASK_SECRET_KEY")
 if not _secret_key:
     if os.getenv("FLASK_ENV", "").lower() == "production":

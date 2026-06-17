@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-17T16:04:33.733747Z",
+  "last_updated": "2026-06-17T16:50:18.268697Z",
   "season": 2025,
   "source": "wec_data",
   "teams": [
@@ -161,7 +161,7 @@
       "car": "Lamborghini SC63",
       "class": "Hypercar",
       "strength": 80,
-      "logo_slug": "lamborghini"
+      "logo_slug": "iron-lynx"
     },
     {
       "id": 17,
@@ -341,7 +341,7 @@
       "car": "Mercedes-AMG GT3",
       "class": "LMGT3",
       "strength": 79,
-      "logo_slug": "mercedes"
+      "logo_slug": "iron-lynx"
     }
   ],
   "drivers": [
@@ -371,36 +371,36 @@
         "fuel_management": 85,
         "stamina": 93
       },
-      "peak_age": 31,
-      "retirement_age": 48,
+      "peak_age": 33,
+      "retirement_age": 50,
       "season_form": 1.0,
       "career_arc": "starter",
-      "potential": 86,
-      "development_rate": 0.99,
-      "ceiling_factor": 0.955,
+      "potential": 88,
+      "development_rate": 0.941,
+      "ceiling_factor": 0.937,
       "peak_attributes": {
-        "pace": 74,
-        "racecraft": 74,
-        "tyre_management": 65,
-        "consistency": 70,
-        "fuel_management": 74,
-        "stamina": 79
+        "pace": 68,
+        "racecraft": 73,
+        "tyre_management": 70,
+        "consistency": 72,
+        "fuel_management": 64,
+        "stamina": 76
       },
       "stat_modifiers": {
-        "ppr": 0.985,
-        "pod": 1.102,
-        "ovt": 0.973,
-        "pol": 1.118,
-        "fl": 0.912
+        "ppr": 0.924,
+        "pod": 1.018,
+        "ovt": 0.964,
+        "pol": 1.053,
+        "fl": 0.889
       },
-      "pace_bias": 0.992,
+      "pace_bias": 0.97,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 96,
-        "racecraft": 77,
+        "pace": 94,
+        "racecraft": 76,
         "tyre_management": 99,
-        "consistency": 97,
-        "fuel_management": 91,
+        "consistency": 95,
+        "fuel_management": 89,
         "stamina": 99
       }
     },
@@ -430,36 +430,36 @@
         "fuel_management": 69,
         "stamina": 87
       },
-      "peak_age": 31,
-      "retirement_age": 47,
+      "peak_age": 30,
+      "retirement_age": 52,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 80,
-      "development_rate": 0.893,
-      "ceiling_factor": 0.902,
+      "potential": 84,
+      "development_rate": 1.118,
+      "ceiling_factor": 0.954,
       "peak_attributes": {
-        "pace": 61,
-        "racecraft": 65,
-        "tyre_management": 58,
-        "consistency": 58,
-        "fuel_management": 64,
-        "stamina": 66
+        "pace": 66,
+        "racecraft": 64,
+        "tyre_management": 67,
+        "consistency": 69,
+        "fuel_management": 65,
+        "stamina": 75
       },
       "stat_modifiers": {
-        "ppr": 0.934,
-        "pod": 1.055,
-        "ovt": 0.924,
-        "pol": 1.05,
-        "fl": 0.95
+        "ppr": 1.111,
+        "pod": 1.096,
+        "ovt": 0.977,
+        "pol": 0.989,
+        "fl": 0.949
       },
-      "pace_bias": 1.083,
+      "pace_bias": 0.961,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 89,
-        "racecraft": 73,
+        "pace": 90,
+        "racecraft": 74,
         "tyre_management": 99,
-        "consistency": 97,
-        "fuel_management": 77,
+        "consistency": 98,
+        "fuel_management": 78,
         "stamina": 99
       }
     },
@@ -489,36 +489,36 @@
         "fuel_management": 64,
         "stamina": 99
       },
-      "peak_age": 30,
-      "retirement_age": 48,
+      "peak_age": 32,
+      "retirement_age": 47,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 75,
-      "development_rate": 1.05,
-      "ceiling_factor": 0.881,
+      "potential": 71,
+      "development_rate": 0.953,
+      "ceiling_factor": 0.959,
       "peak_attributes": {
-        "pace": 56,
-        "racecraft": 54,
-        "tyre_management": 55,
-        "consistency": 60,
-        "fuel_management": 58,
-        "stamina": 60
+        "pace": 60,
+        "racecraft": 52,
+        "tyre_management": 57,
+        "consistency": 56,
+        "fuel_management": 61,
+        "stamina": 65
       },
       "stat_modifiers": {
-        "ppr": 1.049,
-        "pod": 1.04,
-        "ovt": 1.052,
-        "pol": 0.908,
-        "fl": 1.164
+        "ppr": 1.102,
+        "pod": 0.908,
+        "ovt": 1.034,
+        "pol": 1.093,
+        "fl": 1.143
       },
       "pace_bias": 1.05,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 76,
-        "racecraft": 80,
-        "tyre_management": 68,
-        "consistency": 67,
-        "fuel_management": 64,
+        "pace": 78,
+        "racecraft": 82,
+        "tyre_management": 70,
+        "consistency": 69,
+        "fuel_management": 66,
         "stamina": 99
       }
     },
@@ -548,36 +548,36 @@
         "fuel_management": 90,
         "stamina": 98
       },
-      "peak_age": 33,
-      "retirement_age": 48,
+      "peak_age": 34,
+      "retirement_age": 49,
       "season_form": 1.0,
       "career_arc": "starter",
-      "potential": 91,
-      "development_rate": 0.904,
-      "ceiling_factor": 0.924,
+      "potential": 97,
+      "development_rate": 1.081,
+      "ceiling_factor": 0.969,
       "peak_attributes": {
-        "pace": 66,
-        "racecraft": 70,
-        "tyre_management": 73,
-        "consistency": 72,
-        "fuel_management": 68,
-        "stamina": 83
+        "pace": 82,
+        "racecraft": 82,
+        "tyre_management": 77,
+        "consistency": 78,
+        "fuel_management": 81,
+        "stamina": 86
       },
       "stat_modifiers": {
-        "ppr": 0.911,
-        "pod": 1.01,
-        "ovt": 0.903,
-        "pol": 0.86,
-        "fl": 1.119
+        "ppr": 0.972,
+        "pod": 0.941,
+        "ovt": 0.828,
+        "pol": 1.082,
+        "fl": 1.173
       },
-      "pace_bias": 1.093,
+      "pace_bias": 1.099,
       "season_gp": 0,
       "base_attributes": {
         "pace": 99,
         "racecraft": 99,
         "tyre_management": 99,
         "consistency": 99,
-        "fuel_management": 93,
+        "fuel_management": 92,
         "stamina": 99
       }
     },
@@ -607,36 +607,36 @@
         "fuel_management": 90,
         "stamina": 98
       },
-      "peak_age": 29,
-      "retirement_age": 48,
+      "peak_age": 31,
+      "retirement_age": 49,
       "season_form": 1.0,
       "career_arc": "starter",
-      "potential": 87,
-      "development_rate": 1.07,
-      "ceiling_factor": 0.957,
+      "potential": 93,
+      "development_rate": 0.963,
+      "ceiling_factor": 0.932,
       "peak_attributes": {
-        "pace": 74,
-        "racecraft": 75,
-        "tyre_management": 65,
-        "consistency": 67,
-        "fuel_management": 75,
-        "stamina": 80
+        "pace": 78,
+        "racecraft": 73,
+        "tyre_management": 75,
+        "consistency": 73,
+        "fuel_management": 71,
+        "stamina": 82
       },
       "stat_modifiers": {
-        "ppr": 0.985,
-        "pod": 1.09,
-        "ovt": 0.833,
-        "pol": 0.868,
-        "fl": 0.806
+        "ppr": 1.069,
+        "pod": 0.858,
+        "ovt": 0.964,
+        "pol": 1.047,
+        "fl": 1.183
       },
-      "pace_bias": 1.038,
+      "pace_bias": 1.002,
       "season_gp": 0,
       "base_attributes": {
         "pace": 99,
-        "racecraft": 97,
-        "tyre_management": 90,
+        "racecraft": 95,
+        "tyre_management": 89,
         "consistency": 99,
-        "fuel_management": 96,
+        "fuel_management": 94,
         "stamina": 99
       }
     },
@@ -666,36 +666,36 @@
         "fuel_management": 86,
         "stamina": 99
       },
-      "peak_age": 34,
-      "retirement_age": 52,
+      "peak_age": 33,
+      "retirement_age": 51,
       "season_form": 1.0,
       "career_arc": "starter",
-      "potential": 95,
-      "development_rate": 0.961,
-      "ceiling_factor": 0.939,
+      "potential": 87,
+      "development_rate": 0.997,
+      "ceiling_factor": 0.931,
       "peak_attributes": {
-        "pace": 78,
-        "racecraft": 77,
-        "tyre_management": 74,
-        "consistency": 74,
-        "fuel_management": 75,
-        "stamina": 87
+        "pace": 72,
+        "racecraft": 71,
+        "tyre_management": 69,
+        "consistency": 70,
+        "fuel_management": 67,
+        "stamina": 79
       },
       "stat_modifiers": {
-        "ppr": 0.992,
-        "pod": 1.121,
-        "ovt": 0.992,
-        "pol": 1.04,
-        "fl": 0.884
+        "ppr": 0.945,
+        "pod": 1.191,
+        "ovt": 0.815,
+        "pol": 0.947,
+        "fl": 1.111
       },
-      "pace_bias": 1.007,
+      "pace_bias": 1.082,
       "season_gp": 0,
       "base_attributes": {
         "pace": 99,
-        "racecraft": 83,
-        "tyre_management": 87,
-        "consistency": 91,
-        "fuel_management": 89,
+        "racecraft": 82,
+        "tyre_management": 86,
+        "consistency": 90,
+        "fuel_management": 88,
         "stamina": 99
       }
     },
@@ -725,36 +725,36 @@
         "fuel_management": 91,
         "stamina": 99
       },
-      "peak_age": 29,
-      "retirement_age": 46,
+      "peak_age": 33,
+      "retirement_age": 51,
       "season_form": 1.0,
       "career_arc": "starter",
-      "potential": 89,
-      "development_rate": 0.945,
-      "ceiling_factor": 0.967,
+      "potential": 93,
+      "development_rate": 0.97,
+      "ceiling_factor": 0.921,
       "peak_attributes": {
-        "pace": 71,
-        "racecraft": 72,
-        "tyre_management": 68,
-        "consistency": 69,
-        "fuel_management": 73,
-        "stamina": 81
+        "pace": 77,
+        "racecraft": 77,
+        "tyre_management": 70,
+        "consistency": 70,
+        "fuel_management": 68,
+        "stamina": 84
       },
       "stat_modifiers": {
-        "ppr": 0.964,
-        "pod": 0.923,
-        "ovt": 1.096,
-        "pol": 1.133,
-        "fl": 1.138
+        "ppr": 0.941,
+        "pod": 0.99,
+        "ovt": 0.824,
+        "pol": 0.903,
+        "fl": 1.023
       },
-      "pace_bias": 0.953,
+      "pace_bias": 1.068,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 98,
+        "pace": 99,
         "racecraft": 99,
-        "tyre_management": 92,
-        "consistency": 96,
-        "fuel_management": 91,
+        "tyre_management": 97,
+        "consistency": 99,
+        "fuel_management": 96,
         "stamina": 99
       }
     },
@@ -788,25 +788,25 @@
       "retirement_age": 50,
       "season_form": 1.0,
       "career_arc": "starter",
-      "potential": 94,
-      "development_rate": 0.91,
-      "ceiling_factor": 0.96,
+      "potential": 86,
+      "development_rate": 0.885,
+      "ceiling_factor": 0.953,
       "peak_attributes": {
-        "pace": 74,
-        "racecraft": 78,
-        "tyre_management": 78,
-        "consistency": 81,
-        "fuel_management": 72,
-        "stamina": 85
+        "pace": 72,
+        "racecraft": 64,
+        "tyre_management": 72,
+        "consistency": 73,
+        "fuel_management": 68,
+        "stamina": 81
       },
       "stat_modifiers": {
-        "ppr": 0.993,
-        "pod": 1.014,
-        "ovt": 0.886,
-        "pol": 0.984,
-        "fl": 1.176
+        "ppr": 1.008,
+        "pod": 1.072,
+        "ovt": 0.838,
+        "pol": 0.833,
+        "fl": 1.121
       },
-      "pace_bias": 0.974,
+      "pace_bias": 0.958,
       "season_gp": 0,
       "base_attributes": {
         "pace": 94,
@@ -843,36 +843,36 @@
         "fuel_management": 91,
         "stamina": 99
       },
-      "peak_age": 30,
+      "peak_age": 32,
       "retirement_age": 49,
       "season_form": 1.0,
       "career_arc": "starter",
-      "potential": 97,
-      "development_rate": 1.067,
-      "ceiling_factor": 0.973,
+      "potential": 95,
+      "development_rate": 0.983,
+      "ceiling_factor": 0.922,
       "peak_attributes": {
-        "pace": 77,
-        "racecraft": 84,
-        "tyre_management": 74,
-        "consistency": 80,
-        "fuel_management": 81,
-        "stamina": 91
+        "pace": 75,
+        "racecraft": 75,
+        "tyre_management": 76,
+        "consistency": 72,
+        "fuel_management": 76,
+        "stamina": 86
       },
       "stat_modifiers": {
-        "ppr": 1.015,
-        "pod": 0.815,
-        "ovt": 0.891,
-        "pol": 1.129,
-        "fl": 0.889
+        "ppr": 0.912,
+        "pod": 0.97,
+        "ovt": 1.186,
+        "pol": 0.816,
+        "fl": 0.976
       },
-      "pace_bias": 0.947,
+      "pace_bias": 0.996,
       "season_gp": 0,
       "base_attributes": {
         "pace": 99,
         "racecraft": 99,
         "tyre_management": 99,
         "consistency": 99,
-        "fuel_management": 94,
+        "fuel_management": 97,
         "stamina": 99
       }
     },
@@ -903,28 +903,28 @@
         "stamina": 87
       },
       "peak_age": 32,
-      "retirement_age": 50,
+      "retirement_age": 46,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 79,
-      "development_rate": 1.134,
-      "ceiling_factor": 0.927,
+      "potential": 78,
+      "development_rate": 0.865,
+      "ceiling_factor": 0.909,
       "peak_attributes": {
-        "pace": 63,
-        "racecraft": 66,
-        "tyre_management": 60,
-        "consistency": 59,
-        "fuel_management": 62,
-        "stamina": 69
+        "pace": 61,
+        "racecraft": 56,
+        "tyre_management": 61,
+        "consistency": 63,
+        "fuel_management": 58,
+        "stamina": 67
       },
       "stat_modifiers": {
-        "ppr": 1.044,
-        "pod": 0.928,
-        "ovt": 0.912,
-        "pol": 0.908,
-        "fl": 1.091
+        "ppr": 0.988,
+        "pod": 1.195,
+        "ovt": 0.905,
+        "pol": 0.94,
+        "fl": 1.16
       },
-      "pace_bias": 1.074,
+      "pace_bias": 0.958,
       "season_gp": 0,
       "base_attributes": {
         "pace": 87,
@@ -961,36 +961,36 @@
         "fuel_management": 73,
         "stamina": 96
       },
-      "peak_age": 29,
-      "retirement_age": 49,
+      "peak_age": 32,
+      "retirement_age": 53,
       "season_form": 1.0,
       "career_arc": "starter",
-      "potential": 77,
-      "development_rate": 1.075,
-      "ceiling_factor": 0.965,
+      "potential": 83,
+      "development_rate": 0.864,
+      "ceiling_factor": 0.946,
       "peak_attributes": {
-        "pace": 61,
+        "pace": 71,
         "racecraft": 62,
-        "tyre_management": 67,
+        "tyre_management": 69,
         "consistency": 64,
-        "fuel_management": 59,
-        "stamina": 69
+        "fuel_management": 69,
+        "stamina": 76
       },
       "stat_modifiers": {
-        "ppr": 1.022,
-        "pod": 1.055,
-        "ovt": 0.897,
-        "pol": 0.811,
-        "fl": 0.938
+        "ppr": 1.043,
+        "pod": 1.141,
+        "ovt": 1.119,
+        "pol": 1.049,
+        "fl": 0.852
       },
-      "pace_bias": 1.009,
+      "pace_bias": 1.044,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 84,
-        "racecraft": 99,
-        "tyre_management": 88,
-        "consistency": 88,
-        "fuel_management": 78,
+        "pace": 81,
+        "racecraft": 96,
+        "tyre_management": 86,
+        "consistency": 86,
+        "fuel_management": 75,
         "stamina": 99
       }
     },
@@ -1020,29 +1020,29 @@
         "fuel_management": 86,
         "stamina": 99
       },
-      "peak_age": 32,
-      "retirement_age": 48,
+      "peak_age": 30,
+      "retirement_age": 44,
       "season_form": 1.0,
       "career_arc": "starter",
-      "potential": 95,
-      "development_rate": 1.011,
-      "ceiling_factor": 0.92,
+      "potential": 93,
+      "development_rate": 1.094,
+      "ceiling_factor": 0.974,
       "peak_attributes": {
-        "pace": 75,
-        "racecraft": 73,
-        "tyre_management": 77,
-        "consistency": 69,
-        "fuel_management": 69,
-        "stamina": 82
+        "pace": 77,
+        "racecraft": 79,
+        "tyre_management": 73,
+        "consistency": 74,
+        "fuel_management": 75,
+        "stamina": 83
       },
       "stat_modifiers": {
-        "ppr": 0.961,
-        "pod": 1.051,
-        "ovt": 1.189,
-        "pol": 0.93,
-        "fl": 1.025
+        "ppr": 1.066,
+        "pod": 1.129,
+        "ovt": 1.057,
+        "pol": 1.183,
+        "fl": 0.979
       },
-      "pace_bias": 0.956,
+      "pace_bias": 1.074,
       "season_gp": 0,
       "base_attributes": {
         "pace": 97,
@@ -1079,36 +1079,36 @@
         "fuel_management": 70,
         "stamina": 88
       },
-      "peak_age": 30,
-      "retirement_age": 46,
+      "peak_age": 33,
+      "retirement_age": 51,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 71,
-      "development_rate": 0.953,
-      "ceiling_factor": 0.954,
+      "potential": 74,
+      "development_rate": 1.133,
+      "ceiling_factor": 0.947,
       "peak_attributes": {
-        "pace": 60,
-        "racecraft": 54,
-        "tyre_management": 52,
-        "consistency": 62,
-        "fuel_management": 57,
-        "stamina": 62
+        "pace": 63,
+        "racecraft": 59,
+        "tyre_management": 56,
+        "consistency": 60,
+        "fuel_management": 64,
+        "stamina": 64
       },
       "stat_modifiers": {
-        "ppr": 1.139,
-        "pod": 0.954,
-        "ovt": 0.817,
-        "pol": 1.092,
-        "fl": 0.869
+        "ppr": 0.987,
+        "pod": 1.034,
+        "ovt": 1.063,
+        "pol": 0.859,
+        "fl": 0.817
       },
-      "pace_bias": 0.978,
+      "pace_bias": 1.072,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 87,
-        "racecraft": 92,
-        "tyre_management": 84,
-        "consistency": 82,
-        "fuel_management": 78,
+        "pace": 84,
+        "racecraft": 89,
+        "tyre_management": 82,
+        "consistency": 80,
+        "fuel_management": 75,
         "stamina": 99
       }
     },
@@ -1139,28 +1139,28 @@
         "stamina": 89
       },
       "peak_age": 32,
-      "retirement_age": 51,
+      "retirement_age": 48,
       "season_form": 1.0,
       "career_arc": "role",
       "potential": 69,
-      "development_rate": 1.015,
-      "ceiling_factor": 0.943,
+      "development_rate": 1.018,
+      "ceiling_factor": 0.889,
       "peak_attributes": {
-        "pace": 59,
-        "racecraft": 59,
-        "tyre_management": 56,
-        "consistency": 51,
-        "fuel_management": 56,
-        "stamina": 60
+        "pace": 49,
+        "racecraft": 56,
+        "tyre_management": 52,
+        "consistency": 52,
+        "fuel_management": 54,
+        "stamina": 58
       },
       "stat_modifiers": {
-        "ppr": 0.947,
-        "pod": 1.095,
-        "ovt": 1.098,
-        "pol": 0.882,
-        "fl": 0.987
+        "ppr": 1.023,
+        "pod": 1.194,
+        "ovt": 1.015,
+        "pol": 0.81,
+        "fl": 0.992
       },
-      "pace_bias": 0.97,
+      "pace_bias": 0.973,
       "season_gp": 0,
       "base_attributes": {
         "pace": 62,
@@ -1197,36 +1197,36 @@
         "fuel_management": 56,
         "stamina": 91
       },
-      "peak_age": 30,
-      "retirement_age": 49,
+      "peak_age": 34,
+      "retirement_age": 48,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 63,
-      "development_rate": 1.085,
-      "ceiling_factor": 0.882,
+      "potential": 66,
+      "development_rate": 0.936,
+      "ceiling_factor": 0.908,
       "peak_attributes": {
-        "pace": 47,
-        "racecraft": 46,
-        "tyre_management": 42,
-        "consistency": 48,
-        "fuel_management": 42,
+        "pace": 53,
+        "racecraft": 47,
+        "tyre_management": 49,
+        "consistency": 55,
+        "fuel_management": 51,
         "stamina": 54
       },
       "stat_modifiers": {
-        "ppr": 1.026,
-        "pod": 0.817,
-        "ovt": 0.936,
-        "pol": 0.805,
-        "fl": 1.057
+        "ppr": 1.08,
+        "pod": 0.841,
+        "ovt": 0.81,
+        "pol": 1.037,
+        "fl": 0.966
       },
-      "pace_bias": 1.065,
+      "pace_bias": 1.087,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 62,
-        "racecraft": 75,
-        "tyre_management": 59,
-        "consistency": 56,
-        "fuel_management": 61,
+        "pace": 64,
+        "racecraft": 78,
+        "tyre_management": 61,
+        "consistency": 57,
+        "fuel_management": 63,
         "stamina": 99
       }
     },
@@ -1256,35 +1256,35 @@
         "fuel_management": 83,
         "stamina": 96
       },
-      "peak_age": 32,
+      "peak_age": 33,
       "retirement_age": 47,
       "season_form": 1.0,
       "career_arc": "starter",
-      "potential": 81,
-      "development_rate": 0.87,
-      "ceiling_factor": 0.937,
+      "potential": 84,
+      "development_rate": 1.098,
+      "ceiling_factor": 0.961,
       "peak_attributes": {
-        "pace": 67,
-        "racecraft": 60,
-        "tyre_management": 62,
-        "consistency": 67,
-        "fuel_management": 59,
-        "stamina": 69
+        "pace": 63,
+        "racecraft": 72,
+        "tyre_management": 69,
+        "consistency": 63,
+        "fuel_management": 69,
+        "stamina": 78
       },
       "stat_modifiers": {
-        "ppr": 1.078,
-        "pod": 0.928,
-        "ovt": 1.14,
-        "pol": 0.883,
-        "fl": 1.033
+        "ppr": 0.988,
+        "pod": 1.144,
+        "ovt": 1.0,
+        "pol": 0.838,
+        "fl": 1.194
       },
-      "pace_bias": 1.044,
+      "pace_bias": 0.974,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 98,
-        "racecraft": 74,
-        "tyre_management": 81,
-        "consistency": 94,
+        "pace": 97,
+        "racecraft": 73,
+        "tyre_management": 80,
+        "consistency": 93,
         "fuel_management": 86,
         "stamina": 99
       }
@@ -1316,28 +1316,28 @@
         "stamina": 87
       },
       "peak_age": 32,
-      "retirement_age": 52,
+      "retirement_age": 44,
       "season_form": 1.0,
       "career_arc": "starter",
-      "potential": 89,
-      "development_rate": 0.851,
-      "ceiling_factor": 0.96,
+      "potential": 88,
+      "development_rate": 0.956,
+      "ceiling_factor": 0.955,
       "peak_attributes": {
-        "pace": 74,
-        "racecraft": 74,
+        "pace": 70,
+        "racecraft": 67,
         "tyre_management": 73,
-        "consistency": 71,
-        "fuel_management": 73,
-        "stamina": 83
+        "consistency": 74,
+        "fuel_management": 74,
+        "stamina": 80
       },
       "stat_modifiers": {
-        "ppr": 1.034,
-        "pod": 0.945,
-        "ovt": 1.148,
-        "pol": 0.927,
-        "fl": 1.03
+        "ppr": 0.985,
+        "pod": 1.016,
+        "ovt": 1.172,
+        "pol": 1.03,
+        "fl": 0.822
       },
-      "pace_bias": 1.047,
+      "pace_bias": 0.956,
       "season_gp": 0,
       "base_attributes": {
         "pace": 99,
@@ -1374,36 +1374,36 @@
         "fuel_management": 69,
         "stamina": 99
       },
-      "peak_age": 31,
-      "retirement_age": 48,
+      "peak_age": 30,
+      "retirement_age": 45,
       "season_form": 1.0,
       "career_arc": "starter",
-      "potential": 81,
-      "development_rate": 0.933,
-      "ceiling_factor": 0.979,
+      "potential": 77,
+      "development_rate": 1.111,
+      "ceiling_factor": 0.927,
       "peak_attributes": {
-        "pace": 67,
-        "racecraft": 72,
-        "tyre_management": 64,
-        "consistency": 71,
-        "fuel_management": 69,
-        "stamina": 77
+        "pace": 58,
+        "racecraft": 65,
+        "tyre_management": 62,
+        "consistency": 58,
+        "fuel_management": 58,
+        "stamina": 71
       },
       "stat_modifiers": {
-        "ppr": 1.025,
-        "pod": 1.048,
-        "ovt": 1.142,
-        "pol": 0.901,
-        "fl": 0.911
+        "ppr": 0.912,
+        "pod": 0.878,
+        "ovt": 1.17,
+        "pol": 0.937,
+        "fl": 0.834
       },
-      "pace_bias": 0.993,
+      "pace_bias": 1.09,
       "season_gp": 0,
       "base_attributes": {
         "pace": 81,
         "racecraft": 79,
-        "tyre_management": 95,
-        "consistency": 92,
-        "fuel_management": 70,
+        "tyre_management": 96,
+        "consistency": 93,
+        "fuel_management": 71,
         "stamina": 99
       }
     },
@@ -1433,36 +1433,36 @@
         "fuel_management": 88,
         "stamina": 99
       },
-      "peak_age": 30,
-      "retirement_age": 50,
+      "peak_age": 33,
+      "retirement_age": 49,
       "season_form": 1.0,
       "career_arc": "starter",
-      "potential": 87,
-      "development_rate": 0.9,
-      "ceiling_factor": 0.953,
+      "potential": 91,
+      "development_rate": 1.038,
+      "ceiling_factor": 0.964,
       "peak_attributes": {
         "pace": 73,
         "racecraft": 73,
-        "tyre_management": 68,
-        "consistency": 66,
-        "fuel_management": 66,
-        "stamina": 76
+        "tyre_management": 78,
+        "consistency": 78,
+        "fuel_management": 78,
+        "stamina": 80
       },
       "stat_modifiers": {
-        "ppr": 1.099,
-        "pod": 0.975,
-        "ovt": 0.982,
-        "pol": 0.88,
-        "fl": 0.878
+        "ppr": 1.054,
+        "pod": 0.885,
+        "ovt": 1.177,
+        "pol": 0.915,
+        "fl": 1.005
       },
-      "pace_bias": 1.027,
+      "pace_bias": 0.947,
       "season_gp": 0,
       "base_attributes": {
         "pace": 99,
-        "racecraft": 77,
-        "tyre_management": 89,
-        "consistency": 95,
-        "fuel_management": 88,
+        "racecraft": 80,
+        "tyre_management": 93,
+        "consistency": 99,
+        "fuel_management": 92,
         "stamina": 99
       }
     },
@@ -1492,36 +1492,36 @@
         "fuel_management": 83,
         "stamina": 97
       },
-      "peak_age": 32,
+      "peak_age": 34,
       "retirement_age": 51,
       "season_form": 1.0,
       "career_arc": "starter",
-      "potential": 86,
-      "development_rate": 0.853,
-      "ceiling_factor": 0.928,
+      "potential": 89,
+      "development_rate": 0.989,
+      "ceiling_factor": 0.937,
       "peak_attributes": {
-        "pace": 67,
-        "racecraft": 72,
-        "tyre_management": 72,
-        "consistency": 72,
-        "fuel_management": 67,
-        "stamina": 74
+        "pace": 65,
+        "racecraft": 69,
+        "tyre_management": 70,
+        "consistency": 70,
+        "fuel_management": 65,
+        "stamina": 79
       },
       "stat_modifiers": {
-        "ppr": 1.091,
-        "pod": 1.087,
-        "ovt": 0.967,
-        "pol": 0.971,
-        "fl": 0.868
+        "ppr": 0.903,
+        "pod": 1.051,
+        "ovt": 0.85,
+        "pol": 0.956,
+        "fl": 0.842
       },
-      "pace_bias": 1.014,
+      "pace_bias": 1.008,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 93,
-        "racecraft": 88,
-        "tyre_management": 79,
-        "consistency": 88,
-        "fuel_management": 86,
+        "pace": 91,
+        "racecraft": 86,
+        "tyre_management": 78,
+        "consistency": 86,
+        "fuel_management": 84,
         "stamina": 99
       }
     },
@@ -1552,28 +1552,28 @@
         "stamina": 85
       },
       "peak_age": 31,
-      "retirement_age": 49,
+      "retirement_age": 47,
       "season_form": 1.0,
       "career_arc": "starter",
-      "potential": 90,
-      "development_rate": 1.12,
-      "ceiling_factor": 0.935,
+      "potential": 86,
+      "development_rate": 0.996,
+      "ceiling_factor": 0.962,
       "peak_attributes": {
-        "pace": 72,
-        "racecraft": 67,
-        "tyre_management": 73,
-        "consistency": 66,
+        "pace": 73,
+        "racecraft": 71,
+        "tyre_management": 71,
+        "consistency": 73,
         "fuel_management": 67,
-        "stamina": 77
+        "stamina": 81
       },
       "stat_modifiers": {
-        "ppr": 0.901,
-        "pod": 1.179,
-        "ovt": 0.999,
-        "pol": 1.162,
-        "fl": 1.069
+        "ppr": 1.136,
+        "pod": 1.009,
+        "ovt": 1.157,
+        "pol": 1.143,
+        "fl": 0.895
       },
-      "pace_bias": 0.992,
+      "pace_bias": 1.094,
       "season_gp": 0,
       "base_attributes": {
         "pace": 99,
@@ -1611,28 +1611,28 @@
         "stamina": 99
       },
       "peak_age": 34,
-      "retirement_age": 47,
+      "retirement_age": 48,
       "season_form": 1.0,
       "career_arc": "starter",
-      "potential": 92,
-      "development_rate": 0.856,
-      "ceiling_factor": 0.959,
+      "potential": 91,
+      "development_rate": 0.86,
+      "ceiling_factor": 0.921,
       "peak_attributes": {
-        "pace": 79,
-        "racecraft": 71,
-        "tyre_management": 70,
+        "pace": 70,
+        "racecraft": 74,
+        "tyre_management": 68,
         "consistency": 72,
-        "fuel_management": 79,
-        "stamina": 84
+        "fuel_management": 68,
+        "stamina": 79
       },
       "stat_modifiers": {
-        "ppr": 0.947,
-        "pod": 0.968,
-        "ovt": 0.845,
-        "pol": 1.193,
-        "fl": 0.967
+        "ppr": 0.941,
+        "pod": 0.859,
+        "ovt": 1.116,
+        "pol": 1.078,
+        "fl": 0.935
       },
-      "pace_bias": 0.983,
+      "pace_bias": 1.05,
       "season_gp": 0,
       "base_attributes": {
         "pace": 96,
@@ -1669,34 +1669,34 @@
         "fuel_management": 78,
         "stamina": 99
       },
-      "peak_age": 34,
-      "retirement_age": 46,
+      "peak_age": 29,
+      "retirement_age": 50,
       "season_form": 1.0,
       "career_arc": "starter",
-      "potential": 90,
-      "development_rate": 1.008,
-      "ceiling_factor": 0.945,
+      "potential": 81,
+      "development_rate": 0.949,
+      "ceiling_factor": 0.977,
       "peak_attributes": {
-        "pace": 76,
-        "racecraft": 69,
-        "tyre_management": 74,
-        "consistency": 67,
-        "fuel_management": 73,
-        "stamina": 83
+        "pace": 62,
+        "racecraft": 64,
+        "tyre_management": 69,
+        "consistency": 63,
+        "fuel_management": 70,
+        "stamina": 76
       },
       "stat_modifiers": {
-        "ppr": 1.034,
-        "pod": 0.921,
-        "ovt": 1.054,
-        "pol": 1.067,
-        "fl": 1.093
+        "ppr": 0.947,
+        "pod": 0.969,
+        "ovt": 1.081,
+        "pol": 0.992,
+        "fl": 1.055
       },
-      "pace_bias": 1.084,
+      "pace_bias": 1.053,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 84,
-        "racecraft": 88,
-        "tyre_management": 95,
+        "pace": 85,
+        "racecraft": 89,
+        "tyre_management": 96,
         "consistency": 99,
         "fuel_management": 80,
         "stamina": 99
@@ -1728,36 +1728,36 @@
         "fuel_management": 61,
         "stamina": 99
       },
-      "peak_age": 31,
-      "retirement_age": 50,
+      "peak_age": 32,
+      "retirement_age": 53,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 71,
-      "development_rate": 1.018,
-      "ceiling_factor": 0.943,
+      "potential": 66,
+      "development_rate": 0.974,
+      "ceiling_factor": 0.883,
       "peak_attributes": {
-        "pace": 60,
-        "racecraft": 53,
-        "tyre_management": 61,
-        "consistency": 60,
-        "fuel_management": 58,
-        "stamina": 66
+        "pace": 49,
+        "racecraft": 48,
+        "tyre_management": 53,
+        "consistency": 52,
+        "fuel_management": 53,
+        "stamina": 53
       },
       "stat_modifiers": {
-        "ppr": 1.101,
-        "pod": 0.857,
-        "ovt": 0.955,
-        "pol": 0.937,
-        "fl": 1.082
+        "ppr": 1.068,
+        "pod": 0.923,
+        "ovt": 0.887,
+        "pol": 0.997,
+        "fl": 0.899
       },
-      "pace_bias": 1.045,
+      "pace_bias": 0.957,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 63,
-        "racecraft": 87,
-        "tyre_management": 75,
-        "consistency": 68,
-        "fuel_management": 61,
+        "pace": 64,
+        "racecraft": 88,
+        "tyre_management": 76,
+        "consistency": 69,
+        "fuel_management": 62,
         "stamina": 99
       }
     },
@@ -1787,36 +1787,36 @@
         "fuel_management": 70,
         "stamina": 98
       },
-      "peak_age": 29,
+      "peak_age": 32,
       "retirement_age": 46,
       "season_form": 1.0,
       "career_arc": "starter",
-      "potential": 85,
-      "development_rate": 1.024,
-      "ceiling_factor": 0.948,
+      "potential": 82,
+      "development_rate": 1.01,
+      "ceiling_factor": 0.937,
       "peak_attributes": {
-        "pace": 71,
-        "racecraft": 68,
-        "tyre_management": 69,
-        "consistency": 68,
-        "fuel_management": 69,
-        "stamina": 77
+        "pace": 66,
+        "racecraft": 69,
+        "tyre_management": 67,
+        "consistency": 69,
+        "fuel_management": 65,
+        "stamina": 72
       },
       "stat_modifiers": {
-        "ppr": 0.989,
-        "pod": 1.069,
-        "ovt": 1.006,
-        "pol": 0.961,
-        "fl": 0.809
+        "ppr": 0.909,
+        "pod": 1.184,
+        "ovt": 1.018,
+        "pol": 1.116,
+        "fl": 1.006
       },
-      "pace_bias": 0.987,
+      "pace_bias": 1.084,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 83,
-        "racecraft": 96,
-        "tyre_management": 92,
-        "consistency": 99,
-        "fuel_management": 74,
+        "pace": 81,
+        "racecraft": 93,
+        "tyre_management": 89,
+        "consistency": 98,
+        "fuel_management": 71,
         "stamina": 99
       }
     },
@@ -1847,28 +1847,28 @@
         "stamina": 82
       },
       "peak_age": 33,
-      "retirement_age": 50,
+      "retirement_age": 46,
       "season_form": 1.0,
       "career_arc": "starter",
-      "potential": 76,
-      "development_rate": 0.969,
-      "ceiling_factor": 0.921,
+      "potential": 84,
+      "development_rate": 1.064,
+      "ceiling_factor": 0.957,
       "peak_attributes": {
-        "pace": 54,
-        "racecraft": 62,
-        "tyre_management": 55,
-        "consistency": 57,
-        "fuel_management": 58,
-        "stamina": 66
+        "pace": 70,
+        "racecraft": 71,
+        "tyre_management": 72,
+        "consistency": 63,
+        "fuel_management": 66,
+        "stamina": 77
       },
       "stat_modifiers": {
-        "ppr": 1.012,
-        "pod": 1.08,
-        "ovt": 0.872,
-        "pol": 1.179,
-        "fl": 1.004
+        "ppr": 1.106,
+        "pod": 1.052,
+        "ovt": 1.101,
+        "pol": 0.808,
+        "fl": 0.853
       },
-      "pace_bias": 1.098,
+      "pace_bias": 0.999,
       "season_gp": 0,
       "base_attributes": {
         "pace": 99,
@@ -1905,36 +1905,36 @@
         "fuel_management": 71,
         "stamina": 80
       },
-      "peak_age": 33,
+      "peak_age": 31,
       "retirement_age": 47,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 83,
-      "development_rate": 0.991,
-      "ceiling_factor": 0.884,
+      "potential": 85,
+      "development_rate": 0.938,
+      "ceiling_factor": 0.894,
       "peak_attributes": {
-        "pace": 66,
-        "racecraft": 60,
-        "tyre_management": 66,
-        "consistency": 63,
-        "fuel_management": 65,
-        "stamina": 68
+        "pace": 67,
+        "racecraft": 65,
+        "tyre_management": 61,
+        "consistency": 66,
+        "fuel_management": 63,
+        "stamina": 70
       },
       "stat_modifiers": {
-        "ppr": 1.143,
-        "pod": 1.014,
-        "ovt": 1.08,
-        "pol": 1.031,
-        "fl": 1.048
+        "ppr": 1.119,
+        "pod": 1.116,
+        "ovt": 1.036,
+        "pol": 0.999,
+        "fl": 1.108
       },
-      "pace_bias": 0.985,
+      "pace_bias": 1.069,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 95,
-        "racecraft": 89,
-        "tyre_management": 92,
-        "consistency": 90,
-        "fuel_management": 82,
+        "pace": 98,
+        "racecraft": 91,
+        "tyre_management": 94,
+        "consistency": 92,
+        "fuel_management": 84,
         "stamina": 99
       }
     },
@@ -1964,36 +1964,36 @@
         "fuel_management": 89,
         "stamina": 99
       },
-      "peak_age": 30,
-      "retirement_age": 45,
+      "peak_age": 29,
+      "retirement_age": 50,
       "season_form": 1.0,
       "career_arc": "starter",
-      "potential": 92,
-      "development_rate": 1.007,
-      "ceiling_factor": 0.924,
+      "potential": 89,
+      "development_rate": 1.118,
+      "ceiling_factor": 0.935,
       "peak_attributes": {
-        "pace": 67,
-        "racecraft": 71,
-        "tyre_management": 69,
-        "consistency": 70,
-        "fuel_management": 71,
-        "stamina": 79
+        "pace": 73,
+        "racecraft": 67,
+        "tyre_management": 68,
+        "consistency": 65,
+        "fuel_management": 67,
+        "stamina": 77
       },
       "stat_modifiers": {
-        "ppr": 1.015,
-        "pod": 0.994,
-        "ovt": 0.935,
-        "pol": 1.15,
-        "fl": 1.176
+        "ppr": 0.988,
+        "pod": 1.193,
+        "ovt": 0.916,
+        "pol": 0.824,
+        "fl": 1.126
       },
-      "pace_bias": 1.027,
+      "pace_bias": 1.083,
       "season_gp": 0,
       "base_attributes": {
         "pace": 99,
-        "racecraft": 68,
-        "tyre_management": 89,
-        "consistency": 77,
-        "fuel_management": 94,
+        "racecraft": 67,
+        "tyre_management": 88,
+        "consistency": 76,
+        "fuel_management": 92,
         "stamina": 99
       }
     },
@@ -2023,36 +2023,36 @@
         "fuel_management": 76,
         "stamina": 99
       },
-      "peak_age": 31,
-      "retirement_age": 44,
+      "peak_age": 30,
+      "retirement_age": 53,
       "season_form": 1.0,
       "career_arc": "starter",
-      "potential": 83,
-      "development_rate": 0.967,
-      "ceiling_factor": 0.972,
+      "potential": 87,
+      "development_rate": 1.009,
+      "ceiling_factor": 0.961,
       "peak_attributes": {
-        "pace": 65,
-        "racecraft": 70,
-        "tyre_management": 73,
-        "consistency": 67,
-        "fuel_management": 72,
-        "stamina": 76
+        "pace": 69,
+        "racecraft": 67,
+        "tyre_management": 70,
+        "consistency": 73,
+        "fuel_management": 71,
+        "stamina": 78
       },
       "stat_modifiers": {
-        "ppr": 1.011,
-        "pod": 1.021,
-        "ovt": 0.972,
-        "pol": 0.861,
-        "fl": 1.003
+        "ppr": 1.11,
+        "pod": 0.986,
+        "ovt": 0.815,
+        "pol": 1.162,
+        "fl": 1.051
       },
-      "pace_bias": 0.959,
+      "pace_bias": 1.016,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 87,
-        "racecraft": 98,
-        "tyre_management": 84,
-        "consistency": 74,
-        "fuel_management": 77,
+        "pace": 86,
+        "racecraft": 96,
+        "tyre_management": 83,
+        "consistency": 73,
+        "fuel_management": 76,
         "stamina": 99
       }
     },
@@ -2083,28 +2083,28 @@
         "stamina": 95
       },
       "peak_age": 33,
-      "retirement_age": 53,
+      "retirement_age": 48,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 76,
-      "development_rate": 0.99,
-      "ceiling_factor": 0.956,
+      "potential": 78,
+      "development_rate": 1.008,
+      "ceiling_factor": 0.886,
       "peak_attributes": {
-        "pace": 63,
-        "racecraft": 60,
+        "pace": 54,
+        "racecraft": 58,
         "tyre_management": 61,
-        "consistency": 66,
-        "fuel_management": 66,
-        "stamina": 72
+        "consistency": 54,
+        "fuel_management": 60,
+        "stamina": 63
       },
       "stat_modifiers": {
-        "ppr": 0.976,
-        "pod": 1.0,
-        "ovt": 1.044,
-        "pol": 1.154,
-        "fl": 1.004
+        "ppr": 0.956,
+        "pod": 1.091,
+        "ovt": 1.115,
+        "pol": 1.155,
+        "fl": 0.953
       },
-      "pace_bias": 0.995,
+      "pace_bias": 1.031,
       "season_gp": 0,
       "base_attributes": {
         "pace": 80,
@@ -2141,36 +2141,36 @@
         "fuel_management": 78,
         "stamina": 97
       },
-      "peak_age": 30,
-      "retirement_age": 54,
+      "peak_age": 29,
+      "retirement_age": 52,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 84,
-      "development_rate": 0.979,
-      "ceiling_factor": 0.898,
+      "potential": 79,
+      "development_rate": 1.019,
+      "ceiling_factor": 0.917,
       "peak_attributes": {
-        "pace": 60,
-        "racecraft": 67,
-        "tyre_management": 65,
+        "pace": 59,
+        "racecraft": 64,
+        "tyre_management": 64,
         "consistency": 62,
-        "fuel_management": 68,
-        "stamina": 73
+        "fuel_management": 63,
+        "stamina": 68
       },
       "stat_modifiers": {
-        "ppr": 1.129,
-        "pod": 0.989,
-        "ovt": 1.057,
-        "pol": 0.958,
-        "fl": 0.907
+        "ppr": 0.926,
+        "pod": 1.13,
+        "ovt": 0.884,
+        "pol": 1.041,
+        "fl": 0.89
       },
-      "pace_bias": 0.974,
+      "pace_bias": 1.072,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 86,
-        "racecraft": 96,
-        "tyre_management": 81,
-        "consistency": 90,
-        "fuel_management": 84,
+        "pace": 85,
+        "racecraft": 95,
+        "tyre_management": 80,
+        "consistency": 89,
+        "fuel_management": 82,
         "stamina": 99
       }
     },
@@ -2200,37 +2200,37 @@
         "fuel_management": 69,
         "stamina": 98
       },
-      "peak_age": 33,
-      "retirement_age": 53,
+      "peak_age": 30,
+      "retirement_age": 49,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 81,
-      "development_rate": 1.05,
-      "ceiling_factor": 0.938,
+      "potential": 78,
+      "development_rate": 0.863,
+      "ceiling_factor": 0.883,
       "peak_attributes": {
-        "pace": 68,
-        "racecraft": 69,
-        "tyre_management": 67,
-        "consistency": 63,
-        "fuel_management": 62,
-        "stamina": 73
+        "pace": 58,
+        "racecraft": 59,
+        "tyre_management": 60,
+        "consistency": 55,
+        "fuel_management": 58,
+        "stamina": 66
       },
       "stat_modifiers": {
-        "ppr": 0.94,
-        "pod": 0.864,
-        "ovt": 1.122,
-        "pol": 0.88,
-        "fl": 1.138
+        "ppr": 1.051,
+        "pod": 1.16,
+        "ovt": 1.18,
+        "pol": 1.134,
+        "fl": 0.907
       },
-      "pace_bias": 1.072,
+      "pace_bias": 0.954,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 81,
-        "racecraft": 78,
-        "tyre_management": 71,
-        "consistency": 79,
-        "fuel_management": 69,
-        "stamina": 98
+        "pace": 84,
+        "racecraft": 80,
+        "tyre_management": 73,
+        "consistency": 81,
+        "fuel_management": 71,
+        "stamina": 99
       }
     },
     {
@@ -2259,37 +2259,37 @@
         "fuel_management": 78,
         "stamina": 91
       },
-      "peak_age": 34,
-      "retirement_age": 49,
+      "peak_age": 29,
+      "retirement_age": 50,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 78,
-      "development_rate": 1.109,
-      "ceiling_factor": 0.93,
+      "potential": 80,
+      "development_rate": 0.919,
+      "ceiling_factor": 0.916,
       "peak_attributes": {
-        "pace": 64,
-        "racecraft": 60,
-        "tyre_management": 58,
+        "pace": 61,
+        "racecraft": 61,
+        "tyre_management": 64,
         "consistency": 62,
-        "fuel_management": 57,
-        "stamina": 71
+        "fuel_management": 58,
+        "stamina": 70
       },
       "stat_modifiers": {
-        "ppr": 1.112,
-        "pod": 0.904,
-        "ovt": 0.928,
-        "pol": 0.908,
-        "fl": 1.076
+        "ppr": 1.06,
+        "pod": 0.917,
+        "ovt": 1.104,
+        "pol": 1.022,
+        "fl": 0.818
       },
-      "pace_bias": 0.95,
+      "pace_bias": 0.943,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 89,
-        "racecraft": 75,
-        "tyre_management": 81,
-        "consistency": 86,
-        "fuel_management": 81,
-        "stamina": 97
+        "pace": 93,
+        "racecraft": 79,
+        "tyre_management": 86,
+        "consistency": 91,
+        "fuel_management": 86,
+        "stamina": 99
       }
     },
     {
@@ -2318,36 +2318,36 @@
         "fuel_management": 58,
         "stamina": 99
       },
-      "peak_age": 34,
-      "retirement_age": 45,
+      "peak_age": 31,
+      "retirement_age": 47,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 74,
-      "development_rate": 0.989,
-      "ceiling_factor": 0.892,
+      "potential": 73,
+      "development_rate": 1.13,
+      "ceiling_factor": 0.883,
       "peak_attributes": {
-        "pace": 56,
-        "racecraft": 53,
-        "tyre_management": 56,
+        "pace": 52,
+        "racecraft": 56,
+        "tyre_management": 55,
         "consistency": 57,
-        "fuel_management": 55,
-        "stamina": 60
+        "fuel_management": 54,
+        "stamina": 62
       },
       "stat_modifiers": {
-        "ppr": 1.077,
-        "pod": 0.931,
-        "ovt": 1.085,
-        "pol": 1.034,
-        "fl": 0.896
+        "ppr": 1.118,
+        "pod": 1.03,
+        "ovt": 0.904,
+        "pol": 1.069,
+        "fl": 1.172
       },
-      "pace_bias": 1.065,
+      "pace_bias": 0.944,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 68,
-        "racecraft": 71,
-        "tyre_management": 74,
-        "consistency": 85,
-        "fuel_management": 61,
+        "pace": 66,
+        "racecraft": 68,
+        "tyre_management": 71,
+        "consistency": 82,
+        "fuel_management": 59,
         "stamina": 99
       }
     },
@@ -2377,36 +2377,36 @@
         "fuel_management": 83,
         "stamina": 99
       },
-      "peak_age": 34,
-      "retirement_age": 51,
+      "peak_age": 33,
+      "retirement_age": 48,
       "season_form": 1.0,
       "career_arc": "starter",
-      "potential": 78,
-      "development_rate": 0.933,
-      "ceiling_factor": 0.974,
+      "potential": 82,
+      "development_rate": 0.896,
+      "ceiling_factor": 0.955,
       "peak_attributes": {
-        "pace": 69,
-        "racecraft": 64,
-        "tyre_management": 61,
-        "consistency": 68,
-        "fuel_management": 67,
-        "stamina": 75
+        "pace": 70,
+        "racecraft": 66,
+        "tyre_management": 62,
+        "consistency": 64,
+        "fuel_management": 63,
+        "stamina": 77
       },
       "stat_modifiers": {
-        "ppr": 0.951,
-        "pod": 1.133,
-        "ovt": 0.911,
-        "pol": 1.101,
-        "fl": 0.86
+        "ppr": 1.05,
+        "pod": 1.034,
+        "ovt": 1.2,
+        "pol": 0.937,
+        "fl": 1.07
       },
-      "pace_bias": 1.083,
+      "pace_bias": 1.046,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 87,
-        "racecraft": 83,
-        "tyre_management": 81,
-        "consistency": 73,
-        "fuel_management": 84,
+        "pace": 86,
+        "racecraft": 82,
+        "tyre_management": 80,
+        "consistency": 72,
+        "fuel_management": 83,
         "stamina": 99
       }
     },
@@ -2436,36 +2436,36 @@
         "fuel_management": 79,
         "stamina": 94
       },
-      "peak_age": 31,
-      "retirement_age": 44,
+      "peak_age": 32,
+      "retirement_age": 50,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 70,
-      "development_rate": 1.01,
-      "ceiling_factor": 0.94,
+      "potential": 68,
+      "development_rate": 0.931,
+      "ceiling_factor": 0.935,
       "peak_attributes": {
-        "pace": 55,
-        "racecraft": 54,
-        "tyre_management": 55,
-        "consistency": 52,
-        "fuel_management": 55,
-        "stamina": 60
+        "pace": 52,
+        "racecraft": 55,
+        "tyre_management": 51,
+        "consistency": 54,
+        "fuel_management": 50,
+        "stamina": 59
       },
       "stat_modifiers": {
-        "ppr": 0.957,
-        "pod": 1.0,
-        "ovt": 0.82,
-        "pol": 1.058,
-        "fl": 0.979
+        "ppr": 0.929,
+        "pod": 0.922,
+        "ovt": 1.101,
+        "pol": 1.08,
+        "fl": 1.06
       },
-      "pace_bias": 0.971,
+      "pace_bias": 1.064,
       "season_gp": 0,
       "base_attributes": {
         "pace": 84,
-        "racecraft": 69,
-        "tyre_management": 64,
-        "consistency": 64,
-        "fuel_management": 82,
+        "racecraft": 68,
+        "tyre_management": 63,
+        "consistency": 63,
+        "fuel_management": 81,
         "stamina": 99
       }
     },
@@ -2495,37 +2495,37 @@
         "fuel_management": 62,
         "stamina": 81
       },
-      "peak_age": 34,
-      "retirement_age": 54,
+      "peak_age": 29,
+      "retirement_age": 50,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 69,
-      "development_rate": 0.88,
-      "ceiling_factor": 0.891,
+      "potential": 66,
+      "development_rate": 0.901,
+      "ceiling_factor": 0.884,
       "peak_attributes": {
-        "pace": 49,
-        "racecraft": 48,
-        "tyre_management": 55,
-        "consistency": 48,
-        "fuel_management": 49,
-        "stamina": 57
+        "pace": 50,
+        "racecraft": 45,
+        "tyre_management": 53,
+        "consistency": 51,
+        "fuel_management": 51,
+        "stamina": 54
       },
       "stat_modifiers": {
-        "ppr": 1.134,
-        "pod": 1.047,
-        "ovt": 1.111,
-        "pol": 1.185,
-        "fl": 1.172
+        "ppr": 0.9,
+        "pod": 0.904,
+        "ovt": 0.952,
+        "pol": 0.893,
+        "fl": 0.808
       },
-      "pace_bias": 1.001,
+      "pace_bias": 0.99,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 73,
-        "racecraft": 79,
-        "tyre_management": 79,
-        "consistency": 63,
-        "fuel_management": 68,
-        "stamina": 95
+        "pace": 77,
+        "racecraft": 84,
+        "tyre_management": 84,
+        "consistency": 66,
+        "fuel_management": 72,
+        "stamina": 99
       }
     },
     {
@@ -2554,36 +2554,36 @@
         "fuel_management": 65,
         "stamina": 99
       },
-      "peak_age": 32,
-      "retirement_age": 51,
+      "peak_age": 30,
+      "retirement_age": 47,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 73,
-      "development_rate": 0.952,
-      "ceiling_factor": 0.943,
+      "potential": 69,
+      "development_rate": 1.058,
+      "ceiling_factor": 0.94,
       "peak_attributes": {
-        "pace": 57,
-        "racecraft": 63,
-        "tyre_management": 53,
-        "consistency": 58,
-        "fuel_management": 55,
-        "stamina": 68
+        "pace": 52,
+        "racecraft": 50,
+        "tyre_management": 51,
+        "consistency": 55,
+        "fuel_management": 50,
+        "stamina": 64
       },
       "stat_modifiers": {
-        "ppr": 1.007,
-        "pod": 0.891,
-        "ovt": 1.078,
-        "pol": 0.954,
-        "fl": 1.152
+        "ppr": 1.079,
+        "pod": 0.86,
+        "ovt": 1.044,
+        "pol": 1.01,
+        "fl": 1.119
       },
-      "pace_bias": 0.977,
+      "pace_bias": 0.952,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 73,
-        "racecraft": 65,
-        "tyre_management": 67,
-        "consistency": 78,
-        "fuel_management": 67,
+        "pace": 71,
+        "racecraft": 63,
+        "tyre_management": 65,
+        "consistency": 76,
+        "fuel_management": 65,
         "stamina": 99
       }
     },
@@ -2613,37 +2613,37 @@
         "fuel_management": 78,
         "stamina": 89
       },
-      "peak_age": 29,
-      "retirement_age": 54,
+      "peak_age": 34,
+      "retirement_age": 50,
       "season_form": 1.0,
       "career_arc": "role",
       "potential": 76,
-      "development_rate": 1.119,
-      "ceiling_factor": 0.918,
+      "development_rate": 0.889,
+      "ceiling_factor": 0.884,
       "peak_attributes": {
-        "pace": 54,
-        "racecraft": 59,
-        "tyre_management": 59,
-        "consistency": 54,
-        "fuel_management": 57,
-        "stamina": 64
+        "pace": 53,
+        "racecraft": 61,
+        "tyre_management": 57,
+        "consistency": 58,
+        "fuel_management": 52,
+        "stamina": 65
       },
       "stat_modifiers": {
-        "ppr": 1.086,
-        "pod": 0.918,
-        "ovt": 1.127,
-        "pol": 0.966,
-        "fl": 1.108
+        "ppr": 1.051,
+        "pod": 1.035,
+        "ovt": 0.864,
+        "pol": 1.061,
+        "fl": 1.162
       },
-      "pace_bias": 1.013,
+      "pace_bias": 1.05,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 92,
-        "racecraft": 78,
-        "tyre_management": 70,
-        "consistency": 71,
-        "fuel_management": 87,
-        "stamina": 99
+        "pace": 87,
+        "racecraft": 74,
+        "tyre_management": 66,
+        "consistency": 67,
+        "fuel_management": 82,
+        "stamina": 97
       }
     },
     {
@@ -2672,36 +2672,36 @@
         "fuel_management": 78,
         "stamina": 94
       },
-      "peak_age": 34,
-      "retirement_age": 50,
+      "peak_age": 29,
+      "retirement_age": 46,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 86,
-      "development_rate": 1.135,
-      "ceiling_factor": 0.93,
+      "potential": 79,
+      "development_rate": 0.978,
+      "ceiling_factor": 0.931,
       "peak_attributes": {
-        "pace": 71,
-        "racecraft": 66,
-        "tyre_management": 62,
-        "consistency": 66,
-        "fuel_management": 67,
-        "stamina": 75
+        "pace": 63,
+        "racecraft": 62,
+        "tyre_management": 65,
+        "consistency": 57,
+        "fuel_management": 59,
+        "stamina": 69
       },
       "stat_modifiers": {
-        "ppr": 1.056,
-        "pod": 0.941,
-        "ovt": 0.891,
-        "pol": 1.059,
-        "fl": 0.806
+        "ppr": 1.097,
+        "pod": 0.94,
+        "ovt": 1.196,
+        "pol": 1.052,
+        "fl": 1.13
       },
-      "pace_bias": 0.994,
+      "pace_bias": 1.034,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 99,
-        "racecraft": 90,
-        "tyre_management": 77,
-        "consistency": 78,
-        "fuel_management": 89,
+        "pace": 97,
+        "racecraft": 87,
+        "tyre_management": 74,
+        "consistency": 75,
+        "fuel_management": 86,
         "stamina": 99
       }
     },
@@ -2731,37 +2731,37 @@
         "fuel_management": 48,
         "stamina": 75
       },
-      "peak_age": 32,
-      "retirement_age": 45,
+      "peak_age": 34,
+      "retirement_age": 47,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 48,
-      "development_rate": 1.118,
-      "ceiling_factor": 0.928,
+      "potential": 52,
+      "development_rate": 1.046,
+      "ceiling_factor": 0.884,
       "peak_attributes": {
-        "pace": 42,
-        "racecraft": 38,
-        "tyre_management": 41,
-        "consistency": 41,
+        "pace": 37,
+        "racecraft": 37,
+        "tyre_management": 43,
+        "consistency": 37,
         "fuel_management": 36,
-        "stamina": 44
+        "stamina": 41
       },
       "stat_modifiers": {
-        "ppr": 1.128,
-        "pod": 0.912,
-        "ovt": 0.81,
-        "pol": 0.946,
-        "fl": 1.098
+        "ppr": 0.98,
+        "pod": 0.889,
+        "ovt": 1.11,
+        "pol": 0.888,
+        "fl": 1.035
       },
-      "pace_bias": 0.955,
+      "pace_bias": 1.066,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 51,
-        "racecraft": 49,
-        "tyre_management": 50,
-        "consistency": 48,
-        "fuel_management": 55,
-        "stamina": 93
+        "pace": 50,
+        "racecraft": 48,
+        "tyre_management": 49,
+        "consistency": 47,
+        "fuel_management": 53,
+        "stamina": 89
       }
     },
     {
@@ -2794,25 +2794,25 @@
       "retirement_age": 46,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 62,
-      "development_rate": 1.001,
-      "ceiling_factor": 0.942,
+      "potential": 65,
+      "development_rate": 1.129,
+      "ceiling_factor": 0.943,
       "peak_attributes": {
         "pace": 53,
-        "racecraft": 48,
-        "tyre_management": 48,
-        "consistency": 54,
-        "fuel_management": 48,
+        "racecraft": 54,
+        "tyre_management": 47,
+        "consistency": 55,
+        "fuel_management": 54,
         "stamina": 57
       },
       "stat_modifiers": {
-        "ppr": 1.149,
-        "pod": 0.937,
-        "ovt": 0.996,
-        "pol": 1.004,
-        "fl": 0.855
+        "ppr": 1.11,
+        "pod": 1.047,
+        "ovt": 0.8,
+        "pol": 1.134,
+        "fl": 1.02
       },
-      "pace_bias": 1.013,
+      "pace_bias": 1.012,
       "season_gp": 0,
       "base_attributes": {
         "pace": 67,
@@ -2849,37 +2849,37 @@
         "fuel_management": 60,
         "stamina": 85
       },
-      "peak_age": 33,
-      "retirement_age": 46,
+      "peak_age": 31,
+      "retirement_age": 48,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 67,
-      "development_rate": 0.855,
-      "ceiling_factor": 0.901,
+      "potential": 72,
+      "development_rate": 1.135,
+      "ceiling_factor": 0.886,
       "peak_attributes": {
-        "pace": 52,
-        "racecraft": 46,
-        "tyre_management": 46,
-        "consistency": 49,
-        "fuel_management": 51,
-        "stamina": 58
+        "pace": 49,
+        "racecraft": 55,
+        "tyre_management": 54,
+        "consistency": 50,
+        "fuel_management": 55,
+        "stamina": 60
       },
       "stat_modifiers": {
-        "ppr": 0.955,
-        "pod": 1.187,
-        "ovt": 1.148,
+        "ppr": 1.13,
+        "pod": 0.836,
+        "ovt": 0.818,
         "pol": 0.825,
-        "fl": 1.082
+        "fl": 1.039
       },
-      "pace_bias": 1.023,
+      "pace_bias": 1.005,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 72,
-        "racecraft": 91,
-        "tyre_management": 80,
-        "consistency": 66,
-        "fuel_management": 65,
-        "stamina": 97
+        "pace": 73,
+        "racecraft": 93,
+        "tyre_management": 82,
+        "consistency": 68,
+        "fuel_management": 67,
+        "stamina": 99
       }
     },
     {
@@ -2908,29 +2908,29 @@
         "fuel_management": 51,
         "stamina": 96
       },
-      "peak_age": 32,
-      "retirement_age": 49,
+      "peak_age": 30,
+      "retirement_age": 52,
       "season_form": 1.0,
       "career_arc": "role",
       "potential": 57,
-      "development_rate": 1.083,
-      "ceiling_factor": 0.881,
+      "development_rate": 0.931,
+      "ceiling_factor": 0.945,
       "peak_attributes": {
-        "pace": 41,
-        "racecraft": 45,
-        "tyre_management": 44,
-        "consistency": 38,
-        "fuel_management": 45,
-        "stamina": 49
+        "pace": 42,
+        "racecraft": 50,
+        "tyre_management": 42,
+        "consistency": 50,
+        "fuel_management": 50,
+        "stamina": 51
       },
       "stat_modifiers": {
-        "ppr": 1.047,
-        "pod": 0.919,
-        "ovt": 1.037,
-        "pol": 0.934,
-        "fl": 0.86
+        "ppr": 1.007,
+        "pod": 1.147,
+        "ovt": 1.018,
+        "pol": 0.866,
+        "fl": 0.902
       },
-      "pace_bias": 1.028,
+      "pace_bias": 1.093,
       "season_gp": 0,
       "base_attributes": {
         "pace": 51,
@@ -2938,7 +2938,7 @@
         "tyre_management": 59,
         "consistency": 64,
         "fuel_management": 52,
-        "stamina": 97
+        "stamina": 98
       }
     },
     {
@@ -2967,36 +2967,36 @@
         "fuel_management": 64,
         "stamina": 95
       },
-      "peak_age": 29,
-      "retirement_age": 53,
+      "peak_age": 31,
+      "retirement_age": 52,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 73,
-      "development_rate": 1.078,
-      "ceiling_factor": 0.895,
+      "potential": 74,
+      "development_rate": 1.091,
+      "ceiling_factor": 0.914,
       "peak_attributes": {
-        "pace": 54,
-        "racecraft": 56,
-        "tyre_management": 59,
-        "consistency": 57,
-        "fuel_management": 54,
-        "stamina": 63
+        "pace": 55,
+        "racecraft": 60,
+        "tyre_management": 53,
+        "consistency": 60,
+        "fuel_management": 56,
+        "stamina": 62
       },
       "stat_modifiers": {
-        "ppr": 1.059,
-        "pod": 1.144,
-        "ovt": 0.819,
-        "pol": 1.082,
-        "fl": 1.073
+        "ppr": 0.917,
+        "pod": 0.82,
+        "ovt": 0.913,
+        "pol": 1.044,
+        "fl": 1.108
       },
-      "pace_bias": 1.047,
+      "pace_bias": 1.016,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 78,
-        "racecraft": 72,
-        "tyre_management": 76,
-        "consistency": 75,
-        "fuel_management": 68,
+        "pace": 80,
+        "racecraft": 74,
+        "tyre_management": 78,
+        "consistency": 77,
+        "fuel_management": 69,
         "stamina": 99
       }
     },
@@ -3026,37 +3026,37 @@
         "fuel_management": 62,
         "stamina": 90
       },
-      "peak_age": 30,
-      "retirement_age": 47,
+      "peak_age": 34,
+      "retirement_age": 46,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 58,
-      "development_rate": 0.919,
-      "ceiling_factor": 0.953,
+      "potential": 57,
+      "development_rate": 1.026,
+      "ceiling_factor": 0.955,
       "peak_attributes": {
-        "pace": 46,
-        "racecraft": 49,
-        "tyre_management": 49,
+        "pace": 49,
+        "racecraft": 50,
+        "tyre_management": 50,
         "consistency": 42,
-        "fuel_management": 42,
-        "stamina": 51
+        "fuel_management": 49,
+        "stamina": 49
       },
       "stat_modifiers": {
-        "ppr": 1.12,
-        "pod": 0.938,
-        "ovt": 0.86,
-        "pol": 1.1,
-        "fl": 0.891
+        "ppr": 1.008,
+        "pod": 0.988,
+        "ovt": 0.832,
+        "pol": 1.192,
+        "fl": 0.948
       },
-      "pace_bias": 1.019,
+      "pace_bias": 1.058,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 67,
-        "racecraft": 49,
-        "tyre_management": 55,
-        "consistency": 54,
-        "fuel_management": 65,
-        "stamina": 98
+        "pace": 65,
+        "racecraft": 47,
+        "tyre_management": 53,
+        "consistency": 52,
+        "fuel_management": 63,
+        "stamina": 91
       }
     },
     {
@@ -3085,37 +3085,37 @@
         "fuel_management": 71,
         "stamina": 90
       },
-      "peak_age": 30,
-      "retirement_age": 54,
+      "peak_age": 34,
+      "retirement_age": 53,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 78,
-      "development_rate": 1.034,
-      "ceiling_factor": 0.952,
+      "potential": 79,
+      "development_rate": 0.982,
+      "ceiling_factor": 0.95,
       "peak_attributes": {
-        "pace": 62,
-        "racecraft": 61,
-        "tyre_management": 64,
-        "consistency": 60,
-        "fuel_management": 58,
-        "stamina": 72
+        "pace": 66,
+        "racecraft": 67,
+        "tyre_management": 61,
+        "consistency": 64,
+        "fuel_management": 64,
+        "stamina": 71
       },
       "stat_modifiers": {
-        "ppr": 1.0,
-        "pod": 1.088,
-        "ovt": 0.957,
-        "pol": 1.125,
-        "fl": 1.133
+        "ppr": 1.014,
+        "pod": 1.103,
+        "ovt": 1.043,
+        "pol": 1.159,
+        "fl": 0.815
       },
-      "pace_bias": 0.967,
+      "pace_bias": 0.969,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 82,
-        "racecraft": 99,
-        "tyre_management": 80,
-        "consistency": 82,
-        "fuel_management": 77,
-        "stamina": 99
+        "pace": 78,
+        "racecraft": 96,
+        "tyre_management": 77,
+        "consistency": 78,
+        "fuel_management": 74,
+        "stamina": 96
       }
     },
     {
@@ -3148,25 +3148,25 @@
       "retirement_age": 47,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 78,
-      "development_rate": 0.868,
-      "ceiling_factor": 0.883,
+      "potential": 76,
+      "development_rate": 0.878,
+      "ceiling_factor": 0.895,
       "peak_attributes": {
-        "pace": 58,
-        "racecraft": 57,
-        "tyre_management": 59,
-        "consistency": 54,
-        "fuel_management": 54,
-        "stamina": 65
+        "pace": 60,
+        "racecraft": 61,
+        "tyre_management": 54,
+        "consistency": 53,
+        "fuel_management": 53,
+        "stamina": 66
       },
       "stat_modifiers": {
-        "ppr": 0.924,
-        "pod": 1.138,
-        "ovt": 1.077,
-        "pol": 1.127,
-        "fl": 1.131
+        "ppr": 0.907,
+        "pod": 0.878,
+        "ovt": 1.155,
+        "pol": 1.031,
+        "fl": 0.983
       },
-      "pace_bias": 1.033,
+      "pace_bias": 1.003,
       "season_gp": 0,
       "base_attributes": {
         "pace": 75,
@@ -3204,28 +3204,28 @@
         "stamina": 65
       },
       "peak_age": 32,
-      "retirement_age": 48,
+      "retirement_age": 54,
       "season_form": 1.0,
       "career_arc": "role",
       "potential": 40,
-      "development_rate": 1.12,
-      "ceiling_factor": 0.928,
+      "development_rate": 0.939,
+      "ceiling_factor": 0.932,
       "peak_attributes": {
         "pace": 27,
-        "racecraft": 34,
+        "racecraft": 32,
         "tyre_management": 29,
         "consistency": 27,
-        "fuel_management": 33,
-        "stamina": 33
+        "fuel_management": 30,
+        "stamina": 34
       },
       "stat_modifiers": {
-        "ppr": 1.143,
-        "pod": 0.951,
-        "ovt": 0.993,
-        "pol": 0.977,
-        "fl": 0.867
+        "ppr": 1.108,
+        "pod": 0.92,
+        "ovt": 1.053,
+        "pol": 1.152,
+        "fl": 0.85
       },
-      "pace_bias": 0.943,
+      "pace_bias": 0.995,
       "season_gp": 0,
       "base_attributes": {
         "pace": 29,
@@ -3262,36 +3262,36 @@
         "fuel_management": 45,
         "stamina": 92
       },
-      "peak_age": 31,
+      "peak_age": 33,
       "retirement_age": 52,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 45,
-      "development_rate": 0.868,
-      "ceiling_factor": 0.9,
+      "potential": 53,
+      "development_rate": 1.059,
+      "ceiling_factor": 0.943,
       "peak_attributes": {
-        "pace": 32,
-        "racecraft": 35,
-        "tyre_management": 32,
-        "consistency": 30,
-        "fuel_management": 38,
-        "stamina": 36
+        "pace": 39,
+        "racecraft": 47,
+        "tyre_management": 39,
+        "consistency": 39,
+        "fuel_management": 46,
+        "stamina": 48
       },
       "stat_modifiers": {
-        "ppr": 0.998,
-        "pod": 0.814,
-        "ovt": 1.194,
-        "pol": 1.025,
-        "fl": 0.866
+        "ppr": 0.929,
+        "pod": 0.824,
+        "ovt": 1.068,
+        "pol": 1.104,
+        "fl": 1.054
       },
-      "pace_bias": 1.058,
+      "pace_bias": 1.036,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 43,
-        "racecraft": 46,
-        "tyre_management": 48,
+        "pace": 44,
+        "racecraft": 47,
+        "tyre_management": 49,
         "consistency": 55,
-        "fuel_management": 45,
+        "fuel_management": 46,
         "stamina": 93
       }
     },
@@ -3321,36 +3321,36 @@
         "fuel_management": 68,
         "stamina": 98
       },
-      "peak_age": 32,
-      "retirement_age": 49,
+      "peak_age": 34,
+      "retirement_age": 54,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 72,
-      "development_rate": 1.012,
-      "ceiling_factor": 0.939,
+      "potential": 66,
+      "development_rate": 1.146,
+      "ceiling_factor": 0.947,
       "peak_attributes": {
-        "pace": 56,
-        "racecraft": 57,
-        "tyre_management": 54,
-        "consistency": 55,
-        "fuel_management": 54,
-        "stamina": 65
+        "pace": 50,
+        "racecraft": 53,
+        "tyre_management": 57,
+        "consistency": 54,
+        "fuel_management": 52,
+        "stamina": 60
       },
       "stat_modifiers": {
-        "ppr": 0.928,
-        "pod": 0.961,
-        "ovt": 1.073,
-        "pol": 0.994,
-        "fl": 1.038
+        "ppr": 1.045,
+        "pod": 1.02,
+        "ovt": 1.096,
+        "pol": 0.885,
+        "fl": 1.081
       },
-      "pace_bias": 1.043,
+      "pace_bias": 0.989,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 73,
-        "racecraft": 75,
-        "tyre_management": 61,
-        "consistency": 55,
-        "fuel_management": 69,
+        "pace": 75,
+        "racecraft": 77,
+        "tyre_management": 62,
+        "consistency": 56,
+        "fuel_management": 71,
         "stamina": 99
       }
     },
@@ -3381,28 +3381,28 @@
         "stamina": 86
       },
       "peak_age": 29,
-      "retirement_age": 44,
+      "retirement_age": 47,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 46,
-      "development_rate": 1.012,
-      "ceiling_factor": 0.936,
+      "potential": 53,
+      "development_rate": 1.017,
+      "ceiling_factor": 0.943,
       "peak_attributes": {
-        "pace": 32,
-        "racecraft": 37,
-        "tyre_management": 33,
-        "consistency": 37,
-        "fuel_management": 33,
-        "stamina": 42
+        "pace": 41,
+        "racecraft": 46,
+        "tyre_management": 41,
+        "consistency": 44,
+        "fuel_management": 43,
+        "stamina": 45
       },
       "stat_modifiers": {
-        "ppr": 1.066,
-        "pod": 0.986,
-        "ovt": 0.939,
-        "pol": 0.913,
-        "fl": 1.177
+        "ppr": 1.11,
+        "pod": 1.074,
+        "ovt": 1.078,
+        "pol": 1.042,
+        "fl": 1.169
       },
-      "pace_bias": 1.029,
+      "pace_bias": 1.091,
       "season_gp": 0,
       "base_attributes": {
         "pace": 41,
@@ -3439,37 +3439,37 @@
         "fuel_management": 38,
         "stamina": 91
       },
-      "peak_age": 33,
-      "retirement_age": 45,
+      "peak_age": 31,
+      "retirement_age": 48,
       "season_form": 1.0,
       "career_arc": "role",
       "potential": 40,
-      "development_rate": 1.022,
-      "ceiling_factor": 0.939,
+      "development_rate": 0.996,
+      "ceiling_factor": 0.934,
       "peak_attributes": {
-        "pace": 27,
-        "racecraft": 31,
-        "tyre_management": 33,
-        "consistency": 30,
-        "fuel_management": 32,
-        "stamina": 38
+        "pace": 36,
+        "racecraft": 27,
+        "tyre_management": 31,
+        "consistency": 33,
+        "fuel_management": 30,
+        "stamina": 37
       },
       "stat_modifiers": {
-        "ppr": 0.934,
-        "pod": 1.012,
-        "ovt": 0.954,
-        "pol": 0.843,
-        "fl": 1.068
+        "ppr": 0.994,
+        "pod": 0.933,
+        "ovt": 0.916,
+        "pol": 1.15,
+        "fl": 1.018
       },
-      "pace_bias": 1.052,
+      "pace_bias": 0.946,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 38,
-        "racecraft": 29,
-        "tyre_management": 45,
-        "consistency": 38,
-        "fuel_management": 40,
-        "stamina": 96
+        "pace": 37,
+        "racecraft": 28,
+        "tyre_management": 44,
+        "consistency": 37,
+        "fuel_management": 39,
+        "stamina": 94
       }
     },
     {
@@ -3498,29 +3498,29 @@
         "fuel_management": 25,
         "stamina": 84
       },
-      "peak_age": 32,
-      "retirement_age": 54,
+      "peak_age": 34,
+      "retirement_age": 47,
       "season_form": 1.0,
       "career_arc": "role",
       "potential": 40,
-      "development_rate": 1.078,
-      "ceiling_factor": 0.894,
+      "development_rate": 0.873,
+      "ceiling_factor": 0.893,
       "peak_attributes": {
         "pace": 25,
-        "racecraft": 33,
-        "tyre_management": 30,
-        "consistency": 27,
+        "racecraft": 29,
+        "tyre_management": 31,
+        "consistency": 31,
         "fuel_management": 32,
-        "stamina": 33
+        "stamina": 31
       },
       "stat_modifiers": {
-        "ppr": 1.015,
-        "pod": 1.0,
-        "ovt": 1.159,
-        "pol": 1.149,
-        "fl": 0.862
+        "ppr": 0.901,
+        "pod": 1.004,
+        "ovt": 0.925,
+        "pol": 1.088,
+        "fl": 0.901
       },
-      "pace_bias": 1.028,
+      "pace_bias": 0.989,
       "season_gp": 0,
       "base_attributes": {
         "pace": 25,
@@ -3557,37 +3557,37 @@
         "fuel_management": 25,
         "stamina": 56
       },
-      "peak_age": 30,
+      "peak_age": 34,
       "retirement_age": 55,
       "season_form": 1.0,
       "career_arc": "role",
       "potential": 40,
-      "development_rate": 0.97,
-      "ceiling_factor": 0.946,
+      "development_rate": 1.021,
+      "ceiling_factor": 0.931,
       "peak_attributes": {
-        "pace": 35,
-        "racecraft": 34,
-        "tyre_management": 28,
-        "consistency": 36,
-        "fuel_management": 37,
-        "stamina": 34
+        "pace": 30,
+        "racecraft": 28,
+        "tyre_management": 29,
+        "consistency": 30,
+        "fuel_management": 27,
+        "stamina": 35
       },
       "stat_modifiers": {
-        "ppr": 0.913,
-        "pod": 1.146,
-        "ovt": 0.922,
-        "pol": 0.959,
-        "fl": 1.124
+        "ppr": 1.106,
+        "pod": 0.961,
+        "ovt": 1.064,
+        "pol": 1.021,
+        "fl": 0.96
       },
-      "pace_bias": 0.941,
+      "pace_bias": 1.01,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 33,
-        "racecraft": 33,
-        "tyre_management": 33,
-        "consistency": 33,
-        "fuel_management": 33,
-        "stamina": 91
+        "pace": 31,
+        "racecraft": 31,
+        "tyre_management": 31,
+        "consistency": 31,
+        "fuel_management": 31,
+        "stamina": 82
       }
     },
     {
@@ -3617,28 +3617,28 @@
         "stamina": 80
       },
       "peak_age": 32,
-      "retirement_age": 48,
+      "retirement_age": 44,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 40,
-      "development_rate": 1.128,
-      "ceiling_factor": 0.904,
+      "potential": 42,
+      "development_rate": 1.139,
+      "ceiling_factor": 0.96,
       "peak_attributes": {
         "pace": 33,
-        "racecraft": 28,
-        "tyre_management": 31,
-        "consistency": 31,
-        "fuel_management": 26,
-        "stamina": 36
+        "racecraft": 39,
+        "tyre_management": 34,
+        "consistency": 35,
+        "fuel_management": 37,
+        "stamina": 38
       },
       "stat_modifiers": {
-        "ppr": 1.128,
-        "pod": 0.814,
-        "ovt": 1.053,
-        "pol": 0.852,
-        "fl": 1.006
+        "ppr": 0.907,
+        "pod": 1.137,
+        "ovt": 1.142,
+        "pol": 0.895,
+        "fl": 1.172
       },
-      "pace_bias": 1.068,
+      "pace_bias": 1.089,
       "season_gp": 0,
       "base_attributes": {
         "pace": 37,
@@ -3675,36 +3675,36 @@
         "fuel_management": 76,
         "stamina": 91
       },
-      "peak_age": 33,
-      "retirement_age": 47,
+      "peak_age": 31,
+      "retirement_age": 50,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 74,
-      "development_rate": 0.935,
-      "ceiling_factor": 0.896,
+      "potential": 81,
+      "development_rate": 1.134,
+      "ceiling_factor": 0.908,
       "peak_attributes": {
-        "pace": 59,
-        "racecraft": 58,
+        "pace": 64,
+        "racecraft": 62,
         "tyre_management": 59,
-        "consistency": 53,
-        "fuel_management": 55,
-        "stamina": 62
+        "consistency": 59,
+        "fuel_management": 57,
+        "stamina": 69
       },
       "stat_modifiers": {
-        "ppr": 1.037,
-        "pod": 0.977,
-        "ovt": 0.953,
-        "pol": 1.182,
-        "fl": 0.941
+        "ppr": 1.113,
+        "pod": 1.135,
+        "ovt": 0.843,
+        "pol": 1.161,
+        "fl": 1.155
       },
-      "pace_bias": 1.054,
+      "pace_bias": 1.067,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 91,
-        "racecraft": 64,
-        "tyre_management": 76,
-        "consistency": 87,
-        "fuel_management": 80,
+        "pace": 92,
+        "racecraft": 66,
+        "tyre_management": 77,
+        "consistency": 89,
+        "fuel_management": 82,
         "stamina": 99
       }
     },
@@ -3734,37 +3734,37 @@
         "fuel_management": 35,
         "stamina": 92
       },
-      "peak_age": 29,
-      "retirement_age": 52,
+      "peak_age": 34,
+      "retirement_age": 50,
       "season_form": 1.0,
       "career_arc": "role",
       "potential": 40,
-      "development_rate": 0.854,
-      "ceiling_factor": 0.941,
+      "development_rate": 0.874,
+      "ceiling_factor": 0.893,
       "peak_attributes": {
-        "pace": 36,
-        "racecraft": 33,
-        "tyre_management": 30,
-        "consistency": 29,
-        "fuel_management": 36,
-        "stamina": 38
+        "pace": 31,
+        "racecraft": 29,
+        "tyre_management": 28,
+        "consistency": 33,
+        "fuel_management": 33,
+        "stamina": 35
       },
       "stat_modifiers": {
-        "ppr": 0.936,
-        "pod": 0.906,
-        "ovt": 1.071,
-        "pol": 1.002,
-        "fl": 1.138
+        "ppr": 1.034,
+        "pod": 0.92,
+        "ovt": 1.065,
+        "pol": 1.087,
+        "fl": 1.153
       },
-      "pace_bias": 0.974,
+      "pace_bias": 1.083,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 32,
-        "racecraft": 37,
-        "tyre_management": 34,
-        "consistency": 31,
-        "fuel_management": 35,
-        "stamina": 93
+        "pace": 34,
+        "racecraft": 39,
+        "tyre_management": 36,
+        "consistency": 33,
+        "fuel_management": 37,
+        "stamina": 97
       }
     },
     {
@@ -3794,28 +3794,28 @@
         "stamina": 84
       },
       "peak_age": 31,
-      "retirement_age": 54,
+      "retirement_age": 51,
       "season_form": 1.0,
       "career_arc": "role",
       "potential": 40,
-      "development_rate": 0.938,
-      "ceiling_factor": 0.908,
+      "development_rate": 0.968,
+      "ceiling_factor": 0.909,
       "peak_attributes": {
         "pace": 34,
-        "racecraft": 28,
-        "tyre_management": 32,
-        "consistency": 30,
-        "fuel_management": 33,
+        "racecraft": 27,
+        "tyre_management": 33,
+        "consistency": 33,
+        "fuel_management": 30,
         "stamina": 36
       },
       "stat_modifiers": {
-        "ppr": 0.967,
-        "pod": 0.845,
-        "ovt": 1.099,
-        "pol": 0.893,
-        "fl": 0.848
+        "ppr": 0.944,
+        "pod": 0.867,
+        "ovt": 1.041,
+        "pol": 1.17,
+        "fl": 1.156
       },
-      "pace_bias": 1.08,
+      "pace_bias": 0.983,
       "season_gp": 0,
       "base_attributes": {
         "pace": 27,
@@ -3853,28 +3853,28 @@
         "stamina": 99
       },
       "peak_age": 33,
-      "retirement_age": 53,
+      "retirement_age": 44,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 72,
-      "development_rate": 1.096,
-      "ceiling_factor": 0.936,
+      "potential": 78,
+      "development_rate": 1.029,
+      "ceiling_factor": 0.905,
       "peak_attributes": {
-        "pace": 59,
-        "racecraft": 53,
-        "tyre_management": 60,
-        "consistency": 59,
-        "fuel_management": 53,
-        "stamina": 67
+        "pace": 62,
+        "racecraft": 63,
+        "tyre_management": 63,
+        "consistency": 62,
+        "fuel_management": 62,
+        "stamina": 69
       },
       "stat_modifiers": {
-        "ppr": 0.959,
-        "pod": 1.177,
-        "ovt": 0.931,
-        "pol": 0.972,
-        "fl": 1.065
+        "ppr": 0.942,
+        "pod": 1.118,
+        "ovt": 1.14,
+        "pol": 1.174,
+        "fl": 0.989
       },
-      "pace_bias": 1.045,
+      "pace_bias": 1.096,
       "season_gp": 0,
       "base_attributes": {
         "pace": 86,
@@ -3912,28 +3912,28 @@
         "stamina": 65
       },
       "peak_age": 31,
-      "retirement_age": 51,
+      "retirement_age": 53,
       "season_form": 1.0,
       "career_arc": "role",
       "potential": 40,
-      "development_rate": 1.059,
-      "ceiling_factor": 0.931,
+      "development_rate": 0.857,
+      "ceiling_factor": 0.938,
       "peak_attributes": {
-        "pace": 30,
-        "racecraft": 36,
-        "tyre_management": 33,
+        "pace": 28,
+        "racecraft": 29,
+        "tyre_management": 27,
         "consistency": 30,
-        "fuel_management": 27,
-        "stamina": 34
+        "fuel_management": 35,
+        "stamina": 35
       },
       "stat_modifiers": {
-        "ppr": 1.116,
-        "pod": 0.821,
-        "ovt": 0.812,
-        "pol": 1.066,
-        "fl": 0.889
+        "ppr": 0.977,
+        "pod": 0.914,
+        "ovt": 1.136,
+        "pol": 0.893,
+        "fl": 0.989
       },
-      "pace_bias": 1.084,
+      "pace_bias": 1.056,
       "season_gp": 0,
       "base_attributes": {
         "pace": 30,
@@ -3970,36 +3970,36 @@
         "fuel_management": 58,
         "stamina": 89
       },
-      "peak_age": 32,
-      "retirement_age": 47,
+      "peak_age": 34,
+      "retirement_age": 50,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 70,
-      "development_rate": 0.874,
-      "ceiling_factor": 0.886,
+      "potential": 71,
+      "development_rate": 1.145,
+      "ceiling_factor": 0.934,
       "peak_attributes": {
-        "pace": 49,
-        "racecraft": 50,
-        "tyre_management": 49,
-        "consistency": 54,
-        "fuel_management": 55,
-        "stamina": 59
+        "pace": 52,
+        "racecraft": 55,
+        "tyre_management": 55,
+        "consistency": 52,
+        "fuel_management": 52,
+        "stamina": 62
       },
       "stat_modifiers": {
-        "ppr": 1.05,
-        "pod": 1.114,
-        "ovt": 1.024,
-        "pol": 0.82,
-        "fl": 1.119
+        "ppr": 0.997,
+        "pod": 1.185,
+        "ovt": 1.069,
+        "pol": 0.87,
+        "fl": 1.125
       },
-      "pace_bias": 1.029,
+      "pace_bias": 0.991,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 65,
-        "racecraft": 56,
-        "tyre_management": 60,
+        "pace": 66,
+        "racecraft": 57,
+        "tyre_management": 61,
         "consistency": 59,
-        "fuel_management": 65,
+        "fuel_management": 66,
         "stamina": 99
       }
     },
@@ -4029,36 +4029,36 @@
         "fuel_management": 88,
         "stamina": 99
       },
-      "peak_age": 29,
-      "retirement_age": 47,
+      "peak_age": 33,
+      "retirement_age": 52,
       "season_form": 1.0,
       "career_arc": "starter",
-      "potential": 83,
-      "development_rate": 1.066,
-      "ceiling_factor": 0.922,
+      "potential": 90,
+      "development_rate": 1.146,
+      "ceiling_factor": 0.929,
       "peak_attributes": {
         "pace": 66,
-        "racecraft": 63,
+        "racecraft": 75,
         "tyre_management": 68,
-        "consistency": 68,
-        "fuel_management": 68,
-        "stamina": 72
+        "consistency": 73,
+        "fuel_management": 75,
+        "stamina": 77
       },
       "stat_modifiers": {
-        "ppr": 0.906,
-        "pod": 1.088,
-        "ovt": 1.009,
-        "pol": 0.888,
-        "fl": 0.839
+        "ppr": 0.966,
+        "pod": 0.983,
+        "ovt": 1.067,
+        "pol": 1.133,
+        "fl": 0.93
       },
-      "pace_bias": 1.097,
+      "pace_bias": 0.985,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 96,
-        "racecraft": 99,
-        "tyre_management": 84,
-        "consistency": 99,
-        "fuel_management": 92,
+        "pace": 92,
+        "racecraft": 96,
+        "tyre_management": 81,
+        "consistency": 95,
+        "fuel_management": 88,
         "stamina": 99
       }
     },
@@ -4088,29 +4088,29 @@
         "fuel_management": 25,
         "stamina": 76
       },
-      "peak_age": 31,
-      "retirement_age": 53,
+      "peak_age": 33,
+      "retirement_age": 45,
       "season_form": 1.0,
       "career_arc": "role",
       "potential": 40,
-      "development_rate": 1.011,
-      "ceiling_factor": 0.918,
+      "development_rate": 0.934,
+      "ceiling_factor": 0.882,
       "peak_attributes": {
-        "pace": 33,
-        "racecraft": 30,
+        "pace": 30,
+        "racecraft": 34,
         "tyre_management": 31,
-        "consistency": 34,
-        "fuel_management": 29,
-        "stamina": 38
+        "consistency": 33,
+        "fuel_management": 28,
+        "stamina": 34
       },
       "stat_modifiers": {
-        "ppr": 0.91,
-        "pod": 1.013,
-        "ovt": 0.989,
-        "pol": 0.842,
-        "fl": 0.925
+        "ppr": 0.982,
+        "pod": 0.83,
+        "ovt": 1.127,
+        "pol": 0.935,
+        "fl": 0.838
       },
-      "pace_bias": 0.949,
+      "pace_bias": 1.089,
       "season_gp": 0,
       "base_attributes": {
         "pace": 27,
@@ -4118,7 +4118,7 @@
         "tyre_management": 27,
         "consistency": 27,
         "fuel_management": 27,
-        "stamina": 87
+        "stamina": 84
       }
     },
     {
@@ -4147,29 +4147,29 @@
         "fuel_management": 35,
         "stamina": 77
       },
-      "peak_age": 33,
-      "retirement_age": 47,
+      "peak_age": 31,
+      "retirement_age": 52,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 44,
-      "development_rate": 0.867,
-      "ceiling_factor": 0.906,
+      "potential": 40,
+      "development_rate": 1.13,
+      "ceiling_factor": 0.927,
       "peak_attributes": {
-        "pace": 36,
-        "racecraft": 38,
-        "tyre_management": 34,
-        "consistency": 32,
-        "fuel_management": 32,
-        "stamina": 35
+        "pace": 27,
+        "racecraft": 28,
+        "tyre_management": 30,
+        "consistency": 35,
+        "fuel_management": 34,
+        "stamina": 37
       },
       "stat_modifiers": {
-        "ppr": 1.12,
-        "pod": 1.082,
-        "ovt": 0.877,
-        "pol": 1.097,
-        "fl": 0.906
+        "ppr": 0.952,
+        "pod": 1.146,
+        "ovt": 1.084,
+        "pol": 0.925,
+        "fl": 0.991
       },
-      "pace_bias": 0.966,
+      "pace_bias": 0.975,
       "season_gp": 0,
       "base_attributes": {
         "pace": 40,
@@ -4206,37 +4206,37 @@
         "fuel_management": 64,
         "stamina": 84
       },
-      "peak_age": 32,
-      "retirement_age": 45,
+      "peak_age": 29,
+      "retirement_age": 54,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 66,
-      "development_rate": 1.149,
-      "ceiling_factor": 0.9,
+      "potential": 72,
+      "development_rate": 0.977,
+      "ceiling_factor": 0.895,
       "peak_attributes": {
-        "pace": 46,
-        "racecraft": 49,
-        "tyre_management": 45,
-        "consistency": 53,
-        "fuel_management": 52,
-        "stamina": 56
+        "pace": 59,
+        "racecraft": 56,
+        "tyre_management": 53,
+        "consistency": 58,
+        "fuel_management": 53,
+        "stamina": 59
       },
       "stat_modifiers": {
-        "ppr": 0.914,
-        "pod": 1.176,
-        "ovt": 0.853,
-        "pol": 0.863,
-        "fl": 0.856
+        "ppr": 1.119,
+        "pod": 1.139,
+        "ovt": 0.876,
+        "pol": 1.177,
+        "fl": 1.104
       },
-      "pace_bias": 1.046,
+      "pace_bias": 0.963,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 77,
-        "racecraft": 87,
-        "tyre_management": 73,
-        "consistency": 65,
-        "fuel_management": 70,
-        "stamina": 98
+        "pace": 80,
+        "racecraft": 90,
+        "tyre_management": 75,
+        "consistency": 67,
+        "fuel_management": 73,
+        "stamina": 99
       }
     },
     {
@@ -4265,37 +4265,37 @@
         "fuel_management": 48,
         "stamina": 87
       },
-      "peak_age": 34,
-      "retirement_age": 45,
+      "peak_age": 32,
+      "retirement_age": 47,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 63,
-      "development_rate": 1.026,
-      "ceiling_factor": 0.935,
+      "potential": 62,
+      "development_rate": 1.038,
+      "ceiling_factor": 0.931,
       "peak_attributes": {
-        "pace": 48,
-        "racecraft": 50,
-        "tyre_management": 52,
-        "consistency": 49,
-        "fuel_management": 54,
-        "stamina": 55
+        "pace": 53,
+        "racecraft": 47,
+        "tyre_management": 47,
+        "consistency": 47,
+        "fuel_management": 44,
+        "stamina": 53
       },
       "stat_modifiers": {
-        "ppr": 1.109,
-        "pod": 1.114,
-        "ovt": 1.114,
-        "pol": 1.127,
-        "fl": 1.177
+        "ppr": 0.974,
+        "pod": 0.942,
+        "ovt": 1.099,
+        "pol": 1.138,
+        "fl": 1.097
       },
-      "pace_bias": 0.966,
+      "pace_bias": 0.993,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 53,
-        "racecraft": 63,
-        "tyre_management": 53,
-        "consistency": 48,
-        "fuel_management": 55,
-        "stamina": 99
+        "pace": 52,
+        "racecraft": 62,
+        "tyre_management": 52,
+        "consistency": 47,
+        "fuel_management": 54,
+        "stamina": 98
       }
     },
     {
@@ -4325,28 +4325,28 @@
         "stamina": 85
       },
       "peak_age": 31,
-      "retirement_age": 46,
+      "retirement_age": 53,
       "season_form": 1.0,
       "career_arc": "role",
       "potential": 40,
-      "development_rate": 1.068,
-      "ceiling_factor": 0.901,
+      "development_rate": 0.911,
+      "ceiling_factor": 0.942,
       "peak_attributes": {
-        "pace": 35,
-        "racecraft": 35,
-        "tyre_management": 33,
-        "consistency": 32,
-        "fuel_management": 30,
-        "stamina": 36
+        "pace": 33,
+        "racecraft": 36,
+        "tyre_management": 35,
+        "consistency": 33,
+        "fuel_management": 36,
+        "stamina": 33
       },
       "stat_modifiers": {
-        "ppr": 1.076,
-        "pod": 0.874,
-        "ovt": 1.151,
-        "pol": 1.029,
-        "fl": 0.934
+        "ppr": 1.027,
+        "pod": 1.098,
+        "ovt": 0.81,
+        "pol": 1.058,
+        "fl": 1.084
       },
-      "pace_bias": 0.983,
+      "pace_bias": 0.988,
       "season_gp": 0,
       "base_attributes": {
         "pace": 27,
@@ -4383,37 +4383,37 @@
         "fuel_management": 25,
         "stamina": 87
       },
-      "peak_age": 29,
-      "retirement_age": 51,
+      "peak_age": 33,
+      "retirement_age": 54,
       "season_form": 1.0,
       "career_arc": "role",
       "potential": 40,
-      "development_rate": 0.966,
-      "ceiling_factor": 0.914,
+      "development_rate": 1.058,
+      "ceiling_factor": 0.937,
       "peak_attributes": {
-        "pace": 35,
-        "racecraft": 33,
-        "tyre_management": 33,
-        "consistency": 26,
-        "fuel_management": 35,
-        "stamina": 36
+        "pace": 33,
+        "racecraft": 32,
+        "tyre_management": 35,
+        "consistency": 35,
+        "fuel_management": 36,
+        "stamina": 35
       },
       "stat_modifiers": {
-        "ppr": 1.024,
-        "pod": 1.096,
-        "ovt": 0.862,
-        "pol": 0.931,
-        "fl": 0.881
+        "ppr": 1.137,
+        "pod": 0.845,
+        "ovt": 0.896,
+        "pol": 0.972,
+        "fl": 1.127
       },
-      "pace_bias": 1.065,
+      "pace_bias": 0.996,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 25,
-        "racecraft": 25,
-        "tyre_management": 25,
-        "consistency": 25,
-        "fuel_management": 25,
-        "stamina": 87
+        "pace": 26,
+        "racecraft": 26,
+        "tyre_management": 26,
+        "consistency": 26,
+        "fuel_management": 26,
+        "stamina": 92
       }
     },
     {
@@ -4442,37 +4442,37 @@
         "fuel_management": 25,
         "stamina": 85
       },
-      "peak_age": 29,
-      "retirement_age": 47,
+      "peak_age": 31,
+      "retirement_age": 54,
       "season_form": 1.0,
       "career_arc": "role",
       "potential": 40,
-      "development_rate": 1.007,
-      "ceiling_factor": 0.938,
+      "development_rate": 1.058,
+      "ceiling_factor": 0.9,
       "peak_attributes": {
-        "pace": 29,
-        "racecraft": 31,
-        "tyre_management": 34,
-        "consistency": 31,
-        "fuel_management": 33,
-        "stamina": 35
+        "pace": 33,
+        "racecraft": 28,
+        "tyre_management": 29,
+        "consistency": 34,
+        "fuel_management": 30,
+        "stamina": 33
       },
       "stat_modifiers": {
-        "ppr": 0.958,
-        "pod": 0.905,
-        "ovt": 1.197,
-        "pol": 1.025,
-        "fl": 0.877
+        "ppr": 1.072,
+        "pod": 1.113,
+        "ovt": 1.105,
+        "pol": 0.96,
+        "fl": 1.05
       },
-      "pace_bias": 1.081,
+      "pace_bias": 1.036,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 26,
-        "racecraft": 26,
-        "tyre_management": 26,
-        "consistency": 26,
-        "fuel_management": 26,
-        "stamina": 89
+        "pace": 25,
+        "racecraft": 25,
+        "tyre_management": 25,
+        "consistency": 25,
+        "fuel_management": 25,
+        "stamina": 86
       }
     },
     {
@@ -4502,28 +4502,28 @@
         "stamina": 84
       },
       "peak_age": 29,
-      "retirement_age": 53,
+      "retirement_age": 51,
       "season_form": 1.0,
       "career_arc": "role",
       "potential": 40,
-      "development_rate": 0.955,
-      "ceiling_factor": 0.955,
+      "development_rate": 1.146,
+      "ceiling_factor": 0.942,
       "peak_attributes": {
-        "pace": 35,
-        "racecraft": 30,
-        "tyre_management": 30,
-        "consistency": 37,
-        "fuel_management": 32,
-        "stamina": 37
+        "pace": 28,
+        "racecraft": 28,
+        "tyre_management": 36,
+        "consistency": 34,
+        "fuel_management": 35,
+        "stamina": 33
       },
       "stat_modifiers": {
-        "ppr": 0.98,
-        "pod": 0.922,
-        "ovt": 1.062,
-        "pol": 1.184,
-        "fl": 0.831
+        "ppr": 0.979,
+        "pod": 1.038,
+        "ovt": 0.985,
+        "pol": 1.043,
+        "fl": 0.819
       },
-      "pace_bias": 1.061,
+      "pace_bias": 0.986,
       "season_gp": 0,
       "base_attributes": {
         "pace": 28,
@@ -4560,37 +4560,37 @@
         "fuel_management": 27,
         "stamina": 79
       },
-      "peak_age": 31,
+      "peak_age": 34,
       "retirement_age": 44,
       "season_form": 1.0,
       "career_arc": "role",
       "potential": 40,
-      "development_rate": 0.915,
-      "ceiling_factor": 0.934,
+      "development_rate": 1.085,
+      "ceiling_factor": 0.948,
       "peak_attributes": {
-        "pace": 34,
+        "pace": 28,
         "racecraft": 31,
-        "tyre_management": 36,
+        "tyre_management": 30,
         "consistency": 30,
-        "fuel_management": 36,
-        "stamina": 38
+        "fuel_management": 29,
+        "stamina": 35
       },
       "stat_modifiers": {
-        "ppr": 1.078,
-        "pod": 1.147,
-        "ovt": 1.001,
-        "pol": 1.113,
-        "fl": 1.188
+        "ppr": 1.072,
+        "pod": 1.022,
+        "ovt": 1.155,
+        "pol": 1.152,
+        "fl": 1.07
       },
-      "pace_bias": 1.094,
+      "pace_bias": 0.976,
       "season_gp": 0,
       "base_attributes": {
         "pace": 29,
         "racecraft": 29,
         "tyre_management": 29,
         "consistency": 29,
-        "fuel_management": 31,
-        "stamina": 92
+        "fuel_management": 32,
+        "stamina": 93
       }
     },
     {
@@ -4619,37 +4619,37 @@
         "fuel_management": 25,
         "stamina": 51
       },
-      "peak_age": 33,
+      "peak_age": 31,
       "retirement_age": 58,
       "season_form": 1.0,
       "career_arc": "role",
       "potential": 40,
-      "development_rate": 0.953,
-      "ceiling_factor": 0.938,
+      "development_rate": 1.056,
+      "ceiling_factor": 0.925,
       "peak_attributes": {
-        "pace": 30,
-        "racecraft": 31,
-        "tyre_management": 28,
-        "consistency": 28,
-        "fuel_management": 27,
-        "stamina": 33
+        "pace": 29,
+        "racecraft": 27,
+        "tyre_management": 26,
+        "consistency": 26,
+        "fuel_management": 35,
+        "stamina": 37
       },
       "stat_modifiers": {
-        "ppr": 0.916,
-        "pod": 0.952,
-        "ovt": 0.927,
-        "pol": 1.125,
-        "fl": 1.133
+        "ppr": 1.093,
+        "pod": 1.164,
+        "ovt": 1.134,
+        "pol": 1.147,
+        "fl": 1.089
       },
-      "pace_bias": 0.961,
+      "pace_bias": 1.01,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 33,
-        "racecraft": 33,
-        "tyre_management": 33,
-        "consistency": 33,
-        "fuel_management": 33,
-        "stamina": 83
+        "pace": 34,
+        "racecraft": 34,
+        "tyre_management": 34,
+        "consistency": 34,
+        "fuel_management": 34,
+        "stamina": 87
       }
     },
     {
@@ -4678,37 +4678,37 @@
         "fuel_management": 43,
         "stamina": 84
       },
-      "peak_age": 34,
+      "peak_age": 33,
       "retirement_age": 47,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 55,
-      "development_rate": 1.128,
-      "ceiling_factor": 0.959,
+      "potential": 60,
+      "development_rate": 0.882,
+      "ceiling_factor": 0.955,
       "peak_attributes": {
-        "pace": 40,
-        "racecraft": 40,
-        "tyre_management": 39,
-        "consistency": 45,
-        "fuel_management": 49,
-        "stamina": 49
+        "pace": 52,
+        "racecraft": 43,
+        "tyre_management": 47,
+        "consistency": 49,
+        "fuel_management": 45,
+        "stamina": 52
       },
       "stat_modifiers": {
-        "ppr": 1.026,
-        "pod": 0.983,
-        "ovt": 0.91,
-        "pol": 1.195,
-        "fl": 1.089
+        "ppr": 1.017,
+        "pod": 0.956,
+        "ovt": 0.867,
+        "pol": 0.947,
+        "fl": 0.875
       },
-      "pace_bias": 0.977,
+      "pace_bias": 1.014,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 51,
+        "pace": 50,
         "racecraft": 74,
         "tyre_management": 52,
         "consistency": 56,
-        "fuel_management": 51,
-        "stamina": 99
+        "fuel_management": 50,
+        "stamina": 98
       }
     },
     {
@@ -4737,37 +4737,37 @@
         "fuel_management": 64,
         "stamina": 83
       },
-      "peak_age": 32,
+      "peak_age": 33,
       "retirement_age": 54,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 73,
-      "development_rate": 1.142,
-      "ceiling_factor": 0.9,
+      "potential": 65,
+      "development_rate": 1.034,
+      "ceiling_factor": 0.949,
       "peak_attributes": {
-        "pace": 53,
-        "racecraft": 54,
-        "tyre_management": 52,
-        "consistency": 55,
-        "fuel_management": 55,
-        "stamina": 64
+        "pace": 51,
+        "racecraft": 48,
+        "tyre_management": 53,
+        "consistency": 50,
+        "fuel_management": 47,
+        "stamina": 56
       },
       "stat_modifiers": {
-        "ppr": 0.937,
-        "pod": 1.0,
-        "ovt": 1.138,
-        "pol": 1.136,
-        "fl": 1.025
+        "ppr": 1.15,
+        "pod": 1.192,
+        "ovt": 0.849,
+        "pol": 1.028,
+        "fl": 1.111
       },
-      "pace_bias": 0.971,
+      "pace_bias": 0.953,
       "season_gp": 0,
       "base_attributes": {
         "pace": 74,
         "racecraft": 73,
         "tyre_management": 84,
-        "consistency": 86,
-        "fuel_management": 71,
-        "stamina": 99
+        "consistency": 85,
+        "fuel_management": 70,
+        "stamina": 97
       }
     },
     {
@@ -4796,37 +4796,37 @@
         "fuel_management": 29,
         "stamina": 87
       },
-      "peak_age": 31,
-      "retirement_age": 46,
+      "peak_age": 33,
+      "retirement_age": 51,
       "season_form": 1.0,
       "career_arc": "role",
       "potential": 40,
-      "development_rate": 1.03,
-      "ceiling_factor": 0.89,
+      "development_rate": 1.071,
+      "ceiling_factor": 0.889,
       "peak_attributes": {
-        "pace": 26,
-        "racecraft": 28,
-        "tyre_management": 32,
-        "consistency": 29,
-        "fuel_management": 29,
-        "stamina": 33
+        "pace": 29,
+        "racecraft": 25,
+        "tyre_management": 31,
+        "consistency": 28,
+        "fuel_management": 28,
+        "stamina": 36
       },
       "stat_modifiers": {
-        "ppr": 0.904,
-        "pod": 0.93,
-        "ovt": 1.068,
-        "pol": 1.009,
-        "fl": 0.823
+        "ppr": 0.903,
+        "pod": 1.102,
+        "ovt": 0.926,
+        "pol": 0.807,
+        "fl": 0.826
       },
-      "pace_bias": 1.045,
+      "pace_bias": 1.003,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 26,
-        "racecraft": 29,
-        "tyre_management": 26,
-        "consistency": 26,
-        "fuel_management": 30,
-        "stamina": 91
+        "pace": 27,
+        "racecraft": 30,
+        "tyre_management": 27,
+        "consistency": 27,
+        "fuel_management": 31,
+        "stamina": 93
       }
     },
     {
@@ -4855,37 +4855,37 @@
         "fuel_management": 54,
         "stamina": 90
       },
-      "peak_age": 29,
-      "retirement_age": 52,
+      "peak_age": 30,
+      "retirement_age": 46,
       "season_form": 1.0,
       "career_arc": "role",
       "potential": 56,
-      "development_rate": 0.897,
-      "ceiling_factor": 0.894,
+      "development_rate": 1.006,
+      "ceiling_factor": 0.96,
       "peak_attributes": {
         "pace": 42,
-        "racecraft": 41,
-        "tyre_management": 44,
-        "consistency": 43,
-        "fuel_management": 38,
-        "stamina": 48
+        "racecraft": 42,
+        "tyre_management": 42,
+        "consistency": 50,
+        "fuel_management": 50,
+        "stamina": 50
       },
       "stat_modifiers": {
-        "ppr": 1.114,
-        "pod": 1.104,
-        "ovt": 0.923,
-        "pol": 0.999,
-        "fl": 0.966
+        "ppr": 0.994,
+        "pod": 1.054,
+        "ovt": 0.837,
+        "pol": 0.895,
+        "fl": 1.151
       },
-      "pace_bias": 1.064,
+      "pace_bias": 0.956,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 61,
-        "racecraft": 61,
-        "tyre_management": 63,
-        "consistency": 65,
+        "pace": 60,
+        "racecraft": 60,
+        "tyre_management": 62,
+        "consistency": 64,
         "fuel_management": 57,
-        "stamina": 99
+        "stamina": 98
       }
     },
     {
@@ -4915,28 +4915,28 @@
         "stamina": 81
       },
       "peak_age": 33,
-      "retirement_age": 54,
+      "retirement_age": 52,
       "season_form": 1.0,
       "career_arc": "role",
       "potential": 40,
-      "development_rate": 0.856,
-      "ceiling_factor": 0.917,
+      "development_rate": 1.062,
+      "ceiling_factor": 0.927,
       "peak_attributes": {
-        "pace": 28,
-        "racecraft": 27,
-        "tyre_management": 34,
-        "consistency": 31,
-        "fuel_management": 29,
-        "stamina": 32
+        "pace": 35,
+        "racecraft": 31,
+        "tyre_management": 32,
+        "consistency": 27,
+        "fuel_management": 30,
+        "stamina": 37
       },
       "stat_modifiers": {
-        "ppr": 1.0,
-        "pod": 0.886,
-        "ovt": 1.154,
-        "pol": 0.809,
-        "fl": 1.038
+        "ppr": 1.145,
+        "pod": 0.827,
+        "ovt": 1.039,
+        "pol": 0.943,
+        "fl": 0.838
       },
-      "pace_bias": 1.008,
+      "pace_bias": 0.979,
       "season_gp": 0,
       "base_attributes": {
         "pace": 28,
@@ -4973,37 +4973,37 @@
         "fuel_management": 28,
         "stamina": 78
       },
-      "peak_age": 29,
-      "retirement_age": 48,
+      "peak_age": 33,
+      "retirement_age": 45,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 42,
-      "development_rate": 0.992,
-      "ceiling_factor": 0.913,
+      "potential": 43,
+      "development_rate": 1.077,
+      "ceiling_factor": 0.958,
       "peak_attributes": {
-        "pace": 30,
-        "racecraft": 28,
-        "tyre_management": 34,
-        "consistency": 30,
-        "fuel_management": 32,
-        "stamina": 39
+        "pace": 32,
+        "racecraft": 33,
+        "tyre_management": 35,
+        "consistency": 31,
+        "fuel_management": 38,
+        "stamina": 41
       },
       "stat_modifiers": {
-        "ppr": 1.007,
-        "pod": 0.949,
-        "ovt": 0.961,
-        "pol": 1.009,
-        "fl": 1.141
+        "ppr": 1.099,
+        "pod": 1.063,
+        "ovt": 1.002,
+        "pol": 1.003,
+        "fl": 1.19
       },
-      "pace_bias": 0.992,
+      "pace_bias": 0.945,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 29,
-        "racecraft": 29,
-        "tyre_management": 29,
-        "consistency": 29,
+        "pace": 30,
+        "racecraft": 30,
+        "tyre_management": 30,
+        "consistency": 30,
         "fuel_management": 33,
-        "stamina": 91
+        "stamina": 93
       }
     },
     {
@@ -5032,37 +5032,37 @@
         "fuel_management": 25,
         "stamina": 81
       },
-      "peak_age": 31,
-      "retirement_age": 54,
+      "peak_age": 34,
+      "retirement_age": 51,
       "season_form": 1.0,
       "career_arc": "role",
       "potential": 40,
-      "development_rate": 0.997,
-      "ceiling_factor": 0.951,
+      "development_rate": 1.128,
+      "ceiling_factor": 0.886,
       "peak_attributes": {
-        "pace": 32,
-        "racecraft": 36,
-        "tyre_management": 34,
-        "consistency": 34,
-        "fuel_management": 27,
-        "stamina": 35
+        "pace": 27,
+        "racecraft": 32,
+        "tyre_management": 29,
+        "consistency": 26,
+        "fuel_management": 28,
+        "stamina": 34
       },
       "stat_modifiers": {
-        "ppr": 0.963,
-        "pod": 1.149,
-        "ovt": 0.929,
-        "pol": 1.021,
-        "fl": 1.184
+        "ppr": 0.957,
+        "pod": 1.039,
+        "ovt": 0.8,
+        "pol": 1.007,
+        "fl": 1.106
       },
-      "pace_bias": 1.067,
+      "pace_bias": 1.002,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 26,
-        "racecraft": 26,
-        "tyre_management": 26,
-        "consistency": 26,
-        "fuel_management": 26,
-        "stamina": 87
+        "pace": 25,
+        "racecraft": 25,
+        "tyre_management": 25,
+        "consistency": 25,
+        "fuel_management": 25,
+        "stamina": 82
       }
     },
     {
@@ -5091,37 +5091,37 @@
         "fuel_management": 40,
         "stamina": 94
       },
-      "peak_age": 31,
-      "retirement_age": 44,
+      "peak_age": 34,
+      "retirement_age": 46,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 46,
-      "development_rate": 0.9,
-      "ceiling_factor": 0.914,
+      "potential": 45,
+      "development_rate": 0.888,
+      "ceiling_factor": 0.954,
       "peak_attributes": {
-        "pace": 34,
-        "racecraft": 34,
-        "tyre_management": 38,
+        "pace": 39,
+        "racecraft": 31,
+        "tyre_management": 32,
         "consistency": 38,
-        "fuel_management": 31,
+        "fuel_management": 37,
         "stamina": 39
       },
       "stat_modifiers": {
-        "ppr": 1.091,
-        "pod": 0.836,
-        "ovt": 1.099,
-        "pol": 0.873,
-        "fl": 0.948
+        "ppr": 0.986,
+        "pod": 0.92,
+        "ovt": 1.071,
+        "pol": 0.907,
+        "fl": 1.078
       },
-      "pace_bias": 1.058,
+      "pace_bias": 1.029,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 38,
-        "racecraft": 38,
-        "tyre_management": 47,
-        "consistency": 44,
-        "fuel_management": 41,
-        "stamina": 95
+        "pace": 39,
+        "racecraft": 39,
+        "tyre_management": 48,
+        "consistency": 45,
+        "fuel_management": 42,
+        "stamina": 99
       }
     },
     {
@@ -5151,28 +5151,28 @@
         "stamina": 71
       },
       "peak_age": 30,
-      "retirement_age": 51,
+      "retirement_age": 47,
       "season_form": 1.0,
       "career_arc": "role",
       "potential": 40,
-      "development_rate": 0.879,
-      "ceiling_factor": 0.95,
+      "development_rate": 0.91,
+      "ceiling_factor": 0.93,
       "peak_attributes": {
-        "pace": 31,
-        "racecraft": 35,
-        "tyre_management": 33,
-        "consistency": 35,
-        "fuel_management": 35,
+        "pace": 29,
+        "racecraft": 28,
+        "tyre_management": 31,
+        "consistency": 27,
+        "fuel_management": 33,
         "stamina": 34
       },
       "stat_modifiers": {
-        "ppr": 0.948,
-        "pod": 1.037,
-        "ovt": 0.887,
-        "pol": 1.106,
-        "fl": 0.847
+        "ppr": 0.944,
+        "pod": 0.988,
+        "ovt": 1.013,
+        "pol": 1.129,
+        "fl": 1.196
       },
-      "pace_bias": 1.063,
+      "pace_bias": 1.092,
       "season_gp": 0,
       "base_attributes": {
         "pace": 29,
@@ -5209,37 +5209,37 @@
         "fuel_management": 41,
         "stamina": 93
       },
-      "peak_age": 32,
-      "retirement_age": 49,
+      "peak_age": 31,
+      "retirement_age": 45,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 49,
-      "development_rate": 1.066,
-      "ceiling_factor": 0.945,
+      "potential": 46,
+      "development_rate": 0.896,
+      "ceiling_factor": 0.909,
       "peak_attributes": {
-        "pace": 37,
-        "racecraft": 34,
-        "tyre_management": 37,
-        "consistency": 37,
-        "fuel_management": 41,
-        "stamina": 44
+        "pace": 34,
+        "racecraft": 33,
+        "tyre_management": 31,
+        "consistency": 31,
+        "fuel_management": 32,
+        "stamina": 41
       },
       "stat_modifiers": {
-        "ppr": 1.033,
-        "pod": 1.174,
-        "ovt": 1.171,
-        "pol": 0.826,
-        "fl": 1.167
+        "ppr": 1.077,
+        "pod": 1.158,
+        "ovt": 1.095,
+        "pol": 1.039,
+        "fl": 1.104
       },
-      "pace_bias": 0.952,
+      "pace_bias": 1.012,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 41,
-        "racecraft": 46,
-        "tyre_management": 42,
-        "consistency": 42,
-        "fuel_management": 42,
-        "stamina": 94
+        "pace": 40,
+        "racecraft": 45,
+        "tyre_management": 41,
+        "consistency": 41,
+        "fuel_management": 41,
+        "stamina": 93
       }
     },
     {
@@ -5268,37 +5268,37 @@
         "fuel_management": 49,
         "stamina": 83
       },
-      "peak_age": 32,
-      "retirement_age": 47,
+      "peak_age": 34,
+      "retirement_age": 49,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 50,
-      "development_rate": 1.057,
-      "ceiling_factor": 0.889,
+      "potential": 45,
+      "development_rate": 0.961,
+      "ceiling_factor": 0.887,
       "peak_attributes": {
-        "pace": 42,
-        "racecraft": 38,
-        "tyre_management": 37,
-        "consistency": 37,
+        "pace": 30,
+        "racecraft": 32,
+        "tyre_management": 35,
+        "consistency": 34,
         "fuel_management": 37,
-        "stamina": 41
+        "stamina": 40
       },
       "stat_modifiers": {
-        "ppr": 0.954,
-        "pod": 0.905,
-        "ovt": 1.123,
-        "pol": 0.869,
-        "fl": 0.911
+        "ppr": 1.07,
+        "pod": 0.962,
+        "ovt": 1.121,
+        "pol": 1.159,
+        "fl": 0.855
       },
-      "pace_bias": 1.019,
+      "pace_bias": 1.078,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 48,
-        "racecraft": 57,
-        "tyre_management": 44,
-        "consistency": 37,
-        "fuel_management": 52,
-        "stamina": 92
+        "pace": 47,
+        "racecraft": 56,
+        "tyre_management": 43,
+        "consistency": 36,
+        "fuel_management": 51,
+        "stamina": 89
       }
     },
     {
@@ -5327,29 +5327,29 @@
         "fuel_management": 25,
         "stamina": 71
       },
-      "peak_age": 29,
-      "retirement_age": 49,
+      "peak_age": 30,
+      "retirement_age": 54,
       "season_form": 1.0,
       "career_arc": "role",
       "potential": 40,
-      "development_rate": 0.946,
-      "ceiling_factor": 0.912,
+      "development_rate": 0.98,
+      "ceiling_factor": 0.954,
       "peak_attributes": {
-        "pace": 26,
-        "racecraft": 32,
-        "tyre_management": 29,
-        "consistency": 35,
-        "fuel_management": 31,
-        "stamina": 35
+        "pace": 27,
+        "racecraft": 37,
+        "tyre_management": 30,
+        "consistency": 30,
+        "fuel_management": 37,
+        "stamina": 34
       },
       "stat_modifiers": {
-        "ppr": 1.031,
-        "pod": 1.052,
-        "ovt": 1.162,
-        "pol": 0.931,
-        "fl": 1.041
+        "ppr": 1.022,
+        "pod": 1.112,
+        "ovt": 0.976,
+        "pol": 1.05,
+        "fl": 0.928
       },
-      "pace_bias": 1.038,
+      "pace_bias": 0.988,
       "season_gp": 0,
       "base_attributes": {
         "pace": 29,
@@ -5357,7 +5357,7 @@
         "tyre_management": 29,
         "consistency": 29,
         "fuel_management": 29,
-        "stamina": 91
+        "stamina": 90
       }
     },
     {
@@ -5386,37 +5386,37 @@
         "fuel_management": 54,
         "stamina": 73
       },
-      "peak_age": 33,
+      "peak_age": 30,
       "retirement_age": 47,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 53,
-      "development_rate": 1.029,
-      "ceiling_factor": 0.94,
+      "potential": 57,
+      "development_rate": 0.896,
+      "ceiling_factor": 0.89,
       "peak_attributes": {
-        "pace": 40,
-        "racecraft": 37,
-        "tyre_management": 39,
-        "consistency": 44,
-        "fuel_management": 45,
-        "stamina": 49
+        "pace": 39,
+        "racecraft": 42,
+        "tyre_management": 43,
+        "consistency": 43,
+        "fuel_management": 41,
+        "stamina": 47
       },
       "stat_modifiers": {
-        "ppr": 1.059,
-        "pod": 0.854,
-        "ovt": 0.82,
-        "pol": 1.04,
-        "fl": 1.102
+        "ppr": 1.005,
+        "pod": 1.1,
+        "ovt": 1.196,
+        "pol": 0.871,
+        "fl": 1.004
       },
-      "pace_bias": 0.983,
+      "pace_bias": 1.017,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 60,
-        "racecraft": 46,
-        "tyre_management": 52,
-        "consistency": 59,
-        "fuel_management": 62,
-        "stamina": 92
+        "pace": 62,
+        "racecraft": 48,
+        "tyre_management": 54,
+        "consistency": 61,
+        "fuel_management": 64,
+        "stamina": 98
       }
     },
     {
@@ -5445,37 +5445,37 @@
         "fuel_management": 57,
         "stamina": 97
       },
-      "peak_age": 30,
-      "retirement_age": 53,
+      "peak_age": 29,
+      "retirement_age": 54,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 69,
-      "development_rate": 0.871,
-      "ceiling_factor": 0.899,
+      "potential": 61,
+      "development_rate": 1.039,
+      "ceiling_factor": 0.929,
       "peak_attributes": {
-        "pace": 57,
-        "racecraft": 56,
-        "tyre_management": 51,
-        "consistency": 54,
-        "fuel_management": 50,
-        "stamina": 57
+        "pace": 47,
+        "racecraft": 50,
+        "tyre_management": 46,
+        "consistency": 48,
+        "fuel_management": 48,
+        "stamina": 55
       },
       "stat_modifiers": {
-        "ppr": 1.112,
-        "pod": 0.805,
-        "ovt": 0.819,
-        "pol": 1.133,
-        "fl": 0.887
+        "ppr": 1.102,
+        "pod": 0.916,
+        "ovt": 0.904,
+        "pol": 0.885,
+        "fl": 1.139
       },
-      "pace_bias": 1.1,
+      "pace_bias": 1.014,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 61,
-        "racecraft": 56,
-        "tyre_management": 75,
-        "consistency": 72,
-        "fuel_management": 58,
-        "stamina": 99
+        "pace": 60,
+        "racecraft": 55,
+        "tyre_management": 74,
+        "consistency": 71,
+        "fuel_management": 57,
+        "stamina": 97
       }
     },
     {
@@ -5504,37 +5504,37 @@
         "fuel_management": 41,
         "stamina": 89
       },
-      "peak_age": 30,
-      "retirement_age": 49,
+      "peak_age": 33,
+      "retirement_age": 47,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 40,
-      "development_rate": 1.106,
-      "ceiling_factor": 0.888,
+      "potential": 44,
+      "development_rate": 1.055,
+      "ceiling_factor": 0.91,
       "peak_attributes": {
-        "pace": 27,
-        "racecraft": 26,
-        "tyre_management": 25,
-        "consistency": 33,
-        "fuel_management": 31,
-        "stamina": 31
+        "pace": 35,
+        "racecraft": 34,
+        "tyre_management": 35,
+        "consistency": 31,
+        "fuel_management": 35,
+        "stamina": 37
       },
       "stat_modifiers": {
-        "ppr": 0.944,
-        "pod": 1.061,
-        "ovt": 1.07,
-        "pol": 1.088,
-        "fl": 1.096
+        "ppr": 1.03,
+        "pod": 1.009,
+        "ovt": 0.809,
+        "pol": 0.942,
+        "fl": 1.162
       },
-      "pace_bias": 1.028,
+      "pace_bias": 1.049,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 41,
-        "racecraft": 36,
-        "tyre_management": 38,
-        "consistency": 38,
-        "fuel_management": 43,
-        "stamina": 94
+        "pace": 42,
+        "racecraft": 37,
+        "tyre_management": 39,
+        "consistency": 39,
+        "fuel_management": 45,
+        "stamina": 97
       }
     },
     {
@@ -5563,37 +5563,37 @@
         "fuel_management": 52,
         "stamina": 81
       },
-      "peak_age": 29,
-      "retirement_age": 51,
+      "peak_age": 33,
+      "retirement_age": 49,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 50,
-      "development_rate": 0.888,
-      "ceiling_factor": 0.921,
+      "potential": 53,
+      "development_rate": 0.894,
+      "ceiling_factor": 0.955,
       "peak_attributes": {
-        "pace": 43,
-        "racecraft": 38,
-        "tyre_management": 35,
-        "consistency": 40,
-        "fuel_management": 41,
-        "stamina": 43
+        "pace": 44,
+        "racecraft": 43,
+        "tyre_management": 40,
+        "consistency": 41,
+        "fuel_management": 38,
+        "stamina": 47
       },
       "stat_modifiers": {
-        "ppr": 0.968,
-        "pod": 0.874,
-        "ovt": 1.044,
-        "pol": 0.982,
-        "fl": 1.074
+        "ppr": 0.917,
+        "pod": 0.873,
+        "ovt": 1.162,
+        "pol": 0.849,
+        "fl": 1.048
       },
-      "pace_bias": 1.005,
+      "pace_bias": 1.033,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 62,
-        "racecraft": 55,
-        "tyre_management": 61,
-        "consistency": 69,
-        "fuel_management": 59,
-        "stamina": 99
+        "pace": 60,
+        "racecraft": 52,
+        "tyre_management": 59,
+        "consistency": 66,
+        "fuel_management": 57,
+        "stamina": 93
       }
     },
     {
@@ -5622,37 +5622,37 @@
         "fuel_management": 62,
         "stamina": 88
       },
-      "peak_age": 33,
-      "retirement_age": 50,
+      "peak_age": 30,
+      "retirement_age": 47,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 73,
-      "development_rate": 0.869,
-      "ceiling_factor": 0.905,
+      "potential": 72,
+      "development_rate": 1.036,
+      "ceiling_factor": 0.914,
       "peak_attributes": {
         "pace": 51,
-        "racecraft": 60,
-        "tyre_management": 56,
-        "consistency": 60,
-        "fuel_management": 52,
-        "stamina": 65
+        "racecraft": 58,
+        "tyre_management": 53,
+        "consistency": 53,
+        "fuel_management": 54,
+        "stamina": 63
       },
       "stat_modifiers": {
-        "ppr": 0.904,
-        "pod": 1.191,
-        "ovt": 0.927,
-        "pol": 0.934,
-        "fl": 1.064
+        "ppr": 1.144,
+        "pod": 1.094,
+        "ovt": 0.849,
+        "pol": 0.911,
+        "fl": 1.09
       },
-      "pace_bias": 1.073,
+      "pace_bias": 0.942,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 70,
-        "racecraft": 91,
-        "tyre_management": 83,
-        "consistency": 91,
-        "fuel_management": 66,
-        "stamina": 97
+        "pace": 73,
+        "racecraft": 95,
+        "tyre_management": 86,
+        "consistency": 95,
+        "fuel_management": 68,
+        "stamina": 99
       }
     },
     {
@@ -5681,37 +5681,37 @@
         "fuel_management": 25,
         "stamina": 56
       },
-      "peak_age": 32,
+      "peak_age": 30,
       "retirement_age": 55,
       "season_form": 1.0,
       "career_arc": "role",
       "potential": 40,
-      "development_rate": 0.926,
-      "ceiling_factor": 0.934,
+      "development_rate": 0.891,
+      "ceiling_factor": 0.917,
       "peak_attributes": {
-        "pace": 28,
-        "racecraft": 29,
+        "pace": 26,
+        "racecraft": 30,
         "tyre_management": 33,
-        "consistency": 28,
-        "fuel_management": 31,
-        "stamina": 34
+        "consistency": 34,
+        "fuel_management": 33,
+        "stamina": 35
       },
       "stat_modifiers": {
-        "ppr": 0.984,
-        "pod": 0.975,
-        "ovt": 0.853,
-        "pol": 1.084,
-        "fl": 0.819
+        "ppr": 0.991,
+        "pod": 0.844,
+        "ovt": 0.959,
+        "pol": 1.153,
+        "fl": 1.0
       },
-      "pace_bias": 0.99,
+      "pace_bias": 1.077,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 32,
-        "racecraft": 32,
-        "tyre_management": 32,
-        "consistency": 32,
-        "fuel_management": 32,
-        "stamina": 86
+        "pace": 33,
+        "racecraft": 33,
+        "tyre_management": 33,
+        "consistency": 33,
+        "fuel_management": 33,
+        "stamina": 91
       }
     },
     {
@@ -5740,37 +5740,37 @@
         "fuel_management": 51,
         "stamina": 91
       },
-      "peak_age": 29,
-      "retirement_age": 52,
+      "peak_age": 31,
+      "retirement_age": 46,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 50,
-      "development_rate": 1.112,
-      "ceiling_factor": 0.907,
+      "potential": 49,
+      "development_rate": 1.11,
+      "ceiling_factor": 0.89,
       "peak_attributes": {
-        "pace": 40,
-        "racecraft": 38,
-        "tyre_management": 36,
-        "consistency": 43,
-        "fuel_management": 39,
+        "pace": 33,
+        "racecraft": 37,
+        "tyre_management": 32,
+        "consistency": 33,
+        "fuel_management": 36,
         "stamina": 41
       },
       "stat_modifiers": {
-        "ppr": 1.049,
-        "pod": 1.032,
-        "ovt": 1.074,
-        "pol": 0.94,
-        "fl": 0.969
+        "ppr": 1.071,
+        "pod": 1.064,
+        "ovt": 1.104,
+        "pol": 1.082,
+        "fl": 1.172
       },
-      "pace_bias": 1.002,
+      "pace_bias": 1.021,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 59,
-        "racecraft": 49,
-        "tyre_management": 57,
-        "consistency": 53,
-        "fuel_management": 54,
-        "stamina": 99
+        "pace": 58,
+        "racecraft": 48,
+        "tyre_management": 56,
+        "consistency": 52,
+        "fuel_management": 53,
+        "stamina": 96
       }
     },
     {
@@ -5799,37 +5799,37 @@
         "fuel_management": 32,
         "stamina": 79
       },
-      "peak_age": 34,
-      "retirement_age": 46,
+      "peak_age": 31,
+      "retirement_age": 48,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 47,
-      "development_rate": 0.938,
-      "ceiling_factor": 0.895,
+      "potential": 44,
+      "development_rate": 0.935,
+      "ceiling_factor": 0.955,
       "peak_attributes": {
         "pace": 37,
-        "racecraft": 37,
-        "tyre_management": 37,
+        "racecraft": 33,
+        "tyre_management": 34,
         "consistency": 37,
-        "fuel_management": 31,
-        "stamina": 38
+        "fuel_management": 37,
+        "stamina": 41
       },
       "stat_modifiers": {
-        "ppr": 0.972,
-        "pod": 1.157,
-        "ovt": 0.825,
-        "pol": 1.031,
-        "fl": 1.008
+        "ppr": 0.931,
+        "pod": 1.015,
+        "ovt": 1.078,
+        "pol": 1.032,
+        "fl": 0.995
       },
-      "pace_bias": 1.029,
+      "pace_bias": 0.967,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 35,
+        "pace": 34,
         "racecraft": 37,
         "tyre_management": 39,
-        "consistency": 42,
+        "consistency": 41,
         "fuel_management": 38,
-        "stamina": 94
+        "stamina": 93
       }
     },
     {
@@ -5858,37 +5858,37 @@
         "fuel_management": 25,
         "stamina": 87
       },
-      "peak_age": 30,
-      "retirement_age": 48,
+      "peak_age": 29,
+      "retirement_age": 54,
       "season_form": 1.0,
       "career_arc": "role",
       "potential": 40,
-      "development_rate": 1.028,
-      "ceiling_factor": 0.891,
+      "development_rate": 1.039,
+      "ceiling_factor": 0.926,
       "peak_attributes": {
-        "pace": 33,
-        "racecraft": 34,
-        "tyre_management": 31,
-        "consistency": 34,
-        "fuel_management": 28,
-        "stamina": 35
+        "pace": 31,
+        "racecraft": 28,
+        "tyre_management": 28,
+        "consistency": 28,
+        "fuel_management": 27,
+        "stamina": 33
       },
       "stat_modifiers": {
-        "ppr": 1.062,
-        "pod": 1.066,
-        "ovt": 0.939,
-        "pol": 0.814,
-        "fl": 1.029
+        "ppr": 0.963,
+        "pod": 1.18,
+        "ovt": 1.003,
+        "pol": 0.963,
+        "fl": 0.964
       },
-      "pace_bias": 1.026,
+      "pace_bias": 0.997,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 26,
-        "racecraft": 26,
-        "tyre_management": 26,
-        "consistency": 26,
-        "fuel_management": 26,
-        "stamina": 90
+        "pace": 25,
+        "racecraft": 25,
+        "tyre_management": 25,
+        "consistency": 25,
+        "fuel_management": 25,
+        "stamina": 89
       }
     },
     {
@@ -5917,37 +5917,37 @@
         "fuel_management": 32,
         "stamina": 93
       },
-      "peak_age": 32,
+      "peak_age": 30,
       "retirement_age": 45,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 42,
-      "development_rate": 0.982,
-      "ceiling_factor": 0.889,
+      "potential": 40,
+      "development_rate": 1.132,
+      "ceiling_factor": 0.907,
       "peak_attributes": {
-        "pace": 35,
-        "racecraft": 34,
-        "tyre_management": 32,
-        "consistency": 29,
-        "fuel_management": 35,
-        "stamina": 37
+        "pace": 30,
+        "racecraft": 35,
+        "tyre_management": 33,
+        "consistency": 27,
+        "fuel_management": 30,
+        "stamina": 34
       },
       "stat_modifiers": {
-        "ppr": 0.9,
-        "pod": 1.136,
-        "ovt": 0.869,
-        "pol": 0.812,
-        "fl": 1.172
+        "ppr": 1.107,
+        "pod": 1.176,
+        "ovt": 1.046,
+        "pol": 0.831,
+        "fl": 1.139
       },
-      "pace_bias": 1.043,
+      "pace_bias": 0.944,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 31,
-        "racecraft": 50,
-        "tyre_management": 39,
-        "consistency": 38,
-        "fuel_management": 33,
-        "stamina": 96
+        "pace": 30,
+        "racecraft": 49,
+        "tyre_management": 38,
+        "consistency": 37,
+        "fuel_management": 32,
+        "stamina": 93
       }
     },
     {
@@ -5976,37 +5976,37 @@
         "fuel_management": 46,
         "stamina": 92
       },
-      "peak_age": 32,
-      "retirement_age": 50,
+      "peak_age": 30,
+      "retirement_age": 52,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 44,
-      "development_rate": 1.003,
-      "ceiling_factor": 0.903,
+      "potential": 49,
+      "development_rate": 1.035,
+      "ceiling_factor": 0.892,
       "peak_attributes": {
-        "pace": 34,
-        "racecraft": 35,
-        "tyre_management": 36,
+        "pace": 38,
+        "racecraft": 37,
+        "tyre_management": 33,
         "consistency": 38,
-        "fuel_management": 30,
-        "stamina": 35
+        "fuel_management": 35,
+        "stamina": 42
       },
       "stat_modifiers": {
-        "ppr": 1.019,
-        "pod": 0.821,
-        "ovt": 0.806,
-        "pol": 1.081,
-        "fl": 1.172
+        "ppr": 1.14,
+        "pod": 1.185,
+        "ovt": 0.854,
+        "pol": 1.196,
+        "fl": 1.117
       },
-      "pace_bias": 1.097,
+      "pace_bias": 1.024,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 45,
-        "racecraft": 29,
-        "tyre_management": 40,
-        "consistency": 45,
-        "fuel_management": 48,
-        "stamina": 96
+        "pace": 44,
+        "racecraft": 28,
+        "tyre_management": 39,
+        "consistency": 44,
+        "fuel_management": 47,
+        "stamina": 94
       }
     },
     {
@@ -6035,37 +6035,37 @@
         "fuel_management": 25,
         "stamina": 77
       },
-      "peak_age": 32,
-      "retirement_age": 44,
+      "peak_age": 34,
+      "retirement_age": 49,
       "season_form": 1.0,
       "career_arc": "role",
       "potential": 40,
-      "development_rate": 1.127,
-      "ceiling_factor": 0.922,
+      "development_rate": 1.107,
+      "ceiling_factor": 0.93,
       "peak_attributes": {
-        "pace": 33,
-        "racecraft": 33,
-        "tyre_management": 26,
-        "consistency": 30,
-        "fuel_management": 36,
-        "stamina": 32
+        "pace": 32,
+        "racecraft": 31,
+        "tyre_management": 28,
+        "consistency": 35,
+        "fuel_management": 35,
+        "stamina": 33
       },
       "stat_modifiers": {
-        "ppr": 0.922,
-        "pod": 0.827,
-        "ovt": 1.099,
-        "pol": 0.872,
-        "fl": 1.166
+        "ppr": 0.981,
+        "pod": 1.04,
+        "ovt": 0.936,
+        "pol": 0.939,
+        "fl": 1.126
       },
-      "pace_bias": 0.95,
+      "pace_bias": 1.065,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 27,
-        "racecraft": 27,
-        "tyre_management": 27,
-        "consistency": 27,
-        "fuel_management": 27,
-        "stamina": 85
+        "pace": 26,
+        "racecraft": 26,
+        "tyre_management": 26,
+        "consistency": 26,
+        "fuel_management": 26,
+        "stamina": 82
       }
     },
     {
@@ -6095,28 +6095,28 @@
         "stamina": 78
       },
       "peak_age": 29,
-      "retirement_age": 51,
+      "retirement_age": 48,
       "season_form": 1.0,
       "career_arc": "role",
       "potential": 40,
-      "development_rate": 1.072,
-      "ceiling_factor": 0.918,
+      "development_rate": 1.068,
+      "ceiling_factor": 0.955,
       "peak_attributes": {
-        "pace": 31,
-        "racecraft": 27,
-        "tyre_management": 31,
-        "consistency": 35,
-        "fuel_management": 31,
-        "stamina": 34
+        "pace": 28,
+        "racecraft": 30,
+        "tyre_management": 35,
+        "consistency": 37,
+        "fuel_management": 35,
+        "stamina": 33
       },
       "stat_modifiers": {
-        "ppr": 0.994,
-        "pod": 0.994,
-        "ovt": 1.113,
-        "pol": 0.946,
-        "fl": 1.11
+        "ppr": 0.931,
+        "pod": 0.935,
+        "ovt": 1.012,
+        "pol": 0.991,
+        "fl": 1.043
       },
-      "pace_bias": 0.991,
+      "pace_bias": 1.076,
       "season_gp": 0,
       "base_attributes": {
         "pace": 28,
@@ -6153,37 +6153,37 @@
         "fuel_management": 46,
         "stamina": 91
       },
-      "peak_age": 31,
+      "peak_age": 29,
       "retirement_age": 48,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 51,
-      "development_rate": 1.024,
-      "ceiling_factor": 0.944,
+      "potential": 55,
+      "development_rate": 1.021,
+      "ceiling_factor": 0.882,
       "peak_attributes": {
-        "pace": 43,
-        "racecraft": 44,
-        "tyre_management": 43,
-        "consistency": 44,
+        "pace": 40,
+        "racecraft": 45,
+        "tyre_management": 41,
+        "consistency": 42,
         "fuel_management": 43,
         "stamina": 44
       },
       "stat_modifiers": {
-        "ppr": 0.993,
-        "pod": 1.114,
-        "ovt": 0.873,
-        "pol": 0.924,
-        "fl": 1.113
+        "ppr": 1.092,
+        "pod": 0.914,
+        "ovt": 0.837,
+        "pol": 0.821,
+        "fl": 1.091
       },
-      "pace_bias": 1.06,
+      "pace_bias": 1.003,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 48,
-        "racecraft": 59,
-        "tyre_management": 43,
-        "consistency": 49,
-        "fuel_management": 47,
-        "stamina": 94
+        "pace": 49,
+        "racecraft": 60,
+        "tyre_management": 44,
+        "consistency": 50,
+        "fuel_management": 48,
+        "stamina": 97
       }
     },
     {
@@ -6212,29 +6212,29 @@
         "fuel_management": 25,
         "stamina": 61
       },
-      "peak_age": 32,
+      "peak_age": 33,
       "retirement_age": 51,
       "season_form": 1.0,
       "career_arc": "role",
       "potential": 40,
-      "development_rate": 1.046,
-      "ceiling_factor": 0.951,
+      "development_rate": 1.081,
+      "ceiling_factor": 0.91,
       "peak_attributes": {
-        "pace": 30,
-        "racecraft": 32,
+        "pace": 26,
+        "racecraft": 27,
         "tyre_management": 31,
-        "consistency": 33,
-        "fuel_management": 32,
+        "consistency": 34,
+        "fuel_management": 27,
         "stamina": 37
       },
       "stat_modifiers": {
-        "ppr": 0.975,
-        "pod": 0.94,
-        "ovt": 1.005,
-        "pol": 1.122,
-        "fl": 0.894
+        "ppr": 0.957,
+        "pod": 1.031,
+        "ovt": 1.014,
+        "pol": 0.976,
+        "fl": 1.109
       },
-      "pace_bias": 1.08,
+      "pace_bias": 1.082,
       "season_gp": 0,
       "base_attributes": {
         "pace": 30,
@@ -6242,7 +6242,7 @@
         "tyre_management": 30,
         "consistency": 30,
         "fuel_management": 30,
-        "stamina": 86
+        "stamina": 84
       }
     },
     {
@@ -6271,37 +6271,37 @@
         "fuel_management": 35,
         "stamina": 76
       },
-      "peak_age": 31,
-      "retirement_age": 51,
+      "peak_age": 33,
+      "retirement_age": 45,
       "season_form": 1.0,
       "career_arc": "role",
       "potential": 40,
-      "development_rate": 1.149,
+      "development_rate": 1.126,
       "ceiling_factor": 0.881,
       "peak_attributes": {
-        "pace": 27,
-        "racecraft": 29,
-        "tyre_management": 32,
-        "consistency": 34,
-        "fuel_management": 29,
-        "stamina": 34
+        "pace": 32,
+        "racecraft": 28,
+        "tyre_management": 33,
+        "consistency": 33,
+        "fuel_management": 32,
+        "stamina": 32
       },
       "stat_modifiers": {
-        "ppr": 0.919,
-        "pod": 0.872,
-        "ovt": 1.183,
-        "pol": 1.18,
-        "fl": 0.873
+        "ppr": 0.928,
+        "pod": 0.947,
+        "ovt": 1.157,
+        "pol": 1.108,
+        "fl": 1.117
       },
-      "pace_bias": 0.956,
+      "pace_bias": 1.015,
       "season_gp": 0,
       "base_attributes": {
         "pace": 34,
-        "racecraft": 29,
-        "tyre_management": 28,
-        "consistency": 28,
-        "fuel_management": 39,
-        "stamina": 90
+        "racecraft": 28,
+        "tyre_management": 27,
+        "consistency": 27,
+        "fuel_management": 38,
+        "stamina": 87
       }
     },
     {
@@ -6330,37 +6330,37 @@
         "fuel_management": 45,
         "stamina": 81
       },
-      "peak_age": 33,
-      "retirement_age": 45,
+      "peak_age": 30,
+      "retirement_age": 46,
       "season_form": 1.0,
       "career_arc": "role",
       "potential": 52,
-      "development_rate": 1.016,
-      "ceiling_factor": 0.893,
+      "development_rate": 1.004,
+      "ceiling_factor": 0.953,
       "peak_attributes": {
-        "pace": 39,
-        "racecraft": 43,
+        "pace": 42,
+        "racecraft": 42,
         "tyre_management": 43,
-        "consistency": 41,
-        "fuel_management": 43,
-        "stamina": 46
+        "consistency": 44,
+        "fuel_management": 46,
+        "stamina": 44
       },
       "stat_modifiers": {
-        "ppr": 1.047,
-        "pod": 1.162,
-        "ovt": 0.948,
-        "pol": 0.896,
-        "fl": 0.917
+        "ppr": 1.132,
+        "pod": 1.082,
+        "ovt": 1.068,
+        "pol": 0.994,
+        "fl": 1.012
       },
-      "pace_bias": 1.062,
+      "pace_bias": 0.963,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 52,
-        "racecraft": 43,
-        "tyre_management": 52,
-        "consistency": 49,
-        "fuel_management": 48,
-        "stamina": 91
+        "pace": 53,
+        "racecraft": 44,
+        "tyre_management": 53,
+        "consistency": 51,
+        "fuel_management": 50,
+        "stamina": 96
       }
     },
     {
@@ -6389,37 +6389,37 @@
         "fuel_management": 43,
         "stamina": 92
       },
-      "peak_age": 33,
-      "retirement_age": 50,
+      "peak_age": 32,
+      "retirement_age": 53,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 40,
-      "development_rate": 0.85,
-      "ceiling_factor": 0.954,
+      "potential": 42,
+      "development_rate": 0.878,
+      "ceiling_factor": 0.92,
       "peak_attributes": {
-        "pace": 28,
-        "racecraft": 30,
+        "pace": 34,
+        "racecraft": 31,
         "tyre_management": 28,
         "consistency": 35,
-        "fuel_management": 28,
-        "stamina": 36
+        "fuel_management": 36,
+        "stamina": 37
       },
       "stat_modifiers": {
-        "ppr": 1.001,
-        "pod": 0.81,
-        "ovt": 0.949,
-        "pol": 1.13,
-        "fl": 0.841
+        "ppr": 1.058,
+        "pod": 1.101,
+        "ovt": 0.816,
+        "pol": 1.127,
+        "fl": 0.802
       },
-      "pace_bias": 1.041,
+      "pace_bias": 1.055,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 40,
+        "pace": 39,
         "racecraft": 26,
         "tyre_management": 32,
         "consistency": 28,
-        "fuel_management": 45,
-        "stamina": 96
+        "fuel_management": 44,
+        "stamina": 95
       }
     },
     {
@@ -6448,29 +6448,29 @@
         "fuel_management": 25,
         "stamina": 86
       },
-      "peak_age": 34,
-      "retirement_age": 44,
+      "peak_age": 33,
+      "retirement_age": 46,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 40,
-      "development_rate": 0.851,
-      "ceiling_factor": 0.96,
+      "potential": 41,
+      "development_rate": 1.101,
+      "ceiling_factor": 0.942,
       "peak_attributes": {
-        "pace": 31,
-        "racecraft": 33,
-        "tyre_management": 31,
-        "consistency": 30,
+        "pace": 29,
+        "racecraft": 31,
+        "tyre_management": 28,
+        "consistency": 34,
         "fuel_management": 33,
-        "stamina": 38
+        "stamina": 37
       },
       "stat_modifiers": {
-        "ppr": 1.026,
-        "pod": 0.983,
-        "ovt": 0.876,
-        "pol": 0.801,
-        "fl": 1.028
+        "ppr": 0.941,
+        "pod": 0.934,
+        "ovt": 1.048,
+        "pol": 1.084,
+        "fl": 1.186
       },
-      "pace_bias": 0.977,
+      "pace_bias": 1.049,
       "season_gp": 0,
       "base_attributes": {
         "pace": 27,
@@ -6478,7 +6478,7 @@
         "tyre_management": 27,
         "consistency": 27,
         "fuel_management": 27,
-        "stamina": 94
+        "stamina": 93
       }
     },
     {
@@ -6507,37 +6507,37 @@
         "fuel_management": 27,
         "stamina": 82
       },
-      "peak_age": 34,
-      "retirement_age": 44,
+      "peak_age": 29,
+      "retirement_age": 48,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 41,
-      "development_rate": 1.126,
-      "ceiling_factor": 0.922,
+      "potential": 40,
+      "development_rate": 1.085,
+      "ceiling_factor": 0.893,
       "peak_attributes": {
-        "pace": 34,
+        "pace": 32,
         "racecraft": 34,
-        "tyre_management": 30,
-        "consistency": 34,
-        "fuel_management": 30,
-        "stamina": 38
+        "tyre_management": 26,
+        "consistency": 28,
+        "fuel_management": 29,
+        "stamina": 31
       },
       "stat_modifiers": {
-        "ppr": 1.007,
-        "pod": 0.84,
-        "ovt": 0.919,
-        "pol": 0.929,
-        "fl": 0.912
+        "ppr": 0.996,
+        "pod": 1.025,
+        "ovt": 1.125,
+        "pol": 1.024,
+        "fl": 0.896
       },
-      "pace_bias": 1.053,
+      "pace_bias": 1.044,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 29,
-        "racecraft": 29,
-        "tyre_management": 29,
-        "consistency": 29,
-        "fuel_management": 31,
-        "stamina": 94
+        "pace": 28,
+        "racecraft": 28,
+        "tyre_management": 28,
+        "consistency": 28,
+        "fuel_management": 30,
+        "stamina": 90
       }
     },
     {
@@ -6566,37 +6566,37 @@
         "fuel_management": 33,
         "stamina": 77
       },
-      "peak_age": 32,
-      "retirement_age": 45,
+      "peak_age": 30,
+      "retirement_age": 46,
       "season_form": 1.0,
       "career_arc": "role",
       "potential": 40,
-      "development_rate": 0.869,
-      "ceiling_factor": 0.89,
+      "development_rate": 0.898,
+      "ceiling_factor": 0.907,
       "peak_attributes": {
-        "pace": 34,
-        "racecraft": 32,
-        "tyre_management": 29,
+        "pace": 27,
+        "racecraft": 30,
+        "tyre_management": 30,
         "consistency": 30,
-        "fuel_management": 33,
-        "stamina": 33
+        "fuel_management": 29,
+        "stamina": 36
       },
       "stat_modifiers": {
-        "ppr": 1.09,
-        "pod": 1.016,
-        "ovt": 1.162,
-        "pol": 1.051,
-        "fl": 0.869
+        "ppr": 0.942,
+        "pod": 1.191,
+        "ovt": 1.186,
+        "pol": 1.085,
+        "fl": 0.939
       },
-      "pace_bias": 0.948,
+      "pace_bias": 1.039,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 30,
-        "racecraft": 35,
-        "tyre_management": 28,
+        "pace": 31,
+        "racecraft": 36,
+        "tyre_management": 29,
         "consistency": 34,
-        "fuel_management": 36,
-        "stamina": 88
+        "fuel_management": 37,
+        "stamina": 92
       }
     },
     {
@@ -6625,37 +6625,37 @@
         "fuel_management": 42,
         "stamina": 84
       },
-      "peak_age": 33,
-      "retirement_age": 45,
+      "peak_age": 30,
+      "retirement_age": 44,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 42,
-      "development_rate": 0.981,
-      "ceiling_factor": 0.955,
+      "potential": 46,
+      "development_rate": 1.007,
+      "ceiling_factor": 0.899,
       "peak_attributes": {
-        "pace": 38,
-        "racecraft": 33,
-        "tyre_management": 33,
-        "consistency": 37,
-        "fuel_management": 30,
+        "pace": 33,
+        "racecraft": 35,
+        "tyre_management": 37,
+        "consistency": 35,
+        "fuel_management": 31,
         "stamina": 41
       },
       "stat_modifiers": {
-        "ppr": 0.951,
-        "pod": 0.965,
-        "ovt": 1.085,
-        "pol": 1.137,
-        "fl": 1.168
+        "ppr": 1.003,
+        "pod": 0.811,
+        "ovt": 1.137,
+        "pol": 0.924,
+        "fl": 0.941
       },
-      "pace_bias": 1.039,
+      "pace_bias": 1.031,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 45,
-        "racecraft": 30,
+        "pace": 44,
+        "racecraft": 29,
         "tyre_management": 36,
         "consistency": 36,
-        "fuel_management": 48,
-        "stamina": 95
+        "fuel_management": 47,
+        "stamina": 93
       }
     },
     {
@@ -6684,37 +6684,37 @@
         "fuel_management": 39,
         "stamina": 87
       },
-      "peak_age": 34,
-      "retirement_age": 47,
+      "peak_age": 32,
+      "retirement_age": 46,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 57,
-      "development_rate": 0.9,
-      "ceiling_factor": 0.926,
+      "potential": 48,
+      "development_rate": 1.048,
+      "ceiling_factor": 0.925,
       "peak_attributes": {
-        "pace": 41,
-        "racecraft": 43,
-        "tyre_management": 47,
-        "consistency": 48,
-        "fuel_management": 41,
-        "stamina": 47
+        "pace": 36,
+        "racecraft": 39,
+        "tyre_management": 40,
+        "consistency": 38,
+        "fuel_management": 37,
+        "stamina": 39
       },
       "stat_modifiers": {
-        "ppr": 1.075,
-        "pod": 1.131,
-        "ovt": 1.082,
-        "pol": 1.091,
-        "fl": 1.147
+        "ppr": 0.912,
+        "pod": 1.198,
+        "ovt": 1.146,
+        "pol": 0.916,
+        "fl": 0.889
       },
-      "pace_bias": 0.992,
+      "pace_bias": 1.037,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 45,
+        "pace": 44,
         "racecraft": 56,
-        "tyre_management": 54,
+        "tyre_management": 53,
         "consistency": 57,
-        "fuel_management": 44,
-        "stamina": 98
+        "fuel_management": 43,
+        "stamina": 97
       }
     },
     {
@@ -6743,37 +6743,37 @@
         "fuel_management": 25,
         "stamina": 83
       },
-      "peak_age": 34,
-      "retirement_age": 51,
+      "peak_age": 29,
+      "retirement_age": 48,
       "season_form": 1.0,
       "career_arc": "role",
       "potential": 40,
-      "development_rate": 0.977,
-      "ceiling_factor": 0.949,
+      "development_rate": 1.096,
+      "ceiling_factor": 0.932,
       "peak_attributes": {
-        "pace": 36,
-        "racecraft": 37,
-        "tyre_management": 36,
-        "consistency": 31,
-        "fuel_management": 28,
-        "stamina": 36
+        "pace": 30,
+        "racecraft": 27,
+        "tyre_management": 32,
+        "consistency": 30,
+        "fuel_management": 36,
+        "stamina": 35
       },
       "stat_modifiers": {
-        "ppr": 1.069,
-        "pod": 1.108,
-        "ovt": 1.007,
-        "pol": 0.831,
-        "fl": 1.078
+        "ppr": 1.05,
+        "pod": 1.002,
+        "ovt": 1.063,
+        "pol": 1.002,
+        "fl": 0.854
       },
-      "pace_bias": 1.023,
+      "pace_bias": 0.942,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 28,
-        "racecraft": 28,
-        "tyre_management": 28,
-        "consistency": 28,
-        "fuel_management": 28,
-        "stamina": 94
+        "pace": 27,
+        "racecraft": 27,
+        "tyre_management": 27,
+        "consistency": 27,
+        "fuel_management": 27,
+        "stamina": 90
       }
     },
     {
@@ -6802,37 +6802,37 @@
         "fuel_management": 30,
         "stamina": 82
       },
-      "peak_age": 34,
-      "retirement_age": 47,
+      "peak_age": 32,
+      "retirement_age": 53,
       "season_form": 1.0,
       "career_arc": "role",
       "potential": 40,
-      "development_rate": 1.145,
-      "ceiling_factor": 0.936,
+      "development_rate": 1.091,
+      "ceiling_factor": 0.937,
       "peak_attributes": {
-        "pace": 28,
+        "pace": 34,
         "racecraft": 30,
-        "tyre_management": 33,
-        "consistency": 29,
-        "fuel_management": 35,
-        "stamina": 36
+        "tyre_management": 31,
+        "consistency": 36,
+        "fuel_management": 28,
+        "stamina": 35
       },
       "stat_modifiers": {
-        "ppr": 1.076,
-        "pod": 0.934,
-        "ovt": 0.924,
-        "pol": 0.916,
-        "fl": 1.03
+        "ppr": 1.071,
+        "pod": 0.932,
+        "ovt": 0.876,
+        "pol": 0.849,
+        "fl": 1.189
       },
-      "pace_bias": 0.997,
+      "pace_bias": 1.091,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 29,
+        "pace": 28,
         "racecraft": 35,
-        "tyre_management": 29,
-        "consistency": 29,
+        "tyre_management": 28,
+        "consistency": 28,
         "fuel_management": 34,
-        "stamina": 94
+        "stamina": 93
       }
     },
     {
@@ -6861,37 +6861,37 @@
         "fuel_management": 33,
         "stamina": 85
       },
-      "peak_age": 34,
-      "retirement_age": 45,
+      "peak_age": 31,
+      "retirement_age": 52,
       "season_form": 1.0,
       "career_arc": "role",
       "potential": 40,
-      "development_rate": 0.939,
-      "ceiling_factor": 0.924,
+      "development_rate": 0.9,
+      "ceiling_factor": 0.936,
       "peak_attributes": {
         "pace": 31,
-        "racecraft": 28,
+        "racecraft": 33,
         "tyre_management": 29,
-        "consistency": 32,
-        "fuel_management": 32,
+        "consistency": 33,
+        "fuel_management": 30,
         "stamina": 37
       },
       "stat_modifiers": {
-        "ppr": 0.94,
-        "pod": 0.926,
-        "ovt": 1.168,
-        "pol": 0.915,
-        "fl": 1.007
+        "ppr": 0.998,
+        "pod": 1.11,
+        "ovt": 1.124,
+        "pol": 1.148,
+        "fl": 0.93
       },
-      "pace_bias": 1.044,
+      "pace_bias": 1.013,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 28,
-        "racecraft": 26,
-        "tyre_management": 29,
-        "consistency": 29,
-        "fuel_management": 33,
-        "stamina": 85
+        "pace": 29,
+        "racecraft": 27,
+        "tyre_management": 30,
+        "consistency": 30,
+        "fuel_management": 34,
+        "stamina": 89
       }
     },
     {
@@ -6920,37 +6920,37 @@
         "fuel_management": 44,
         "stamina": 82
       },
-      "peak_age": 31,
+      "peak_age": 29,
       "retirement_age": 49,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 46,
-      "development_rate": 0.865,
-      "ceiling_factor": 0.912,
+      "potential": 50,
+      "development_rate": 1.006,
+      "ceiling_factor": 0.892,
       "peak_attributes": {
-        "pace": 31,
-        "racecraft": 38,
-        "tyre_management": 39,
-        "consistency": 32,
-        "fuel_management": 40,
-        "stamina": 41
+        "pace": 42,
+        "racecraft": 35,
+        "tyre_management": 42,
+        "consistency": 33,
+        "fuel_management": 41,
+        "stamina": 40
       },
       "stat_modifiers": {
-        "ppr": 1.078,
-        "pod": 1.164,
-        "ovt": 1.185,
-        "pol": 0.905,
-        "fl": 1.08
+        "ppr": 1.069,
+        "pod": 0.822,
+        "ovt": 1.024,
+        "pol": 1.103,
+        "fl": 1.065
       },
-      "pace_bias": 1.042,
+      "pace_bias": 1.023,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 50,
-        "racecraft": 48,
+        "pace": 49,
+        "racecraft": 47,
         "tyre_management": 38,
         "consistency": 44,
-        "fuel_management": 51,
-        "stamina": 95
+        "fuel_management": 50,
+        "stamina": 94
       }
     },
     {
@@ -6979,37 +6979,37 @@
         "fuel_management": 33,
         "stamina": 90
       },
-      "peak_age": 34,
-      "retirement_age": 50,
+      "peak_age": 32,
+      "retirement_age": 46,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 45,
-      "development_rate": 1.087,
-      "ceiling_factor": 0.93,
+      "potential": 41,
+      "development_rate": 0.884,
+      "ceiling_factor": 0.953,
       "peak_attributes": {
-        "pace": 32,
-        "racecraft": 32,
-        "tyre_management": 37,
+        "pace": 34,
+        "racecraft": 30,
+        "tyre_management": 38,
         "consistency": 32,
         "fuel_management": 35,
-        "stamina": 42
+        "stamina": 36
       },
       "stat_modifiers": {
-        "ppr": 0.918,
-        "pod": 0.936,
-        "ovt": 0.846,
-        "pol": 1.192,
-        "fl": 1.033
+        "ppr": 0.931,
+        "pod": 0.949,
+        "ovt": 0.966,
+        "pol": 0.843,
+        "fl": 1.096
       },
-      "pace_bias": 1.077,
+      "pace_bias": 1.047,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 32,
-        "racecraft": 44,
-        "tyre_management": 29,
-        "consistency": 30,
-        "fuel_management": 35,
-        "stamina": 96
+        "pace": 31,
+        "racecraft": 43,
+        "tyre_management": 28,
+        "consistency": 29,
+        "fuel_management": 34,
+        "stamina": 94
       }
     },
     {
@@ -7039,28 +7039,28 @@
         "stamina": 85
       },
       "peak_age": 29,
-      "retirement_age": 50,
+      "retirement_age": 53,
       "season_form": 1.0,
       "career_arc": "role",
       "potential": 40,
-      "development_rate": 0.904,
-      "ceiling_factor": 0.881,
+      "development_rate": 0.885,
+      "ceiling_factor": 0.938,
       "peak_attributes": {
-        "pace": 30,
-        "racecraft": 29,
-        "tyre_management": 34,
-        "consistency": 25,
-        "fuel_management": 31,
-        "stamina": 34
+        "pace": 32,
+        "racecraft": 33,
+        "tyre_management": 35,
+        "consistency": 31,
+        "fuel_management": 32,
+        "stamina": 36
       },
       "stat_modifiers": {
-        "ppr": 1.106,
-        "pod": 1.134,
-        "ovt": 0.994,
-        "pol": 0.961,
-        "fl": 1.016
+        "ppr": 1.078,
+        "pod": 0.944,
+        "ovt": 1.175,
+        "pol": 0.986,
+        "fl": 1.171
       },
-      "pace_bias": 1.087,
+      "pace_bias": 1.074,
       "season_gp": 0,
       "base_attributes": {
         "pace": 26,
@@ -7097,37 +7097,37 @@
         "fuel_management": 41,
         "stamina": 77
       },
-      "peak_age": 34,
-      "retirement_age": 49,
+      "peak_age": 32,
+      "retirement_age": 45,
       "season_form": 1.0,
       "career_arc": "role",
       "potential": 40,
-      "development_rate": 0.906,
-      "ceiling_factor": 0.89,
+      "development_rate": 0.917,
+      "ceiling_factor": 0.927,
       "peak_attributes": {
-        "pace": 34,
-        "racecraft": 26,
-        "tyre_management": 28,
-        "consistency": 31,
+        "pace": 33,
+        "racecraft": 35,
+        "tyre_management": 31,
+        "consistency": 28,
         "fuel_management": 30,
-        "stamina": 31
+        "stamina": 35
       },
       "stat_modifiers": {
-        "ppr": 1.023,
-        "pod": 0.904,
-        "ovt": 0.9,
-        "pol": 0.967,
-        "fl": 1.086
+        "ppr": 0.999,
+        "pod": 0.997,
+        "ovt": 1.042,
+        "pol": 0.986,
+        "fl": 0.887
       },
-      "pace_bias": 0.946,
+      "pace_bias": 0.993,
       "season_gp": 0,
       "base_attributes": {
-        "pace": 40,
-        "racecraft": 28,
-        "tyre_management": 41,
-        "consistency": 41,
-        "fuel_management": 44,
-        "stamina": 87
+        "pace": 41,
+        "racecraft": 29,
+        "tyre_management": 42,
+        "consistency": 42,
+        "fuel_management": 45,
+        "stamina": 90
       }
     },
     {
@@ -7156,29 +7156,29 @@
         "fuel_management": 25,
         "stamina": 79
       },
-      "peak_age": 33,
-      "retirement_age": 46,
+      "peak_age": 32,
+      "retirement_age": 52,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 40,
-      "development_rate": 0.982,
-      "ceiling_factor": 0.898,
+      "potential": 42,
+      "development_rate": 0.912,
+      "ceiling_factor": 0.956,
       "peak_attributes": {
-        "pace": 32,
-        "racecraft": 35,
-        "tyre_management": 30,
-        "consistency": 32,
-        "fuel_management": 34,
-        "stamina": 33
+        "pace": 29,
+        "racecraft": 30,
+        "tyre_management": 29,
+        "consistency": 38,
+        "fuel_management": 36,
+        "stamina": 37
       },
       "stat_modifiers": {
-        "ppr": 0.954,
-        "pod": 0.965,
-        "ovt": 1.194,
-        "pol": 0.904,
-        "fl": 0.948
+        "ppr": 1.055,
+        "pod": 0.823,
+        "ovt": 1.148,
+        "pol": 0.99,
+        "fl": 1.158
       },
-      "pace_bias": 0.982,
+      "pace_bias": 1.062,
       "season_gp": 0,
       "base_attributes": {
         "pace": 29,
@@ -7186,7 +7186,7 @@
         "tyre_management": 29,
         "consistency": 29,
         "fuel_management": 29,
-        "stamina": 93
+        "stamina": 92
       }
     },
     {
@@ -7215,29 +7215,29 @@
         "fuel_management": 25,
         "stamina": 79
       },
-      "peak_age": 32,
-      "retirement_age": 45,
+      "peak_age": 34,
+      "retirement_age": 50,
       "season_form": 1.0,
       "career_arc": "role",
       "potential": 40,
-      "development_rate": 0.905,
-      "ceiling_factor": 0.904,
+      "development_rate": 1.049,
+      "ceiling_factor": 0.885,
       "peak_attributes": {
-        "pace": 31,
-        "racecraft": 29,
-        "tyre_management": 35,
-        "consistency": 29,
-        "fuel_management": 31,
-        "stamina": 37
+        "pace": 32,
+        "racecraft": 32,
+        "tyre_management": 28,
+        "consistency": 32,
+        "fuel_management": 30,
+        "stamina": 34
       },
       "stat_modifiers": {
-        "ppr": 1.091,
-        "pod": 0.917,
-        "ovt": 1.032,
-        "pol": 1.08,
-        "fl": 1.059
+        "ppr": 1.086,
+        "pod": 1.198,
+        "ovt": 0.86,
+        "pol": 1.135,
+        "fl": 0.822
       },
-      "pace_bias": 1.002,
+      "pace_bias": 1.025,
       "season_gp": 0,
       "base_attributes": {
         "pace": 29,
@@ -7245,7 +7245,7 @@
         "tyre_management": 29,
         "consistency": 29,
         "fuel_management": 29,
-        "stamina": 92
+        "stamina": 93
       }
     },
     {
@@ -7275,28 +7275,28 @@
         "stamina": 80
       },
       "peak_age": 34,
-      "retirement_age": 54,
+      "retirement_age": 46,
       "season_form": 1.0,
       "career_arc": "role",
-      "potential": 40,
-      "development_rate": 1.039,
-      "ceiling_factor": 0.94,
+      "potential": 41,
+      "development_rate": 0.865,
+      "ceiling_factor": 0.958,
       "peak_attributes": {
-        "pace": 28,
-        "racecraft": 29,
-        "tyre_management": 36,
+        "pace": 37,
+        "racecraft": 31,
+        "tyre_management": 37,
         "consistency": 28,
-        "fuel_management": 30,
-        "stamina": 36
+        "fuel_management": 35,
+        "stamina": 39
       },
       "stat_modifiers": {
-        "ppr": 1.06,
-        "pod": 0.874,
-        "ovt": 1.152,
-        "pol": 0.865,
-        "fl": 1.005
+        "ppr": 0.955,
+        "pod": 1.182,
+        "ovt": 1.175,
+        "pol": 1.134,
+        "fl": 1.16
       },
-      "pace_bias": 1.072,
+      "pace_bias": 1.007,
       "season_gp": 0,
       "base_attributes": {
         "pace": 29,

@@ -4,6 +4,8 @@ import json
 import random
 from pathlib import Path
 
+from paths import bundled_data_path, writable_data_dir
+
 _NAMES_DATA = None
 _SUFFIXES = ("Jr.", "Sr.", "II", "III")
 _SUFFIX_ORDER = ("Jr.", "Sr.", "II", "III", "IV")
@@ -11,11 +13,17 @@ _SUFFIX_ORDER = ("Jr.", "Sr.", "II", "III", "IV")
 _KNOWN_SUFFIXES = set(_SUFFIX_ORDER)
 
 
+def _names_json_path() -> Path:
+    writable = writable_data_dir() / "names.json"
+    if writable.is_file():
+        return writable
+    return bundled_data_path("names.json")
+
+
 def _load_names_data():
     global _NAMES_DATA
     if _NAMES_DATA is None:
-        path = Path(__file__).resolve().parent / "data" / "names.json"
-        with path.open(encoding="utf-8") as handle:
+        with _names_json_path().open(encoding="utf-8") as handle:
             _NAMES_DATA = json.load(handle)
     return _NAMES_DATA
 

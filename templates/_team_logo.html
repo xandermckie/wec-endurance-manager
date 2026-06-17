@@ -3,7 +3,7 @@
 {%- if logo_slug -%}
 <div class="team-logo-wrap team-logo-wrap-{{ size }}">
   {%- if team_logo_src(logo_slug) -%}
-  <img src="{{ team_logo_src(logo_slug) }}" alt="" class="team-logo team-logo-{{ size }}" loading="lazy" referrerpolicy="no-referrer">
+  <img src="{{ team_logo_src(logo_slug) }}" alt="" class="team-logo team-logo-{{ size }}{% if logo_slug == 'iron-lynx' %} team-logo-wordmark{% endif %}" loading="lazy" referrerpolicy="no-referrer">
   {%- else -%}
   <span class="team-logo-fallback team-logo-{{ size }}" style="--brand: {{ logo_slug|brand_color }}">{{ logo_slug[0]|upper }}</span>
   {%- endif -%}

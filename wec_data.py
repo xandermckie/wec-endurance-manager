@@ -11,7 +11,7 @@ driver categorisation and acts as the game's "position".
 
 import random
 
-from assets import logo_slug_from_car
+from assets import logo_slug_from_team
 
 CLASSES = ("Hypercar", "LMGT3")
 
@@ -187,7 +187,7 @@ def _build_team(team, class_name, team_id, rng):
         "car": team["car"],
         "class": class_name,
         "strength": team["strength"],
-        "logo_slug": logo_slug_from_car(team["car"]),
+        "logo_slug": logo_slug_from_team(team["name"], team["car"]),
     }
     return record
 

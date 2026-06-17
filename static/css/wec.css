@@ -304,6 +304,9 @@ a { color: var(--accent); }
 .team-logo-wrap-md { max-width: 80px; }
 .team-logo-wrap-lg { max-width: 120px; }
 .team-logo { display: block; object-fit: contain; filter: brightness(1.05); max-width: 100%; }
+.team-logo-wordmark.team-logo-sm { width: auto; height: 20px; max-width: 72px; }
+.team-logo-wordmark.team-logo-md { width: auto; height: 28px; max-width: 110px; }
+.team-logo-wordmark.team-logo-lg { width: auto; height: 36px; max-width: 140px; }
 .team-logo-sm, .team-logo-fallback.team-logo-sm { width: 20px; height: 20px; font-size: 0.65rem; }
 .team-logo-md, .team-logo-fallback.team-logo-md { width: 32px; height: 32px; font-size: 0.8rem; }
 .team-logo-lg, .team-logo-fallback.team-logo-lg { width: 48px; height: 48px; font-size: 1rem; }

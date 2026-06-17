@@ -4,9 +4,11 @@ import os
 import shutil
 import tempfile
 
+from paths import writable_data_dir
+
 logger = logging.getLogger(__name__)
 
-CACHE_PATH = os.path.join(os.path.dirname(__file__), "data", "grid.json")
+CACHE_PATH = os.path.join(writable_data_dir(), "grid.json")
 
 DEFAULT_CACHE = {"last_updated": None, "season": None, "drivers": []}
 

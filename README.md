@@ -41,6 +41,27 @@ python app.py
 
 Open http://127.0.0.1:5000/
 
+## Windows desktop build (.exe)
+
+Package the game as a standalone Windows app with [PyInstaller](https://pyinstaller.org/):
+
+```bash
+pip install pyinstaller
+pyinstaller wec-manager.spec
+```
+
+The executable and bundled assets land in `dist/WEC-Endurance-Manager/`. Run
+`WEC-Endurance-Manager.exe` — it starts the local server and opens your browser.
+
+Season saves and grid cache updates are stored under
+`%APPDATA%\WEC-Endurance-Manager\` (not beside the `.exe`).
+
+You can also use the launcher in development:
+
+```bash
+python launcher.py
+```
+
 ## Refreshing the grid
 
 Driver and team data is cached in `data/grid.json`. Rebuild the curated grid (synthetic season

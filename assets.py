@@ -2,7 +2,9 @@
 
 import os
 
-_STATIC_ROOT = os.path.join(os.path.dirname(__file__), "static", "img")
+from paths import bundle_dir
+
+_STATIC_ROOT = os.path.join(bundle_dir(), "static", "img")
 
 # Car model prefix → manufacturer logo slug.
 _CAR_LOGO_SLUGS = (
@@ -48,6 +50,13 @@ _BRAND_COLORS = {
     "ford": "#003478",
     "chevrolet": "#F2BC18",
     "mercedes": "#00D2BE",
+    "iron-lynx": "#C8C8C8",
+}
+
+# Squads with their own branding (overrides manufacturer logo from car model).
+_TEAM_LOGO_SLUGS = {
+    "Iron Lynx": "iron-lynx",
+    "Lamborghini Iron Lynx": "iron-lynx",
 }
 
 _ASSET_SUBDIRS = {
@@ -56,6 +65,8 @@ _ASSET_SUBDIRS = {
     "flag": "flags",
     "hero": "hero",
 }
+
+_LOGO_EXTENSIONS = ("svg", "png")
 
 # Real manufacturer marks via Simple Icons CDN (https://simpleicons.org).
 _SIMPLE_ICONS_CDN = "https://cdn.simpleicons.org"
@@ -90,6 +101,13 @@ def logo_slug_from_car(car: str) -> str:
             return slug
     token = car.split()[0].lower() if car.split() else "unknown"
     return token.replace(" ", "-")
+
+
+def logo_slug_from_team(name: str, car: str = "") -> str:
+    """Map a squad name (and car fallback) to a logo slug."""
+    if name in _TEAM_LOGO_SLUGS:
+        return _TEAM_LOGO_SLUGS[name]
+    return logo_slug_from_car(car)
 
 
 def brand_color(slug: str) -> str:
@@ -137,12 +155,19 @@ def asset_exists(kind: str, slug: str, ext: str = "svg") -> bool:
     return os.path.isfile(_asset_path(kind, slug, ext))
 
 
-def static_relpath(kind: str, slug: str, ext: str = "svg") -> str | None:
+def static_relpath(kind: str, slug: str, ext: str | None = None) -> str | None:
     """Relative path under static/ if the asset file exists."""
-    if not slug or not asset_exists(kind, slug, ext):
+    if not slug:
         return None
+    if kind == "logo" and ext is None:
+        extensions = _LOGO_EXTENSIONS
+    else:
+        extensions = (ext or "svg",)
     subdir = _ASSET_SUBDIRS.get(kind, kind)
-    return f"img/{subdir}/{slug}.{ext}"
+    for candidate in extensions:
+        if asset_exists(kind, slug, candidate):
+            return f"img/{subdir}/{slug}.{candidate}"
+    return None
 
 
 def logo_external_url(slug: str) -> str | None:
@@ -165,7 +190,7 @@ def build_team_logo_lookup(teams: list) -> dict:
         team_id = team.get("id")
         if team_id is None:
             continue
-        slug = team.get("logo_slug") or logo_slug_from_car(team.get("car", ""))
+        slug = team.get("logo_slug") or logo_slug_from_team(team.get("name", ""), team.get("car", ""))
         lookup[team_id] = slug
     return lookup
 
